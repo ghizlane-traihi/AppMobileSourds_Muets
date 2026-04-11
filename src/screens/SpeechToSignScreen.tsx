@@ -29,6 +29,8 @@ import { ErrorMessage } from "../components/ErrorMessage";
 import { LiveWaveform } from "../components/LiveWaveform";
 import { LoadingIndicator } from "../components/LoadingIndicator";
 import { SignPlayer } from "../components/SignPlayer";
+import { SignSequencePlayer } from "../components/SignSequencePlayer";
+import { TranslatingOverlay } from "../components/TranslatingOverlay";
 import { TranslationHistorySwipeItem } from "../components/TranslationHistorySwipeItem";
 import {
   SPEECH_TRANSLATION_FAVORITES_STORAGE_KEY,
@@ -1103,7 +1105,7 @@ export const SpeechToSignScreen = ({ route }: Props) => {
           ) : null}
 
           {translationMode === "standard" && loading ? (
-            <LoadingIndicator label="Transcribing audio..." />
+            <TranslatingOverlay />
           ) : null}
           {translationMode === "standard" && validationError ? (
             <ErrorMessage message={validationError} />
@@ -1403,7 +1405,10 @@ export const SpeechToSignScreen = ({ route }: Props) => {
                 Generated signs
               </Text>
               {result.signs.length > 0 ? (
-                <SignPlayer signs={result.signs} />
+                <SignSequencePlayer
+                  glossText={result.text}
+                  signs={result.signs}
+                />
               ) : (
                 <View
                   style={[
@@ -1534,7 +1539,7 @@ export const SpeechToSignScreen = ({ route }: Props) => {
                 Live signs
               </Text>
               {liveSigns.length > 0 ? (
-                <SignPlayer signs={liveSigns} />
+                <SignSequencePlayer signs={liveSigns} />
               ) : (
                 <View
                   style={[
