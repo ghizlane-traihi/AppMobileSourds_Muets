@@ -19,9 +19,15 @@ import {
   WaveformBackdrop,
 } from "../components/VoiceRecorderStage";
 
+// ─── Types ────────────────────────────────────────────────────────────────────
+
 type RecordingScreenProps = {
   onDelete: () => void;
+  /** Called when the user confirms the recording and wants it translated */
+  onTranslate?: (uri: string, durationMs: number) => void;
 };
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 const formatTimer = (elapsedSeconds: number) => {
   const minutes = Math.floor(elapsedSeconds / 60)
@@ -57,6 +63,8 @@ const settleMeteringValues = ({
   });
 };
 
+// ─── useRecordingSession hook ─────────────────────────────────────────────────
+
 const useRecordingSession = (meteringValues: RecordingMeteringValues) => {
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -65,6 +73,7 @@ const useRecordingSession = (meteringValues: RecordingMeteringValues) => {
   const [isSessionActive, setIsSessionActive] = useState(false);
   const recordingRef = React.useRef<Audio.Recording | null>(null);
   const isMountedRef = React.useRef(true);
+  const elapsedSecondsRef = React.useRef(0);
 
   const stopCurrentRecording = async () => {
     const currentRecording = recordingRef.current;
@@ -92,6 +101,7 @@ const useRecordingSession = (meteringValues: RecordingMeteringValues) => {
     setIsPaused(false);
     setIsSessionActive(false);
     setElapsedSeconds(0);
+    elapsedSecondsRef.current = 0;
     settleMeteringValues(meteringValues);
 
     await stopCurrentRecording();
@@ -194,7 +204,11 @@ const useRecordingSession = (meteringValues: RecordingMeteringValues) => {
     }
 
     const intervalId = setInterval(() => {
-      setElapsedSeconds((currentSeconds) => currentSeconds + 1);
+      setElapsedSeconds((currentSeconds) => {
+        const next = currentSeconds + 1;
+        elapsedSecondsRef.current = next;
+        return next;
+      });
     }, 1000);
 
     return () => {
@@ -239,11 +253,43 @@ const useRecordingSession = (meteringValues: RecordingMeteringValues) => {
     setIsSessionActive(false);
     setIsPaused(false);
     setElapsedSeconds(0);
+    elapsedSecondsRef.current = 0;
     settleMeteringValues(meteringValues);
     await stopCurrentRecording();
   };
 
+  /**
+   * Stops the recording, retrieves the file URI + duration, and returns both.
+   * Call this when the user confirms they want to translate.
+   */
+  const completeRecording = async (): Promise<{
+    uri: string;
+    durationMs: number;
+  } | null> => {
+    const currentRecording = recordingRef.current;
+
+    if (!currentRecording) {
+      return null;
+    }
+
+    // Capture URI before unloading (file persists on disk after unload)
+    const uri = currentRecording.getURI();
+    const durationMs = elapsedSecondsRef.current * 1000;
+
+    setIsSessionActive(false);
+    setIsPaused(false);
+    settleMeteringValues(meteringValues);
+    await stopCurrentRecording();
+
+    if (!uri) {
+      return null;
+    }
+
+    return { uri, durationMs };
+  };
+
   return {
+    completeRecording,
     deleteRecording,
     errorMessage,
     isPaused,
@@ -255,11 +301,14 @@ const useRecordingSession = (meteringValues: RecordingMeteringValues) => {
   };
 };
 
-export const RecordingScreen = ({ onDelete }: RecordingScreenProps) => {
+// ─── RecordingScreen ──────────────────────────────────────────────────────────
+
+export const RecordingScreen = ({ onDelete, onTranslate }: RecordingScreenProps) => {
   const { height, width } = useWindowDimensions();
   const audioLevel = useSharedValue(0);
   const audioJitter = useSharedValue(0);
   const {
+    completeRecording,
     deleteRecording,
     errorMessage,
     isPaused,
@@ -273,20 +322,35 @@ export const RecordingScreen = ({ onDelete }: RecordingScreenProps) => {
   const handleDelete = () => {
     void deleteRecording().finally(onDelete);
   };
+
+  const handleTranslate = async () => {
+    const result = await completeRecording();
+
+    if (result && onTranslate) {
+      onTranslate(result.uri, result.durationMs);
+    }
+  };
+
   const stageWidth = Math.min(width - 32, 430);
   const stageHeight = height < 720 ? 260 : 292;
   const isWaveRecordingActive =
     isSessionActive && !isPaused && !isPreparing && !errorMessage;
+
+  // "Translate" CTA is available once the user has paused a non-empty recording
+  const canTranslate =
+    isPaused && !isPreparing && !errorMessage && isSessionActive && onTranslate;
+
   const statusHint =
     errorMessage ??
     (isPreparing
       ? "Getting your microphone ready."
       : isPaused
-        ? "Paused. Tap play to continue."
+        ? "Paused — tap Translate to see signs, or play to keep recording."
         : "Listening now. Keep it natural.");
 
   return (
     <View style={styles.content}>
+      {/* Copy block */}
       <View style={styles.copyBlock}>
         <Text style={styles.kicker}>
           {isPreparing ? "Preparing" : isPaused ? "Paused" : "Recording"}
@@ -295,6 +359,7 @@ export const RecordingScreen = ({ onDelete }: RecordingScreenProps) => {
         <Text style={styles.timer}>{timerLabel}</Text>
       </View>
 
+      {/* Waveform + controls */}
       <View style={styles.visualCenter}>
         <View
           style={[
@@ -342,10 +407,39 @@ export const RecordingScreen = ({ onDelete }: RecordingScreenProps) => {
         </View>
       </View>
 
+      {/* Hint text */}
       <Text style={styles.hint}>{statusHint}</Text>
+
+      {/* ── Translate CTA — appears when paused ── */}
+      {canTranslate ? (
+        <View style={styles.translateBlock}>
+          <ScalePressable
+            accessibilityLabel="Translate recording to sign language"
+            onPress={() => void handleTranslate()}
+            scaleTo={0.96}
+            style={styles.translateButtonWrapper}
+          >
+            <View style={styles.translateButton}>
+              <Feather color="#FFFFFF" name="zap" size={18} />
+              <Text style={styles.translateButtonText}>Translate to signs</Text>
+              <Feather color="rgba(255,255,255,0.6)" name="arrow-right" size={16} />
+            </View>
+          </ScalePressable>
+
+          <ScalePressable
+            accessibilityLabel="Discard and go back"
+            onPress={handleDelete}
+            scaleTo={0.96}
+          >
+            <Text style={styles.discardText}>Discard recording</Text>
+          </ScalePressable>
+        </View>
+      ) : null}
     </View>
   );
 };
+
+// ─── RoundControl ─────────────────────────────────────────────────────────────
 
 type RoundControlProps = {
   accessibilityLabel: string;
@@ -393,6 +487,8 @@ const RoundControl = ({
   );
 };
 
+// ─── Styles ───────────────────────────────────────────────────────────────────
+
 const styles = StyleSheet.create({
   actionsRow: {
     alignItems: "center",
@@ -420,7 +516,7 @@ const styles = StyleSheet.create({
   content: {
     alignItems: "center",
     flex: 1,
-    paddingBottom: 48,
+    paddingBottom: 32,
     paddingHorizontal: 24,
     paddingTop: 34,
   },
@@ -440,10 +536,11 @@ const styles = StyleSheet.create({
     maxWidth: 340,
   },
   hint: {
-    color: "rgba(226,232,255,0.72)",
-    fontSize: 15,
+    color: "rgba(226,232,255,0.62)",
+    fontSize: 14,
     fontWeight: "600",
     letterSpacing: 0,
+    marginTop: 8,
     textAlign: "center",
   },
   kicker: {
@@ -496,5 +593,42 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     width: "100%",
+  },
+
+  // ── Translate CTA ──
+  translateBlock: {
+    alignItems: "center",
+    gap: 14,
+    marginTop: 20,
+    width: "100%",
+  },
+  translateButtonWrapper: {
+    width: "100%",
+  },
+  translateButton: {
+    alignItems: "center",
+    backgroundColor: "#7C5CFC",
+    borderRadius: 22,
+    flexDirection: "row",
+    gap: 10,
+    justifyContent: "center",
+    paddingHorizontal: 24,
+    paddingVertical: 18,
+    shadowColor: "#050510",
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.9,
+    shadowRadius: 20,
+  },
+  translateButtonText: {
+    color: "#FFFFFF",
+    flex: 1,
+    fontSize: 17,
+    fontWeight: "800",
+    textAlign: "center",
+  },
+  discardText: {
+    color: "rgba(226,232,255,0.45)",
+    fontSize: 14,
+    fontWeight: "700",
   },
 });
