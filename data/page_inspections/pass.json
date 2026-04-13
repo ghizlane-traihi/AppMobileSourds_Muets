@@ -1,0 +1,262 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/p/pass.htm",
+  "title": "\"pass\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/videos/trigonometry-you-finish-pass.mp4",
+      "kind": "video",
+      "source": "video[src]",
+      "score": 100
+    },
+    {
+      "url": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/pass.h1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/pass.h2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/pass.h3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "pass,American Sign Language,Sign Language,ASL,learn ASL,Deaf,signing",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "The sign for pass in American Sign Language (ASL).",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1.0",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/pass.h1.jpg"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/pass.h2.jpg"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/pass.h3.jpg"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "video",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../videos/trigonometry-you-finish-pass.mp4"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "WITH",
+      "attrs": {
+        "href": "../w/with.htm"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "RACE",
+      "attrs": {
+        "href": "../r/race.htm"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://asl.ms"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://www.Lifeprint.com/donate",
+      "attrs": {
+        "href": "https://www.Lifeprint.com/donate"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University's YouTube playlist ►",
+      "attrs": {
+        "href": "https://www.youtube.com/playlist?list=PL6akqFwEeSpiLwRFA3ZvuOWMwPXwI7NqA"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "iframe",
+      "id": "player_1",
+      "className": "responsive-iframe",
+      "text": "",
+      "attrs": {
+        "name": "player_1",
+        "src": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "alt": "back.gif (1674 bytes)",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"pass\" American Sign Language (ASL) ASL University ► American Sign Language: \"pass\" PASS: The right hand moves past the left hand. Your right hand (or left hand if you are left hand dominant) moves. The left hand doesn't move (stays stationary). Sample sentence: Have you passed trigonometry? = T-R-I-G YOU FINISH PASS YOU? See: WITH See: RACE Notes: Regarding the sign \"trigonometry\" in the practice sentence: Realistically, if there is sufficient context (if we've been talking about math) I just spell T-R-I-G. It is good to know both versions (the initialized \"MATH\" version using \"T\"-hands, and the fingerspelled version. You can learn American Sign Language (ASL) online at American Sign Language University ™ ASL resources by Lifeprint.com © Dr. William Vicars Want to help support ASL Univers"
+}

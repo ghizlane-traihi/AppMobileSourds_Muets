@@ -1,0 +1,376 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/m/money.htm",
+  "title": "\"money\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/images-signs/money.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.youtube.com/embed/JfpXG0yxIsU?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/pages-signs/m/money-11s.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/pages-signs/m/money-12s.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/moneymoola1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/moneymoola2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/moneymoola3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/moneymoola4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "money,cash,moola,American Sign Language,Sign Language,ASL,learn ASL,Deaf,signing",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "The sign for money in American Sign Language (ASL).",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1.0",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../images-signs/money.gif"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "money-11s.jpg"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "money-12s.jpg"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "money-11s.jpg"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "money-12s.jpg"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/JfpXG0yxIsU?rel=0"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "BUY",
+      "attrs": {
+        "href": "../b/buy.htm"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "PAY",
+      "attrs": {
+        "href": "../p/pay.htm"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DEPOSIT",
+      "attrs": {
+        "href": "../d/deposit.htm"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "WITHDRAW",
+      "attrs": {
+        "href": "../w/withdraw.htm"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "EXCHANGE",
+      "attrs": {
+        "href": "../e/exchange.htm"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/moneymoola1.jpg"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/moneymoola2.jpg"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/moneymoola3.jpg"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/moneymoola4.jpg"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://www.Lifeprint.com/donate",
+      "attrs": {
+        "href": "https://www.Lifeprint.com/donate"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University's YouTube playlist ►",
+      "attrs": {
+        "href": "https://www.youtube.com/playlist?list=PL6akqFwEeSpiLwRFA3ZvuOWMwPXwI7NqA"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "iframe",
+      "id": "player_1",
+      "className": "responsive-iframe",
+      "text": "",
+      "attrs": {
+        "name": "player_1",
+        "src": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://asl.ms"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 29,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 30,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "alt": "back.gif (1674 bytes)",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"money\" American Sign Language (ASL) ASL University ► American Sign Language: \"money\" The sign for money uses a flattened \"O\" (as if holding onto some money) and smacks it (lightly) twice onto the palm of the base hand. MONEY: Sentence: \"Where do you keep your money?\" = YOUR MONEY, YOU KEEP WHERE? Also see: BUY Also see: PAY Notes: CASH: The sign for \"cash\" is going to depend on what you mean. If you mean \"paper money\" (not electronic) then fingerspell C-A-S-H. If you \" specifically \" need a \"dollar bill\" (piece of paper) (and don't want 4 quarters) for a machine you could sign \"ONE-DOLLAR RECTANGLE\" and then sign \"FOR\" and then mime feeding the dollar into the machine. If you mean \"cash a check\" (or \"cheque\" the British spelling of check) the right way to sign it is going to depend on if "
+}

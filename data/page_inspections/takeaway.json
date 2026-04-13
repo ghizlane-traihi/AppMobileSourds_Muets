@@ -1,0 +1,290 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/t/takeaway.htm",
+  "title": "\"take away\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/videos/eighteen-minus-five-equals-what.mp4",
+      "kind": "video",
+      "source": "video[src]",
+      "score": 100
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs-animated/takeaway.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/t/takeaw8.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/t/takeaw9.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/t/takeaw10.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/minus.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/minus2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "take away,take,away,American Sign Language,Sign Language,ASL,learn ASL,Deaf,signing",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "The sign for \"take away\" in American Sign Language (ASL).",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1.0",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../index.htm"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs-animated/takeaway.gif"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/t/takeaw8.jpg"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/t/takeaw9.jpg"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/t/takeaw10.jpg"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "video",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../videos/eighteen-minus-five-equals-what.mp4"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/minus.jpg"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/minus2.jpg"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "TAKE",
+      "attrs": {
+        "href": "take.htm"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "BRING",
+      "attrs": {
+        "href": "../b/bring.htm"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://www.Lifeprint.com/donate",
+      "attrs": {
+        "href": "https://www.Lifeprint.com/donate"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University's YouTube playlist ►",
+      "attrs": {
+        "href": "https://www.youtube.com/playlist?list=PL6akqFwEeSpiLwRFA3ZvuOWMwPXwI7NqA"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "iframe",
+      "id": "player_1",
+      "className": "responsive-iframe",
+      "text": "",
+      "attrs": {
+        "name": "player_1",
+        "src": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "sign language",
+      "attrs": {
+        "href": "http://www.lifeprint.com"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"take away\" American Sign Language (ASL) ASL University ► American Sign Language: \"take away\" or \"subtract\" The sign for \"take away\" or \"subtract\" can also mean \"deduct from.\" It can also mean deduct as in a tax deduction. SUBTRACT / MINUS / TAKE-WAY / DEDUCT-from: Sentence: 18 take away 5 equals what? When teaching math, sometimes you might want to use the NEGATIVE sign since it can be interpreted as meaning \"minus. MINUS or NEGATIVE: Also see: TAKE Also see: BRING Want to help support ASL University? It's easy : DONATE ( Thanks! ) (You don't need a PayPal account. Just look for the credit card logos and click continue). For a list of various ways to donate see: https://www.Lifeprint.com/donate Another way to help is to buy something from the ASLU \" Bookstore .\" A must see!: ASL Universit"
+}

@@ -1,0 +1,456 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/b/babysitter.htm",
+  "title": "\"babysitter\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs/b/babysitter-baby-keep.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs/b/babysitter-baby-sit.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.youtube.com/embed/1PsaWJIMdkQ?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/xJ8vboGrbug?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitterb1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitterb2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitterb3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitterb4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitterb5.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitterb6.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitterb7.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitter1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitter2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitter3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitter4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitter5.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitter6.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/b/babysitter7.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "babysitter,American Sign Language,Sign Language,ASL,learn ASL,Deaf,signing",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "The sign for babysitter in American Sign Language (ASL).",
+        "name": "description"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1.0",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/1PsaWJIMdkQ?rel=0"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs/b/babysitter-baby-keep.gif"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitterb1.jpg"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitterb2.jpg"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitterb3.jpg"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitterb4.jpg"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitterb5.jpg"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitterb6.jpg"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitterb7.jpg"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/xJ8vboGrbug?rel=0"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs/b/babysitter-baby-sit.gif"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitter1.jpg"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitter2.jpg"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitter3.jpg"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitter4.jpg"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitter5.jpg"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitter6.jpg"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/b/babysitter7.jpg"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://www.Lifeprint.com/donate",
+      "attrs": {
+        "href": "https://www.Lifeprint.com/donate"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University's YouTube playlist ►",
+      "attrs": {
+        "href": "https://www.youtube.com/playlist?list=PL6akqFwEeSpiLwRFA3ZvuOWMwPXwI7NqA"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "iframe",
+      "id": "player_1",
+      "className": "responsive-iframe",
+      "text": "",
+      "attrs": {
+        "name": "player_1",
+        "src": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0"
+      }
+    },
+    {
+      "index": 29,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 30,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 31,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 32,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "alt": "back.gif (1674 bytes)",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"babysitter\" American Sign Language (ASL) ASL University ► American Sign Language: \"babysitter\" There are several ways to do The sign for \"babysitter\" . One is to sign \"baby\" and a shortened form of the sign \"take-care-of\" + \"agent.\" Which means \"keep\" or baby keeper.\" The other is to sign \"baby\" + \"sit\" + \"agent.\" BABYSITTER (baby + keep + person). Some people will try to tell you that the \"baby\" + \"sit\" version is not \"ASL.\" I think it is. Let's face it, many, many deaf people use the \"sit\" version. Learn them both and don't worry about it. Babysitter: \"babysitter\" Version: BABY-WATCHER Sign \"BABY\" then use a two handed \"LOOK-at\" with a double movement, pointed forward and downward as if looking at a baby in a crib. Notes: No need to read below for your ASL class. In a message dated 10/2"
+}

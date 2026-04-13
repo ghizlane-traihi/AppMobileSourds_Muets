@@ -1,0 +1,398 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/p/picture.htm",
+  "title": "\"picture\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs/p/picture-2.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs-animated/picture.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs/p/picture-1.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/pictureb1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/pictureb2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/picturea1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/picturea2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/picturea3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/picture-take-a1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/picture-take-a2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/p/picture-take-a3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/camera1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/camera2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/camera3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/camera4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "The sign for picture in American Sign Language (ASL).",
+        "name": "description"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "picture,camera, take a picture, American Sign Language,Sign Language,ASL,learn ASL,Deaf,signing",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1.0",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs/p/picture-2.gif"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/pictureb1.jpg"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/pictureb2.jpg"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs-animated/picture.gif"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/picturea1.jpg"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/picturea2.jpg"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/picturea3.jpg"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/picture-take-a1.jpg"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/picture-take-a2.jpg"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/p/picture-take-a3.jpg"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/camera1.jpg"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/camera2.jpg"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/camera3.jpg"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/camera4.jpg"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs/p/picture-1.gif"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://www.Lifeprint.com/donate",
+      "attrs": {
+        "href": "https://www.Lifeprint.com/donate"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University's YouTube playlist ►",
+      "attrs": {
+        "href": "https://www.youtube.com/playlist?list=PL6akqFwEeSpiLwRFA3ZvuOWMwPXwI7NqA"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "iframe",
+      "id": "player_1",
+      "className": "responsive-iframe",
+      "text": "",
+      "attrs": {
+        "name": "player_1",
+        "src": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "sign language",
+      "attrs": {
+        "href": "http://www.lifeprint.com"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"picture\" American Sign Language (ASL) ASL University ► American Sign Language: \"picture\" The sign for \"picture\" in ASL moves a \"C\" handshape from near your cheek to the palm of the non-dominant hand. PICTURE: Memory aid: Think of taking an image from the eye and placing it on film. This concept becomes even more obvious when you take a look at the older version of the sign: PICTURE (older version) Here is a verb form of \"picture.\" TAKE A PICTURE: Use a single click of the shutter, (down and up). Note: \"take-PICTURE\" + PERSON = photographer CAMERA (noun form) Use a double click: Notes: PICTURE (version): Want to help support ASL University? It's easy : DONATE ( Thanks! ) (You don't need a PayPal account. Just look for the credit card logos and click continue). For a list of various ways to"
+}

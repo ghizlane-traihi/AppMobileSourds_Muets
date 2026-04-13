@@ -1,0 +1,280 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/c/carpenter.htm",
+  "title": "\"carpenter\" ASL American Sign Language",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs-animated/carpenter.gif",
+      "kind": "linked-media",
+      "source": "a[href media extension]",
+      "score": 85
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry5.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry6.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry7.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/c/carpentry8.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/farmer5.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/farmer6.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "keywords",
+        "content": "American Sign Language, ASL, Deaf, signing"
+      }
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "description",
+        "content": "American Sign Language (ASL) Dictionary and Lessons"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "GENERATOR",
+        "content": "Microsoft FrontPage 6.0"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "src": "../../images-layout/back.gif",
+        "alt": "back.gif (1674 bytes)"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "AGENT",
+      "attrs": {
+        "href": "../a/agent.htm"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "See \"carpenter\" animation",
+      "attrs": {
+        "href": "../../gifs-animated/carpenter.gif"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry1.jpg"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry2.jpg"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry3.jpg"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry4.jpg"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry5.jpg"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry6.jpg"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry7.jpg"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/c/carpentry8.jpg"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/farmer5.jpg"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/farmer6.jpg"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "See \"carpenter\" animation",
+      "attrs": {
+        "href": "../../gifs-animated/carpenter.gif"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Sign Language",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "src": "../../images-layout/back.gif",
+        "alt": "back.gif (1674 bytes)"
+      }
+    }
+  ],
+  "text_preview": "\"carpenter\" ASL American Sign Language carpentry / carpenter Think of a carpenter using a carpenter's plane. To sign \"carpenter\" you can either rely on context, \"MY DAD CARPENTRY,\" or you can add the person sign, \"CARPENTRY + AGENT .\" See \"carpenter\" animation CARPENTRY: The right hand slides forward on the left palm. The left hand is stationary. To sign \"carpenter\" combine the signs CARPENTRY + AGENT. AGENT: See \"carpenter\" animation ADDITIONAL READING (not required) In a message dated 7/6/2005 10:44:50 AM Pacific Daylight Time, a student asks: I'm working on lesson 21 in ASL 1. I am confused about the sign \"Carpenter - [do woodwork]\". It looks similar to \"Credit Card.\" What is the difference? Response from Bill: There are four significant differences between \"CARPENTER\" and \"CREDIT CARD."
+}

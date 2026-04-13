@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
   headline: {
     fontSize: 19,
     fontWeight: "800",
-    letterSpacing: -0.3,
+    letterSpacing: 0,
     textAlign: "center",
   },
   dotsRow: {

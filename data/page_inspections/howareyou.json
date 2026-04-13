@@ -1,0 +1,282 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/h/how-are-you.htm",
+  "title": "\"yyy\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.youtube.com/embed/pmL1k0jsLD4",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "American, Sign, Language, ASL, learn, Deaf, signing, signed, how",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "What is the sign for \"yyy\" in American Sign Language (ASL)?",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "William Vicars",
+        "name": "author"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "index,follow",
+        "name": "robots"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Global",
+        "name": "distribution"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "30 days",
+        "name": "revisit-after"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Copyright 2002-2017 Lifeprint.com",
+        "name": "copyright"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Lessons",
+      "attrs": {
+        "href": "../../lessons/lessons.htm"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Library",
+      "attrs": {
+        "href": "../../pages-layout/topics.htm"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University Main ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/pmL1k0jsLD4"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "HOW",
+      "attrs": {
+        "href": "how.htm"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/pmL1k0jsLD4",
+      "attrs": {
+        "href": "https://youtu.be/pmL1k0jsLD4"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Training Center",
+      "attrs": {
+        "href": "http://www.asl.tc/landing/index.html"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "www.youtube.com/billvicars",
+      "attrs": {
+        "href": "https://www.youtube.com/billvicars"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://asl.ms"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"yyy\" American Sign Language (ASL) ASL Lessons | Bookstore | Library | ASL University Main ► How are you? In American Sign Language (ASL) The purpose of a friendly greeting is not to seek in-depth information. It is to acknowledge the existence of another. \"How are you?\" when asked in passing is the equivalent of asking \"Are you well?\" -- (which is a \"yes / no\" type question). The friendly greetings \"How are you?\" and/or \"What's up?!\" are exceptions to the regular WH-question \"lower your eyebrows\" rule. If you lower your eyebrows on these phrases you will turn them into actual inquiries (instead of friendly greetings). Here is a link to an example of the friendly greeting form of \"How are you?\" Notes: See: HOW YouTube link to \"How are you?\" (as a greeting) https://youtu.be/pmL1k0jsLD4 * Wa"
+}

@@ -3,6 +3,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { AnimatedProgressBar } from "./AnimatedProgressBar";
+import { GlassCard } from "./LiquidGlass";
 import { ScalePressable } from "./ScalePressable";
 import { useAppTheme } from "../theme";
 
@@ -23,46 +24,43 @@ export const DailyChallengeCard = ({
   targetCount,
   taskLabel,
 }: DailyChallengeCardProps) => {
-  const { colors, isDark } = useAppTheme();
+  const { colors } = useAppTheme();
 
   return (
     <ScalePressable
       accessibilityHint="Opens today's challenge inside the learning flow"
       onPress={onPress}
+      pressGlowColor="#7B61FF"
       style={styles.wrapper}
     >
-      <View
-        style={[
-          styles.card,
-          {
-            backgroundColor: isDark ? colors.surfaceAccent : "#EAF4FF",
-            borderColor: colors.primarySoft,
-          },
-        ]}
-      >
+      <GlassCard contentStyle={styles.cardContent} featured={isCompleted} radius={28}>
         <View style={styles.header}>
           <View>
-            <Text style={[styles.eyebrow, { color: colors.primary }]}>Daily challenge</Text>
+            <Text style={[styles.eyebrow, { color: colors.kicker }]}>Daily challenge</Text>
             <Text style={[styles.title, { color: colors.text }]}>{taskLabel}</Text>
           </View>
           <View
             style={[
               styles.status,
               {
-                backgroundColor: isCompleted ? colors.successSoft : colors.surface,
-                borderColor: isCompleted ? colors.success : colors.primarySoft,
+                backgroundColor: isCompleted
+                  ? "rgba(74,222,128,0.14)"
+                  : "rgba(123,97,255,0.14)",
+                borderColor: isCompleted
+                  ? "rgba(74,222,128,0.3)"
+                  : "rgba(123,97,255,0.3)",
               },
             ]}
           >
             <Feather
-              color={isCompleted ? colors.success : colors.primary}
+              color={isCompleted ? colors.success : "#7B61FF"}
               name={isCompleted ? "check-circle" : "sun"}
               size={14}
             />
             <Text
               style={[
                 styles.statusText,
-                { color: isCompleted ? colors.success : colors.primary },
+                { color: isCompleted ? colors.success : "#7B61FF" },
               ]}
             >
               {isCompleted ? "Completed" : "Today"}
@@ -78,15 +76,15 @@ export const DailyChallengeCard = ({
 
         <View style={styles.progressHeader}>
           <Text style={[styles.progressLabel, { color: colors.text }]}>Progress</Text>
-          <Text style={[styles.progressValue, { color: colors.primary }]}>
+          <Text style={[styles.progressValue, { color: "#7B61FF" }]}>
             {Math.min(progressCount, targetCount)}/{targetCount}
           </Text>
         </View>
 
         <AnimatedProgressBar
-          fillColor={isCompleted ? colors.success : colors.primary}
+          fillColor={isCompleted ? colors.success : "#7B61FF"}
           progress={Math.min(progressCount / targetCount, 1)}
-          trackColor={isCompleted ? colors.successSoft : colors.primarySoft}
+          trackColor={isCompleted ? "rgba(74,222,128,0.15)" : "rgba(123,97,255,0.15)"}
         />
 
         <View style={styles.footer}>
@@ -94,13 +92,15 @@ export const DailyChallengeCard = ({
             style={[
               styles.rewardChip,
               {
-                backgroundColor: colors.surface,
-                borderColor: colors.primarySoft,
+                backgroundColor: "rgba(123,97,255,0.12)",
+                borderColor: "rgba(123,97,255,0.26)",
               },
             ]}
           >
-            <Feather color={colors.primary} name="award" size={14} />
-            <Text style={[styles.rewardText, { color: colors.text }]}>+{rewardPoints} points</Text>
+            <Feather color="#7B61FF" name="award" size={14} />
+            <Text style={[styles.rewardText, { color: colors.text }]}>
+              +{rewardPoints} points
+            </Text>
           </View>
 
           <View style={styles.action}>
@@ -110,20 +110,14 @@ export const DailyChallengeCard = ({
             <Feather color={colors.text} name="arrow-right" size={16} />
           </View>
         </View>
-      </View>
+      </GlassCard>
     </ScalePressable>
   );
 };
 
 const styles = StyleSheet.create({
-  wrapper: {
-    borderRadius: 28,
-  },
-  card: {
-    borderRadius: 28,
-    borderWidth: 1,
-    padding: 18,
-  },
+  wrapper: { borderRadius: 28 },
+  cardContent: { padding: 18 },
   header: {
     alignItems: "flex-start",
     flexDirection: "row",
@@ -139,7 +133,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: "800",
-    letterSpacing: -0.4,
+    letterSpacing: 0,
     marginTop: 8,
   },
   status: {

@@ -362,7 +362,7 @@ export const WaveformBackdrop = ({
           style="stroke"
         >
           {config.dash ? (
-            <DashPathEffect intervals={config.dash} phase={4} />
+            <DashPathEffect intervals={config.dash} phase={0} />
           ) : null}
         </Path>
       ))}
@@ -414,21 +414,21 @@ export const HeroRecorderButton = ({
     [breathe],
   );
   const ringOneOpacity = useDerivedValue(
-    () => 0.2 + breathe.value * 0.1 + recordingGlow.value * 0.12,
+    () => 0.28 + breathe.value * 0.12 + recordingGlow.value * 0.14,
     [breathe, recordingGlow],
   );
   const ringTwoOpacity = useDerivedValue(
     () =>
-      0.11 +
-      ((breathe.value + 0.34) % 1) * 0.08 +
-      recordingGlow.value * 0.1,
+      0.16 +
+      ((breathe.value + 0.34) % 1) * 0.1 +
+      recordingGlow.value * 0.12,
     [breathe, recordingGlow],
   );
   const ringThreeOpacity = useDerivedValue(
     () =>
-      0.06 +
-      ((breathe.value + 0.68) % 1) * 0.05 +
-      recordingGlow.value * 0.08,
+      0.1 +
+      ((breathe.value + 0.68) % 1) * 0.07 +
+      recordingGlow.value * 0.1,
     [breathe, recordingGlow],
   );
   const innerGlowOpacity = useDerivedValue(
@@ -480,9 +480,9 @@ export const HeroRecorderButton = ({
               <RadialGradient
                 c={center}
                 colors={[
-                  "rgba(100,60,200,0.12)",
-                  "rgba(100,60,200,0.05)",
-                  "rgba(100,60,200,0)",
+                  "rgba(91,61,245,0.18)",
+                  "rgba(63,43,191,0.12)",
+                  "rgba(63,43,191,0)",
                 ]}
                 positions={[0, 0.48, 1]}
                 r={160}
@@ -499,11 +499,11 @@ export const HeroRecorderButton = ({
                 <SweepGradient
                   c={center}
                   colors={[
-                    "rgba(255,255,255,0.22)",
-                    "rgba(100,80,255,0.4)",
-                    "rgba(100,80,255,0.08)",
-                    "rgba(255,255,255,0.14)",
-                    "rgba(255,255,255,0.22)",
+                    "rgba(255,255,255,0.18)",
+                    "rgba(123,97,255,0.42)",
+                    "rgba(91,61,245,0.3)",
+                    "rgba(63,43,191,0.18)",
+                    "rgba(255,255,255,0.18)",
                   ]}
                   positions={[0, 0.22, 0.55, 0.82, 1]}
                 />
@@ -518,11 +518,11 @@ export const HeroRecorderButton = ({
                 <SweepGradient
                   c={center}
                   colors={[
-                    "rgba(255,255,255,0.28)",
-                    "rgba(120,100,255,0.52)",
-                    "rgba(120,100,255,0.1)",
-                    "rgba(255,255,255,0.16)",
-                    "rgba(255,255,255,0.28)",
+                    "rgba(255,255,255,0.2)",
+                    "rgba(123,97,255,0.52)",
+                    "rgba(91,61,245,0.34)",
+                    "rgba(63,43,191,0.22)",
+                    "rgba(255,255,255,0.2)",
                   ]}
                   positions={[0, 0.24, 0.58, 0.84, 1]}
                 />
@@ -537,11 +537,11 @@ export const HeroRecorderButton = ({
                 <SweepGradient
                   c={center}
                   colors={[
-                    "rgba(255,255,255,0.35)",
-                    "rgba(140,120,255,0.68)",
-                    "rgba(140,120,255,0.16)",
-                    "rgba(255,255,255,0.18)",
-                    "rgba(255,255,255,0.35)",
+                    "rgba(255,255,255,0.24)",
+                    "rgba(123,97,255,0.62)",
+                    "rgba(91,61,245,0.46)",
+                    "rgba(63,43,191,0.28)",
+                    "rgba(255,255,255,0.24)",
                   ]}
                   positions={[0, 0.23, 0.58, 0.84, 1]}
                 />
@@ -553,27 +553,30 @@ export const HeroRecorderButton = ({
               <RadialGradient
                 c={center}
                 colors={[
-                  "rgba(140,100,255,0.5)",
-                  "rgba(140,100,255,0.2)",
-                  "rgba(140,100,255,0)",
+                  "rgba(123,97,255,0.42)",
+                  "rgba(91,61,245,0.22)",
+                  "rgba(63,43,191,0)",
                 ]}
                 positions={[0, 0.42, 1]}
                 r={INNER_GLOW_RADIUS}
               />
             </Circle>
 
-            <Circle c={center} color="rgba(120,80,200,0.35)" r={GLASS_RADIUS}>
-              <BlurMask blur={18} style="solid" />
+            <Circle c={center} color="rgba(91,61,245,0.34)" r={GLASS_RADIUS + 10}>
+              <BlurMask blur={28} style="solid" />
+            </Circle>
+            <Circle c={center} color="rgba(63,43,191,0.34)" r={GLASS_RADIUS + 4}>
+              <BlurMask blur={24} style="solid" />
             </Circle>
             <Circle c={center} opacity={glassOverlayOpacity} r={GLASS_RADIUS}>
               <LinearGradient
                 colors={[
-                  "rgba(255,255,255,0.18)",
-                  "rgba(140,90,255,0.42)",
-                  "rgba(40,22,92,0.5)",
+                  "#7B61FF",
+                  "#5B3DF5",
+                  "#3F2BBF",
                 ]}
                 end={glassEnd}
-                positions={[0, 0.48, 1]}
+                positions={[0, 0.5, 1]}
                 start={glassStart}
               />
             </Circle>
@@ -587,9 +590,9 @@ export const HeroRecorderButton = ({
                 c={center}
                 colors={[
                   "rgba(255,255,255,0.22)",
-                  "rgba(255,255,255,0.08)",
-                  "rgba(255,255,255,0.03)",
-                  "rgba(255,255,255,0.12)",
+                  "rgba(255,255,255,0.14)",
+                  "rgba(123,97,255,0.22)",
+                  "rgba(63,43,191,0.18)",
                   "rgba(255,255,255,0.22)",
                 ]}
                 positions={[0, 0.28, 0.56, 0.82, 1]}
@@ -598,10 +601,10 @@ export const HeroRecorderButton = ({
             <Circle
               cx={BUTTON_CENTER - 12}
               cy={BUTTON_CENTER - 16}
-              color="rgba(255,255,255,0.18)"
-              r={14}
+              color="rgba(255,255,255,0.12)"
+              r={20}
             >
-              <BlurMask blur={12} style="solid" />
+              <BlurMask blur={14} style="solid" />
             </Circle>
           </Canvas>
         </View>

@@ -1,0 +1,430 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/m/morning.htm",
+  "title": "\"morning\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/videos/every-morning-hurry-shower-dress-eat-take-off-school-you.mp4",
+      "kind": "video",
+      "source": "video[src]",
+      "score": 100
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/images-signs/morning.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.youtube.com/embed/iH8N44QMh7c?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/pzDK3fj_Jsg?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/PKrGMspKng4?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/jMJYpa-xIjI?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-01.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-allmorning1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-allmorning4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-allmorning6.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-02.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-everymorning1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-everymorning3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/m/morning-everymorning4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/pages-signs/sentences/goodmo1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/pages-signs/sentences/goodmo2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/pages-signs/sentences/goodmo3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "morning,American Sign Language,Sign Language,ASL,learn ASL,Deaf,signing",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "The sign for morning in American Sign Language (ASL).",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1.0",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../index.htm"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-01.jpg"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/iH8N44QMh7c?rel=0"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/pzDK3fj_Jsg?rel=0"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-allmorning1.jpg"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-allmorning4.jpg"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-allmorning6.jpg"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/PKrGMspKng4?rel=0"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-02.jpg"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-everymorning1.jpg"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-everymorning3.jpg"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/m/morning-everymorning4.jpg"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/jMJYpa-xIjI?rel=0"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "video",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../videos/every-morning-hurry-shower-dress-eat-take-off-school-you.mp4"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../images-signs/morning.gif"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../sentences/goodmo1.jpg"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../sentences/goodmo2.jpg"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../sentences/goodmo3.jpg"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://www.Lifeprint.com/donate",
+      "attrs": {
+        "href": "https://www.Lifeprint.com/donate"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University's YouTube playlist ►",
+      "attrs": {
+        "href": "https://www.youtube.com/playlist?list=PL6akqFwEeSpiLwRFA3ZvuOWMwPXwI7NqA"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "iframe",
+      "id": "player_1",
+      "className": "responsive-iframe",
+      "text": "",
+      "attrs": {
+        "name": "player_1",
+        "src": "https://www.youtube.com/embed//q6LuW4Sp_XM?rel=0"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "sign language",
+      "attrs": {
+        "href": "http://www.lifeprint.com"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 29,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 30,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "alt": "back.gif (1674 bytes)",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"morning\" American Sign Language (ASL) ASL University ► American Sign Language: \"morning\" The sign for \" morning \" uses a palm-up flat hand (or slightly bent hand) on the dominant hand to represent the sun rising up from beneath the horizon. The non-dominant arm plays the role of the horizon. The wrist of the dominant hand contacts the the non-dominant hand's fingers. Sometimes you'll see a little repeated movement of the dominant hand, but often (such as in the case of saying \"good morning\") you only use a single movement. MORNING: Sample sentence: \"What did you eat this morning?\" = NOW MORNING EAT WHAT? You can modify the sign \"morning\" to mean \"all morning\" by using a larger movement. ALL-MORNING: Normally the contact for the sign MORNING is done at the wrist, but notice how for the sig"
+}

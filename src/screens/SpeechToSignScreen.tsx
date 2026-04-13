@@ -28,6 +28,7 @@ import { AssistantHintsCard } from "../components/AssistantHintsCard";
 import { ErrorMessage } from "../components/ErrorMessage";
 import { LiveWaveform } from "../components/LiveWaveform";
 import { LoadingIndicator } from "../components/LoadingIndicator";
+import { PremiumButtonSurface } from "../components/PremiumButtonSurface";
 import { SignPlayer } from "../components/SignPlayer";
 import { SignSequencePlayer } from "../components/SignSequencePlayer";
 import { TranslatingOverlay } from "../components/TranslatingOverlay";
@@ -854,19 +855,18 @@ export const SpeechToSignScreen = ({ route }: Props) => {
                   disabled={!audioFile || loading || isAudioTooShort}
                   onPress={handleTranslate}
                   style={({ pressed }) => [
-                    styles.translateButton,
-                    {
-                      backgroundColor:
-                        !audioFile || loading || isAudioTooShort
-                          ? isDark
-                            ? "#355E91"
-                            : "#98C2FB"
-                          : colors.primary,
-                    },
                     pressed && audioFile && !loading && styles.translateButtonPressed,
                   ]}
                 >
-                  <Text style={styles.translateButtonText}>Translate speech</Text>
+                  <PremiumButtonSurface
+                    radius={20}
+                    style={[
+                      styles.translateButton,
+                      (!audioFile || loading || isAudioTooShort) && styles.translateButtonDisabled,
+                    ]}
+                  >
+                    <Text style={styles.translateButtonText}>Translate speech</Text>
+                  </PremiumButtonSurface>
                 </Pressable>
 
                 {audioFile ? (
@@ -1007,19 +1007,19 @@ export const SpeechToSignScreen = ({ route }: Props) => {
                   accessibilityRole="button"
                   onPress={handleLivePrimaryAction}
                   style={({ pressed }) => [
-                    styles.translateButton,
-                    styles.livePrimaryButton,
-                    {
-                      backgroundColor: isLiveActive ? colors.recording : colors.primary,
-                    },
                     pressed && styles.translateButtonPressed,
                   ]}
                 >
-                  <Text style={styles.translateButtonText}>
-                    {isLiveActive || isPreparing
-                      ? "Stop live translation"
-                      : "Start live translation"}
-                  </Text>
+                  <PremiumButtonSurface
+                    radius={20}
+                    style={[styles.translateButton, styles.livePrimaryButton]}
+                  >
+                    <Text style={styles.translateButtonText}>
+                      {isLiveActive || isPreparing
+                        ? "Stop live translation"
+                        : "Start live translation"}
+                    </Text>
+                  </PremiumButtonSurface>
                 </Pressable>
 
                 {(transcript || recentChunks.length > 0) && !isLiveActive ? (
@@ -1697,14 +1697,14 @@ export const SpeechToSignScreen = ({ route }: Props) => {
               accessibilityRole="button"
               onPress={() => navigation.navigate("DemoSigns")}
               style={({ pressed }) => [
-                styles.learningCardButton,
-                { backgroundColor: colors.surface },
                 pressed && styles.inlineActionButtonPressed,
               ]}
             >
-              <Text style={[styles.learningCardButtonText, { color: colors.text }]}>
-                Go to learning hub
-              </Text>
+              <PremiumButtonSurface radius={18} style={styles.learningCardButton}>
+                <Text style={styles.learningCardButtonText}>
+                  Go to learning hub
+                </Text>
+              </PremiumButtonSurface>
             </Pressable>
           </View>
         </View>
@@ -1736,7 +1736,7 @@ const styles = StyleSheet.create({
     color: "#10233B",
     fontSize: 22,
     fontWeight: "800",
-    letterSpacing: -0.4,
+    letterSpacing: 0,
   },
   sectionDescription: {
     color: "#5E6F80",
@@ -1752,7 +1752,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 34,
     fontWeight: "800",
-    letterSpacing: -0.8,
+    letterSpacing: 0,
   },
   subtitle: {
     color: "#D0DCE8",
@@ -1970,7 +1970,6 @@ const styles = StyleSheet.create({
   },
   translateButton: {
     alignItems: "center",
-    backgroundColor: "#1B6EF3",
     borderRadius: 20,
     paddingHorizontal: 20,
     paddingVertical: 15,
@@ -1981,7 +1980,7 @@ const styles = StyleSheet.create({
     width: "auto",
   },
   translateButtonDisabled: {
-    backgroundColor: "#98C2FB",
+    opacity: 0.5,
   },
   translateButtonPressed: {
     opacity: 0.84,
@@ -2286,15 +2285,14 @@ const styles = StyleSheet.create({
   learningCardButton: {
     alignItems: "center",
     alignSelf: "flex-start",
-    backgroundColor: "#FFFFFF",
-    borderRadius: 999,
+    borderRadius: 18,
     marginTop: 16,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   learningCardButtonText: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 13,
-    fontWeight: "800",
+    fontWeight: "700",
   },
 });

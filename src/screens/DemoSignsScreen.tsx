@@ -6,11 +6,15 @@ import { Feather } from "@expo/vector-icons";
 import { ActionFeedbackCard } from "../components/ActionFeedbackCard";
 import { AnimatedProgressBar } from "../components/AnimatedProgressBar";
 import { AlphabetLearningCard } from "../components/AlphabetLearningCard";
+import { AppBackground } from "../components/AppBackground";
 import { AssistantHintsCard } from "../components/AssistantHintsCard";
 import { DailyChallengeCard } from "../components/DailyChallengeCard";
+import { GlassCard } from "../components/LiquidGlass";
 import { LearningHubCard } from "../components/LearningHubCard";
 import { LearningLessonVisual } from "../components/LearningLessonVisual";
+import { PremiumButtonSurface } from "../components/PremiumButtonSurface";
 import { ResumeActivityCard } from "../components/ResumeActivityCard";
+import { ScalePressable } from "../components/ScalePressable";
 import {
   BADGE_DEFINITIONS,
   DEFAULT_GAMIFICATION_STATE,
@@ -857,22 +861,12 @@ export const DemoSignsScreen = () => {
         : "Keep moving through the alphabet and review difficult letters inside this learning flow.";
 
   return (
-    <SafeAreaView
-      style={[styles.safeArea, { backgroundColor: colors.background }]}
-    >
+    <AppBackground style={styles.root}>
+    <SafeAreaView style={styles.safeArea}>
       <ScrollView
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}
       >
-        <View style={styles.learningIntro}>
-          <Text style={[styles.learningIntroEyebrow, { color: colors.primary }]}>Learning</Text>
-          <Text style={[styles.learningIntroTitle, { color: colors.text }]}>
-            A complete learning section that stays secondary to translation.
-          </Text>
-          <Text style={[styles.learningIntroText, { color: colors.textSecondary }]}>
-            Everything related to lessons, progress, review, and daily learning lives here in one clear vertical flow.
-          </Text>
-        </View>
 
         {currentLessonSign ? (
           <ResumeActivityCard
@@ -909,12 +903,10 @@ export const DemoSignsScreen = () => {
             ).length;
 
             return (
-              <View
+              <GlassCard
                 key={category}
-                style={[
-                  styles.trackSection,
-                  { backgroundColor: colors.surface, borderColor: colors.border },
-                ]}
+                contentStyle={styles.trackSectionContent}
+                radius={24}
               >
                 <View style={styles.trackSectionHeader}>
                   <View>
@@ -952,24 +944,28 @@ export const DemoSignsScreen = () => {
                     const isRecommended = recommendedStructuredLesson?.id === lesson.id;
 
                     return (
-                      <Pressable
+                      <ScalePressable
                         key={lesson.id}
-                        accessibilityRole="button"
                         onPress={() => selectStructuredLesson(lesson)}
-                        style={({ pressed }) => [
+                        pressGlowColor={lesson.accent}
+                        scaleTo={0.975}
+                      >
+                      <View
+                        style={[
                           styles.trackLessonCard,
                           {
-                            backgroundColor: isActive ? lesson.background : colors.surfaceMuted,
-                            borderColor: isActive ? `${lesson.accent}55` : colors.border,
+                            backgroundColor: isActive
+                              ? `${lesson.accent}18`
+                              : "rgba(255,255,255,0.05)",
+                            borderColor: isActive ? `${lesson.accent}50` : "rgba(255,255,255,0.10)",
                           },
-                          pressed && styles.cardPressed,
                         ]}
                       >
                         <View style={styles.trackLessonHeader}>
                           <View
                             style={[
                               styles.trackLessonIcon,
-                              { backgroundColor: colors.surface },
+                              { backgroundColor: `${lesson.accent}18` },
                             ]}
                           >
                             <Feather color={lesson.accent} name={lesson.iconName} size={16} />
@@ -981,15 +977,15 @@ export const DemoSignsScreen = () => {
                                 style={[
                                   styles.trackLessonChip,
                                   {
-                                    backgroundColor: colors.primarySofter,
-                                    borderColor: colors.primarySoft,
+                                    backgroundColor: "rgba(123,97,255,0.14)",
+                                    borderColor: "rgba(123,97,255,0.3)",
                                   },
                                 ]}
                               >
                                 <Text
                                   style={[
                                     styles.trackLessonChipText,
-                                    { color: colors.primary },
+                                    { color: "#7B61FF" },
                                   ]}
                                 >
                                   Recommended
@@ -1000,8 +996,8 @@ export const DemoSignsScreen = () => {
                               style={[
                                 styles.trackLessonChip,
                                 {
-                                  backgroundColor: colors.surface,
-                                  borderColor: colors.border,
+                                  backgroundColor: "rgba(255,255,255,0.07)",
+                                  borderColor: "rgba(255,255,255,0.14)",
                                 },
                               ]}
                             >
@@ -1052,25 +1048,21 @@ export const DemoSignsScreen = () => {
                           progress={lessonState.progressPercent / 100}
                           trackColor={`${lesson.accent}22`}
                         />
-                      </Pressable>
+                      </View>
+                      </ScalePressable>
                     );
                   })}
                 </View>
-              </View>
+              </GlassCard>
             );
           },
         )}
 
         {activeStructuredLesson ? (
-          <View
-            style={[
-              styles.lessonStudioCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-          >
+          <GlassCard contentStyle={styles.lessonStudioContent} radius={24}>
             <View style={styles.lessonStudioHeader}>
               <View>
-                <Text style={[styles.lessonStudioEyebrow, { color: colors.primary }]}>
+                <Text style={[styles.lessonStudioEyebrow, { color: colors.kicker }]}>
                   {recommendedStructuredLesson?.id === activeStructuredLesson.id
                     ? "Recommended next lesson"
                     : "Selected lesson"}
@@ -1092,8 +1084,8 @@ export const DemoSignsScreen = () => {
                 style={[
                   styles.lessonStudioStatus,
                   {
-                    backgroundColor: colors.surfaceMuted,
-                    borderColor: colors.border,
+                    backgroundColor: "rgba(123,97,255,0.12)",
+                    borderColor: "rgba(123,97,255,0.28)",
                   },
                 ]}
               >
@@ -1138,36 +1130,41 @@ export const DemoSignsScreen = () => {
                 accessibilityRole="button"
                 onPress={() => handleOpenStructuredPractice(activeStructuredLesson)}
                 style={({ pressed }) => [
-                  styles.lessonStudioPrimaryButton,
                   pressed && styles.cardPressed,
                 ]}
               >
-                <Text style={styles.lessonStudioPrimaryButtonText}>
-                  {activeStructuredLesson.id === "alphabet-foundations"
-                    ? "Open A-Z lesson"
-                    : "Start practice mode"}
-                </Text>
+                <PremiumButtonSurface radius={18} style={styles.lessonStudioPrimaryButton}>
+                  <Text style={styles.lessonStudioPrimaryButtonText}>
+                    {activeStructuredLesson.id === "alphabet-foundations"
+                      ? "Open A-Z lesson"
+                      : "Start practice mode"}
+                  </Text>
+                </PremiumButtonSurface>
               </Pressable>
 
               <Pressable
                 accessibilityRole="button"
                 onPress={() => navigation.navigate("SignToSpeech", { initialMode: "practice" })}
                 style={({ pressed }) => [
-                  styles.lessonStudioSecondaryButton,
                   pressed && styles.cardPressed,
                 ]}
               >
-                <Text style={styles.lessonStudioSecondaryButtonText}>Open camera practice</Text>
+                <PremiumButtonSurface radius={18} style={styles.lessonStudioSecondaryButton}>
+                  <Text style={styles.lessonStudioSecondaryButtonText}>Open camera practice</Text>
+                </PremiumButtonSurface>
               </Pressable>
             </View>
 
             <View
               style={[
                 styles.practiceCheckCard,
-                { backgroundColor: colors.surfaceMuted, borderColor: colors.border },
+                {
+                  backgroundColor: "rgba(255,255,255,0.04)",
+                  borderColor: "rgba(255,255,255,0.10)",
+                },
               ]}
             >
-              <Text style={[styles.practiceCheckEyebrow, { color: colors.primary }]}>
+              <Text style={[styles.practiceCheckEyebrow, { color: colors.kicker }]}>
                 Quick check
               </Text>
               <Text style={[styles.practiceCheckPrompt, { color: colors.text }]}>
@@ -1176,25 +1173,27 @@ export const DemoSignsScreen = () => {
 
               <View style={styles.practiceOptionList}>
                 {activeStructuredLesson.practiceOptions.map((option) => (
-                  <Pressable
+                  <ScalePressable
                     key={option.id}
-                    accessibilityRole="button"
                     onPress={() =>
                       handleStructuredPracticeAnswer(activeStructuredLesson, option.id)
                     }
-                    style={({ pressed }) => [
-                      styles.practiceOptionButton,
-                      {
-                        backgroundColor: colors.surface,
-                        borderColor: colors.border,
-                      },
-                      pressed && styles.cardPressed,
-                    ]}
+                    pressGlowColor="#7B61FF"
                   >
-                    <Text style={[styles.practiceOptionText, { color: colors.text }]}>
-                      {option.label}
-                    </Text>
-                  </Pressable>
+                    <View
+                      style={[
+                        styles.practiceOptionButton,
+                        {
+                          backgroundColor: "rgba(123,97,255,0.10)",
+                          borderColor: "rgba(123,97,255,0.24)",
+                        },
+                      ]}
+                    >
+                      <Text style={[styles.practiceOptionText, { color: colors.text }]}>
+                        {option.label}
+                      </Text>
+                    </View>
+                  </ScalePressable>
                 ))}
               </View>
 
@@ -1236,7 +1235,7 @@ export const DemoSignsScreen = () => {
                 </View>
               ) : null}
             </View>
-          </View>
+          </GlassCard>
         ) : null}
 
         <AssistantHintsCard
@@ -1256,15 +1255,10 @@ export const DemoSignsScreen = () => {
         ) : null}
 
         {currentLessonSign ? (
-          <View
-            style={[
-              styles.lessonJourneyCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-          >
+          <GlassCard contentStyle={styles.lessonJourneyContent} radius={24}>
             <View style={styles.lessonJourneyHeader}>
               <View>
-                <Text style={[styles.lessonJourneyEyebrow, { color: colors.primary }]}>
+                <Text style={[styles.lessonJourneyEyebrow, { color: colors.kicker }]}>
                   Step-by-step lessons
                 </Text>
                 <Text style={[styles.lessonJourneyTitle, { color: colors.text }]}>
@@ -1276,17 +1270,17 @@ export const DemoSignsScreen = () => {
                   Move from A to Z with one focused letter at a time.
                 </Text>
               </View>
-              <Text style={[styles.lessonJourneyProgressValue, { color: colors.primary }]}>
+              <Text style={[styles.lessonJourneyProgressValue, { color: "#7B61FF" }]}>
                 {completedLessonProgress}%
               </Text>
             </View>
 
-            <View style={[styles.progressTrack, { backgroundColor: colors.primarySoft }]}>
+            <View style={[styles.progressTrack, { backgroundColor: "rgba(123,97,255,0.18)" }]}>
               <View
                 style={[
                   styles.progressFill,
                   {
-                    backgroundColor: colors.primary,
+                    backgroundColor: "#7B61FF",
                     width: `${Math.max(
                       completedLessonProgress,
                       lessonProgress.completedLessonIds.length > 0 ? 8 : 0,
@@ -1299,7 +1293,7 @@ export const DemoSignsScreen = () => {
             <View
               style={[
                 styles.lessonVisualCard,
-                { backgroundColor: currentLessonSign.background },
+                { backgroundColor: "rgba(123,97,255,0.12)" },
               ]}
             >
               <Image
@@ -1327,11 +1321,13 @@ export const DemoSignsScreen = () => {
                 accessibilityRole="button"
                 onPress={() => openSign(currentLessonSign)}
                 style={({ pressed }) => [
-                  styles.lessonOpenButton,
+                  styles.lessonOpenButtonWrapper,
                   pressed && styles.cardPressed,
                 ]}
               >
-                <Text style={styles.lessonOpenButtonText}>Open lesson card</Text>
+                <PremiumButtonSurface radius={18} style={styles.lessonOpenButton}>
+                  <Text style={styles.lessonOpenButtonText}>Open lesson card</Text>
+                </PremiumButtonSurface>
               </Pressable>
 
               <Pressable
@@ -1357,8 +1353,8 @@ export const DemoSignsScreen = () => {
                   styles.lessonSummaryBadge,
                   {
                     backgroundColor: lessonNeedsReview
-                      ? colors.warningSoft
-                      : colors.successSoft,
+                      ? "rgba(251,191,36,0.14)"
+                      : "rgba(74,222,128,0.14)",
                   },
                 ]}
               >
@@ -1376,13 +1372,13 @@ export const DemoSignsScreen = () => {
               <View
                 style={[
                   styles.lessonSummaryBadge,
-                  { backgroundColor: colors.primarySofter },
+                  { backgroundColor: "rgba(123,97,255,0.14)" },
                 ]}
               >
                 <Text
                   style={[
                     styles.lessonSummaryBadgeText,
-                    { color: colors.primary },
+                    { color: "#7B61FF" },
                   ]}
                 >
                   {lessonProgress.correctQuizIds.includes(currentLessonSign.id)
@@ -1391,11 +1387,11 @@ export const DemoSignsScreen = () => {
                 </Text>
               </View>
             </View>
-          </View>
+          </GlassCard>
         ) : null}
 
         {nextSignToLearn ? (
-          <View style={[styles.nextLessonCard, { backgroundColor: colors.hero }]}>
+          <GlassCard contentStyle={styles.nextLessonContent} featured radius={28}>
             <Text style={styles.nextLessonEyebrow}>Next lesson</Text>
             <Text style={styles.nextLessonTitle}>
               Practice {nextSignToLearn.title}
@@ -1439,17 +1435,12 @@ export const DemoSignsScreen = () => {
                 </Text>
               </Pressable>
             </View>
-          </View>
+          </GlassCard>
         ) : null}
 
         {currentLessonSign ? (
-          <View
-            style={[
-              styles.quizCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-          >
-            <Text style={styles.quizEyebrow}>Lesson quiz</Text>
+          <GlassCard contentStyle={styles.quizCardContent} radius={24}>
+            <Text style={[styles.quizEyebrow, { color: colors.kicker }]}>Lesson quiz</Text>
             <Text style={styles.quizTitle}>
               Which letter does this lesson show?
             </Text>
@@ -1460,9 +1451,7 @@ export const DemoSignsScreen = () => {
             <View
               style={[
                 styles.quizImageCard,
-                {
-                  backgroundColor: currentLessonSign.background,
-                },
+                { backgroundColor: "rgba(123,97,255,0.12)" },
               ]}
             >
               <Image
@@ -1548,24 +1537,26 @@ export const DemoSignsScreen = () => {
                 accessibilityRole="button"
                 onPress={handleLessonQuizSubmit}
                 style={({ pressed }) => [
-                  styles.quizPrimaryButton,
                   lessonQuizAnswer.trim().length === 0 && styles.lessonNavButtonDisabled,
                   pressed && styles.cardPressed,
                 ]}
                 disabled={lessonQuizAnswer.trim().length === 0}
               >
-                <Text style={styles.quizPrimaryButtonText}>Check answer</Text>
+                <PremiumButtonSurface radius={18} style={styles.quizPrimaryButton}>
+                  <Text style={styles.quizPrimaryButtonText}>Check answer</Text>
+                </PremiumButtonSurface>
               </Pressable>
 
               <Pressable
                 accessibilityRole="button"
                 onPress={() => openSign(currentLessonSign)}
                 style={({ pressed }) => [
-                  styles.quizSecondaryButton,
                   pressed && styles.cardPressed,
                 ]}
               >
-                <Text style={styles.quizSecondaryButtonText}>Review lesson</Text>
+                <PremiumButtonSurface radius={18} style={styles.quizSecondaryButton}>
+                  <Text style={styles.quizSecondaryButtonText}>Review lesson</Text>
+                </PremiumButtonSurface>
               </Pressable>
 
               <Pressable
@@ -1599,23 +1590,19 @@ export const DemoSignsScreen = () => {
                   });
                 }}
                 style={({ pressed }) => [
-                  styles.quizTertiaryButton,
                   pressed && styles.cardPressed,
                 ]}
               >
-                <Text style={styles.quizTertiaryButtonText}>Save mistake</Text>
+                <PremiumButtonSurface radius={18} style={styles.quizTertiaryButton}>
+                  <Text style={styles.quizTertiaryButtonText}>Save mistake</Text>
+                </PremiumButtonSurface>
               </Pressable>
             </View>
-          </View>
+          </GlassCard>
         ) : null}
 
         {suggestedPracticeSigns.length > 0 ? (
-          <View
-            style={[
-              styles.reviewSuggestionsCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-          >
+          <GlassCard contentStyle={styles.reviewCardContent} radius={24}>
             <Text style={[styles.reviewSuggestionsTitle, { color: colors.text }]}>
               Practice these letters again
             </Text>
@@ -1627,21 +1614,24 @@ export const DemoSignsScreen = () => {
 
             <View style={styles.reviewSuggestionGrid}>
               {suggestedPracticeSigns.map((sign) => (
-                <Pressable
+                <ScalePressable
                   key={sign.id}
-                  accessibilityRole="button"
                   onPress={() => {
                     const nextIndex = ALL_SIGNS.findIndex((item) => item.id === sign.id);
-
-                    if (nextIndex >= 0) {
-                      goToLesson(nextIndex);
-                    }
+                    if (nextIndex >= 0) goToLesson(nextIndex);
                     openSign(sign);
                   }}
-                  style={({ pressed }) => [
+                  pressGlowColor={sign.accent}
+                  style={{ borderRadius: 18, minWidth: "47%", flex: 1 }}
+                >
+                <View
+                  style={[
                     styles.reviewSuggestionItem,
-                    { backgroundColor: sign.background },
-                    pressed && styles.cardPressed,
+                    {
+                      backgroundColor: `${sign.accent}18`,
+                      borderColor: `${sign.accent}30`,
+                      borderWidth: 1,
+                    },
                   ]}
                 >
                   <Text style={[styles.reviewSuggestionLetter, { color: sign.accent }]}>
@@ -1659,37 +1649,28 @@ export const DemoSignsScreen = () => {
                     {mistakesById[sign.id]?.count ?? 0} saved mistake
                     {(mistakesById[sign.id]?.count ?? 0) > 1 ? "s" : ""}
                   </Text>
-                </Pressable>
+                </View>
+                </ScalePressable>
               ))}
             </View>
-          </View>
+          </GlassCard>
         ) : null}
 
-          <View
-            style={[
-              styles.studyPlanCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-          >
-          <Text style={styles.studyPlanTitle}>How to learn with this screen</Text>
+          <GlassCard contentStyle={styles.studyPlanContent} radius={24}>
+          <Text style={[styles.studyPlanTitle, { color: colors.text }]}>How to learn with this screen</Text>
           <View style={styles.studyPlanList}>
             {STUDY_STEPS.map((step, index) => (
               <View key={step} style={styles.studyPlanRow}>
-                <View style={styles.studyPlanIndex}>
-                  <Text style={styles.studyPlanIndexText}>{index + 1}</Text>
+                <View style={[styles.studyPlanIndex, { backgroundColor: "rgba(123,97,255,0.15)" }]}>
+                  <Text style={[styles.studyPlanIndexText, { color: "#7B61FF" }]}>{index + 1}</Text>
                 </View>
-                <Text style={styles.studyPlanText}>{step}</Text>
+                <Text style={[styles.studyPlanText, { color: colors.textSecondary }]}>{step}</Text>
               </View>
             ))}
           </View>
-        </View>
+        </GlassCard>
 
-        <View
-          style={[
-            styles.toolbarCard,
-            { backgroundColor: colors.surface, borderColor: colors.border },
-          ]}
-        >
+        <GlassCard contentStyle={styles.toolbarContent} radius={22}>
           <TextInput
             accessibilityLabel="Search the sign alphabet"
             onChangeText={setSearchQuery}
@@ -1732,64 +1713,64 @@ export const DemoSignsScreen = () => {
           </ScrollView>
 
           {hasActiveFilters ? (
-            <Pressable
-              accessibilityRole="button"
+            <ScalePressable
               onPress={clearFilters}
-              style={({ pressed }) => [
-                styles.resetButton,
-                pressed && styles.cardPressed,
-              ]}
+              pressGlowColor="#7B61FF"
+              style={styles.resetButton}
             >
-              <Text style={styles.resetButtonText}>Reset filters</Text>
-            </Pressable>
+              <View style={styles.resetButtonInner}>
+                <Text style={styles.resetButtonText}>Reset filters</Text>
+              </View>
+            </ScalePressable>
           ) : null}
-        </View>
+        </GlassCard>
 
-          <View
-            style={[
-              styles.summaryCard,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
-          >
+          <GlassCard contentStyle={styles.summaryCardContent} radius={22}>
           <View style={styles.summaryItem}>
-            <Text style={styles.summaryValue}>{totalVisibleSigns}</Text>
-            <Text style={styles.summaryLabel}>Visible</Text>
+            <Text style={[styles.summaryValue, { color: colors.text }]}>{totalVisibleSigns}</Text>
+            <Text style={[styles.summaryLabel, { color: colors.textSecondary }]}>Visible</Text>
           </View>
-          <View style={styles.summaryDivider} />
+          <View style={[styles.summaryDivider, { backgroundColor: "rgba(255,255,255,0.1)" }]} />
           <View style={styles.summaryItem}>
-            <Text style={styles.summaryValue}>{learnedIds.length}</Text>
-            <Text style={styles.summaryLabel}>Learned</Text>
+            <Text style={[styles.summaryValue, { color: colors.text }]}>{learnedIds.length}</Text>
+            <Text style={[styles.summaryLabel, { color: colors.textSecondary }]}>Learned</Text>
           </View>
-          <View style={styles.summaryDivider} />
+          <View style={[styles.summaryDivider, { backgroundColor: "rgba(255,255,255,0.1)" }]} />
           <View style={styles.summaryItem}>
-            <Text style={styles.summaryValue}>{favoriteIds.length}</Text>
-            <Text style={styles.summaryLabel}>Saved</Text>
+            <Text style={[styles.summaryValue, { color: colors.text }]}>{favoriteIds.length}</Text>
+            <Text style={[styles.summaryLabel, { color: colors.textSecondary }]}>Saved</Text>
           </View>
-        </View>
+        </GlassCard>
 
         {recentSigns.length > 0 ? (
           <View style={styles.highlightSection}>
             <View style={styles.highlightHeader}>
-              <Text style={styles.highlightTitle}>Recent letters</Text>
+              <Text style={[styles.highlightTitle, { color: colors.text }]}>Recent letters</Text>
               <Pressable
                 accessibilityRole="button"
                 onPress={() => setSelectedCategory("recent")}
               >
-                <Text style={styles.highlightLink}>See all</Text>
+                <Text style={[styles.highlightLink, { color: "#7B61FF" }]}>See all</Text>
               </Pressable>
             </View>
 
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.carouselRow}>
                 {recentSigns.map((sign) => (
-                  <Pressable
+                  <ScalePressable
                     key={sign.id}
-                    accessibilityRole="button"
                     onPress={() => openSign(sign)}
-                    style={({ pressed }) => [
+                    pressGlowColor={sign.accent}
+                    style={{ borderRadius: 22 }}
+                  >
+                  <View
+                    style={[
                       styles.miniCard,
-                      { backgroundColor: sign.background },
-                      pressed && styles.cardPressed,
+                      {
+                        backgroundColor: `${sign.accent}18`,
+                        borderColor: `${sign.accent}35`,
+                        borderWidth: 1,
+                      },
                     ]}
                   >
                     <Image
@@ -1797,9 +1778,10 @@ export const DemoSignsScreen = () => {
                       source={{ uri: sign.imageUrl }}
                       style={styles.miniCardImage}
                     />
-                    <Text style={styles.miniCardTitle}>{sign.letter}</Text>
-                    <Text style={styles.miniCardMeta}>{sign.title}</Text>
-                  </Pressable>
+                    <Text style={[styles.miniCardTitle, { color: colors.text }]}>{sign.letter}</Text>
+                    <Text style={[styles.miniCardMeta, { color: colors.textSecondary }]}>{sign.title}</Text>
+                  </View>
+                  </ScalePressable>
                 ))}
               </View>
             </ScrollView>
@@ -1807,29 +1789,28 @@ export const DemoSignsScreen = () => {
         ) : null}
 
         {filteredSections.length === 0 ? (
-          <View style={styles.emptyCard}>
-            <Text style={styles.emptyTitle}>No letters found</Text>
-            <Text style={styles.emptyText}>
+          <GlassCard contentStyle={styles.emptyCardContent} radius={22}>
+            <Text style={[styles.emptyTitle, { color: colors.text }]}>No letters found</Text>
+            <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
               Try another search or reset the filters to see the full alphabet.
             </Text>
-            <Pressable
-              accessibilityRole="button"
+            <ScalePressable
               onPress={clearFilters}
-              style={({ pressed }) => [
-                styles.emptyButton,
-                pressed && styles.cardPressed,
-              ]}
+              pressGlowColor="#7B61FF"
+              style={styles.emptyButton}
             >
-              <Text style={styles.emptyButtonText}>Show the full alphabet</Text>
-            </Pressable>
-          </View>
+              <PremiumButtonSurface radius={16} style={styles.emptyButton}>
+                <Text style={styles.emptyButtonText}>Show the full alphabet</Text>
+              </PremiumButtonSurface>
+            </ScalePressable>
+          </GlassCard>
         ) : null}
 
         {filteredSections.map((section) => (
           <View key={section.id} style={styles.section}>
             <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>{section.title}</Text>
-              <Text style={styles.sectionCount}>{section.letters.length}</Text>
+              <Text style={[styles.sectionTitle, { color: colors.text }]}>{section.title}</Text>
+              <Text style={[styles.sectionCount, { color: colors.textSecondary }]}>{section.letters.length}</Text>
             </View>
 
             <View style={styles.grid}>
@@ -1838,46 +1819,53 @@ export const DemoSignsScreen = () => {
                 const isLearned = learnedIds.includes(sign.id);
 
                 return (
-                  <Pressable
+                  <ScalePressable
                     key={sign.id}
-                    accessibilityRole="button"
                     onPress={() => openSign(sign)}
-                    style={({ pressed }) => [
+                    pressGlowColor={sign.accent}
+                    style={{ borderRadius: 24 }}
+                  >
+                  <View
+                    style={[
                       styles.signCard,
-                      { backgroundColor: sign.background },
-                      pressed && styles.cardPressed,
+                      {
+                        backgroundColor: `${sign.accent}18`,
+                        borderColor: `${sign.accent}35`,
+                        borderWidth: 1,
+                      },
                     ]}
                   >
                     <View style={styles.signCardTopRow}>
                       <View
                         style={[
                           styles.badge,
-                          {
-                            backgroundColor: sign.accent,
-                          },
+                          { backgroundColor: sign.accent },
                         ]}
                       >
                         <Text style={styles.badgeText}>{sign.letter}</Text>
                       </View>
 
-                      <Pressable
-                        accessibilityRole="button"
+                      <ScalePressable
                         onPress={() => toggleFavorite(sign.id)}
-                        style={({ pressed }) => [
-                          styles.favoriteButton,
-                          isFavorite && styles.favoriteButtonActive,
-                          pressed && styles.chipPressed,
-                        ]}
+                        pressGlowColor="#7B61FF"
+                        style={{ borderRadius: 999 }}
                       >
-                        <Text
+                        <View
                           style={[
-                            styles.favoriteButtonText,
-                            isFavorite && styles.favoriteButtonTextActive,
+                            styles.favoriteButton,
+                            isFavorite && styles.favoriteButtonActive,
                           ]}
                         >
-                          {isFavorite ? "Saved" : "Save"}
-                        </Text>
-                      </Pressable>
+                          <Text
+                            style={[
+                              styles.favoriteButtonText,
+                              isFavorite && styles.favoriteButtonTextActive,
+                            ]}
+                          >
+                            {isFavorite ? "Saved" : "Save"}
+                          </Text>
+                        </View>
+                      </ScalePressable>
                     </View>
 
                     <Image
@@ -1886,28 +1874,32 @@ export const DemoSignsScreen = () => {
                       style={styles.signImage}
                     />
 
-                    <Text style={styles.signTitle}>{sign.title}</Text>
-                    <Text style={styles.signSubtitle}>{sign.subtitle}</Text>
+                    <Text style={[styles.signTitle, { color: colors.text }]}>{sign.title}</Text>
+                    <Text style={[styles.signSubtitle, { color: colors.textSecondary }]}>{sign.subtitle}</Text>
 
-                    <Pressable
-                      accessibilityRole="button"
+                    <ScalePressable
                       onPress={() => toggleLearned(sign.id)}
-                      style={({ pressed }) => [
-                        styles.learnedButton,
-                        isLearned && styles.learnedButtonActive,
-                        pressed && styles.chipPressed,
-                      ]}
+                      pressGlowColor={isLearned ? "#4ADE80" : "#7B61FF"}
+                      style={{ borderRadius: 16, marginTop: 14 }}
                     >
-                      <Text
+                      <View
                         style={[
-                          styles.learnedButtonText,
-                          isLearned && styles.learnedButtonTextActive,
+                          styles.learnedButton,
+                          isLearned && styles.learnedButtonActive,
                         ]}
                       >
-                        {isLearned ? "Learned" : "Mark as learned"}
-                      </Text>
-                    </Pressable>
-                  </Pressable>
+                        <Text
+                          style={[
+                            styles.learnedButtonText,
+                            isLearned && styles.learnedButtonTextActive,
+                          ]}
+                        >
+                          {isLearned ? "Learned" : "Mark as learned"}
+                        </Text>
+                      </View>
+                    </ScalePressable>
+                  </View>
+                  </ScalePressable>
                 );
               })}
             </View>
@@ -1916,7 +1908,7 @@ export const DemoSignsScreen = () => {
       </ScrollView>
 
       <Modal
-        animationType="fade"
+        animationType="slide"
         onRequestClose={() => setSelectedSign(null)}
         transparent
         visible={selectedSign !== null}
@@ -1925,9 +1917,6 @@ export const DemoSignsScreen = () => {
           <View
             style={[
               styles.modalCard,
-              {
-                backgroundColor: selectedSign?.background ?? "#FFFFFF",
-              },
             ]}
           >
             <View style={styles.modalHeader}>
@@ -1939,26 +1928,27 @@ export const DemoSignsScreen = () => {
               </View>
 
               {selectedSign ? (
-                <Pressable
-                  accessibilityRole="button"
+                <ScalePressable
                   onPress={() => toggleFavorite(selectedSign.id)}
-                  style={({ pressed }) => [
-                    styles.modalSaveButton,
-                    favoriteIds.includes(selectedSign.id) &&
-                      styles.favoriteButtonActive,
-                    pressed && styles.chipPressed,
-                  ]}
+                  pressGlowColor="#7B61FF"
+                  style={{ borderRadius: 999 }}
                 >
-                  <Text
+                  <View
                     style={[
-                      styles.modalSaveButtonText,
-                      favoriteIds.includes(selectedSign.id) &&
-                        styles.favoriteButtonTextActive,
+                      styles.modalSaveButton,
+                      favoriteIds.includes(selectedSign.id) && styles.favoriteButtonActive,
                     ]}
                   >
-                    {favoriteIds.includes(selectedSign.id) ? "Saved" : "Save"}
-                  </Text>
-                </Pressable>
+                    <Text
+                      style={[
+                        styles.modalSaveButtonText,
+                        favoriteIds.includes(selectedSign.id) && styles.favoriteButtonTextActive,
+                      ]}
+                    >
+                      {favoriteIds.includes(selectedSign.id) ? "Saved" : "Save"}
+                    </Text>
+                  </View>
+                </ScalePressable>
               ) : null}
             </View>
 
@@ -1979,65 +1969,67 @@ export const DemoSignsScreen = () => {
             </ScrollView>
 
             {selectedSign ? (
-              <Pressable
-                accessibilityRole="button"
+              <ScalePressable
                 onPress={() => toggleLearned(selectedSign.id)}
-                style={({ pressed }) => [
-                  styles.modalLearnedButton,
-                  learnedIds.includes(selectedSign.id) &&
-                    styles.learnedButtonActive,
-                  pressed && styles.chipPressed,
-                ]}
+                pressGlowColor={learnedIds.includes(selectedSign.id) ? "#4ADE80" : "#7B61FF"}
+                style={{ borderRadius: 18, marginTop: 18 }}
               >
-                <Text
+                <View
                   style={[
-                    styles.modalLearnedButtonText,
-                    learnedIds.includes(selectedSign.id) &&
-                      styles.learnedButtonTextActive,
+                    styles.modalLearnedButton,
+                    learnedIds.includes(selectedSign.id) && styles.learnedButtonActive,
                   ]}
                 >
-                  {learnedIds.includes(selectedSign.id)
-                    ? "Already learned"
-                    : "Mark this letter as learned"}
-                </Text>
-              </Pressable>
+                  <Text
+                    style={[
+                      styles.modalLearnedButtonText,
+                      learnedIds.includes(selectedSign.id) && styles.learnedButtonTextActive,
+                    ]}
+                  >
+                    {learnedIds.includes(selectedSign.id)
+                      ? "Already learned"
+                      : "Mark this letter as learned"}
+                  </Text>
+                </View>
+              </ScalePressable>
             ) : null}
 
             <View style={styles.modalActions}>
-              <Pressable
-                accessibilityRole="button"
+              <ScalePressable
                 onPress={() =>
                   selectedSign ? void handleOpenSource(selectedSign.sourceUrl) : undefined
                 }
-                style={({ pressed }) => [
-                  styles.secondaryButton,
-                  pressed && styles.chipPressed,
-                ]}
+                pressGlowColor="#7B61FF"
+                style={{ borderRadius: 18, flex: 1 }}
               >
-                <Text style={styles.secondaryButtonText}>Open source</Text>
-              </Pressable>
+                <View style={styles.secondaryButton}>
+                  <Text style={styles.secondaryButtonText}>Open source</Text>
+                </View>
+              </ScalePressable>
 
-              <Pressable
-                accessibilityRole="button"
+              <ScalePressable
                 onPress={() => setSelectedSign(null)}
-                style={({ pressed }) => [
-                  styles.closeButton,
-                  pressed && styles.closeButtonPressed,
-                ]}
+                pressGlowColor="#7B61FF"
+                style={{ borderRadius: 18, flex: 1 }}
               >
-                <Text style={styles.closeButtonText}>Close</Text>
-              </Pressable>
+                <View style={styles.closeButton}>
+                  <Text style={styles.closeButtonText}>Close</Text>
+                </View>
+              </ScalePressable>
             </View>
           </View>
         </View>
       </Modal>
     </SafeAreaView>
+    </AppBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+  },
   safeArea: {
-    backgroundColor: "#F7F4EE",
     flex: 1,
   },
   contentContainer: {
@@ -2057,7 +2049,7 @@ const styles = StyleSheet.create({
   learningIntroTitle: {
     fontSize: 28,
     fontWeight: "800",
-    letterSpacing: -0.8,
+    letterSpacing: 0,
     lineHeight: 34,
     marginTop: 10,
     maxWidth: "94%",
@@ -2070,7 +2062,8 @@ const styles = StyleSheet.create({
   },
   trackSection: {
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  trackSectionContent: {
     padding: 18,
   },
   trackSectionHeader: {
@@ -2163,7 +2156,8 @@ const styles = StyleSheet.create({
   },
   lessonStudioCard: {
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  lessonStudioContent: {
     padding: 18,
   },
   lessonStudioHeader: {
@@ -2229,27 +2223,25 @@ const styles = StyleSheet.create({
   },
   lessonStudioPrimaryButton: {
     alignItems: "center",
-    backgroundColor: "#10233B",
-    borderRadius: 999,
+    borderRadius: 18,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   lessonStudioPrimaryButtonText: {
     color: "#FFFFFF",
     fontSize: 13,
-    fontWeight: "800",
+    fontWeight: "700",
   },
   lessonStudioSecondaryButton: {
     alignItems: "center",
-    backgroundColor: "#EEF5FF",
-    borderRadius: 999,
+    borderRadius: 18,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   lessonStudioSecondaryButtonText: {
-    color: "#1D4ED8",
+    color: "#FFFFFF",
     fontSize: 13,
-    fontWeight: "800",
+    fontWeight: "700",
   },
   practiceCheckCard: {
     borderRadius: 22,
@@ -2307,12 +2299,14 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   hero: {
-    backgroundColor: "#10233B",
+    backgroundColor: "rgba(123,97,255,0.12)",
+    borderColor: "rgba(123,97,255,0.22)",
     borderRadius: 28,
+    borderWidth: 1,
     padding: 22,
   },
   heroEyebrow: {
-    color: "#A8BED6",
+    color: "#89DDFF",
     fontSize: 13,
     fontWeight: "800",
     letterSpacing: 1.4,
@@ -2326,34 +2320,30 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   heroText: {
-    color: "#D2DCE7",
+    color: "rgba(255,255,255,0.65)",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 10,
   },
   learningPathsCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  learningPathsContent: {
     padding: 18,
   },
   learningPathsEyebrow: {
-    color: "#1D4ED8",
     fontSize: 12,
     fontWeight: "800",
     letterSpacing: 1.1,
     textTransform: "uppercase",
   },
   learningPathsTitle: {
-    color: "#10233B",
     fontSize: 22,
     fontWeight: "800",
     lineHeight: 28,
     marginTop: 8,
   },
   learningPathsText: {
-    color: "#5E6F80",
     fontSize: 14,
     lineHeight: 20,
     marginTop: 8,
@@ -2388,13 +2378,11 @@ const styles = StyleSheet.create({
     letterSpacing: 0.3,
   },
   learningPathTitle: {
-    color: "#10233B",
     fontSize: 18,
     fontWeight: "800",
     marginTop: 12,
   },
   learningPathSubtitle: {
-    color: "#5E6F80",
     fontSize: 14,
     lineHeight: 20,
     marginTop: 8,
@@ -2420,8 +2408,8 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   gamificationCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderColor: "rgba(255,255,255,0.10)",
     borderRadius: 22,
     borderWidth: 1,
     flex: 1,
@@ -2429,12 +2417,12 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   gamificationValue: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 22,
     fontWeight: "800",
   },
   gamificationLabel: {
-    color: "#6D7D8C",
+    color: "rgba(255,255,255,0.5)",
     fontSize: 12,
     fontWeight: "700",
     lineHeight: 18,
@@ -2442,19 +2430,19 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   badgeBanner: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderColor: "rgba(255,255,255,0.10)",
     borderRadius: 22,
     borderWidth: 1,
     padding: 16,
   },
   badgeBannerTitle: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "800",
   },
   badgeBannerText: {
-    color: "#627384",
+    color: "rgba(255,255,255,0.55)",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 8,
@@ -2464,8 +2452,8 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   quickPickCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderColor: "rgba(255,255,255,0.10)",
     borderRadius: 22,
     borderWidth: 1,
     flex: 1,
@@ -2473,27 +2461,26 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   quickPickValue: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 26,
     fontWeight: "800",
   },
   quickPickLabel: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "800",
     marginTop: 8,
   },
   quickPickHint: {
-    color: "#6D7D8C",
+    color: "rgba(255,255,255,0.5)",
     fontSize: 12,
     lineHeight: 18,
     marginTop: 6,
   },
   learningProgressCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  learningProgressCardContent: {
     padding: 18,
   },
   learningProgressTopRow: {
@@ -2502,39 +2489,36 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   learningProgressTitle: {
-    color: "#10233B",
     fontSize: 18,
     fontWeight: "800",
   },
   learningProgressText: {
-    color: "#627384",
     fontSize: 14,
     lineHeight: 20,
     marginTop: 6,
     maxWidth: "84%",
   },
   learningProgressValue: {
-    color: "#1D4ED8",
+    color: "#7B61FF",
     fontSize: 26,
     fontWeight: "800",
   },
   progressTrack: {
-    backgroundColor: "#E7EEF8",
+    backgroundColor: "rgba(123,97,255,0.18)",
     borderRadius: 999,
     height: 12,
     marginTop: 16,
     overflow: "hidden",
   },
   progressFill: {
-    backgroundColor: "#1D4ED8",
+    backgroundColor: "#7B61FF",
     borderRadius: 999,
     height: "100%",
   },
   lessonJourneyCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  lessonJourneyContent: {
     padding: 18,
   },
   lessonJourneyHeader: {
@@ -2543,14 +2527,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   lessonJourneyEyebrow: {
-    color: "#1D4ED8",
     fontSize: 12,
     fontWeight: "800",
     letterSpacing: 1.1,
     textTransform: "uppercase",
   },
   lessonJourneyTitle: {
-    color: "#10233B",
     fontSize: 21,
     fontWeight: "800",
     lineHeight: 28,
@@ -2558,14 +2540,13 @@ const styles = StyleSheet.create({
     maxWidth: "88%",
   },
   lessonJourneySubtitle: {
-    color: "#5E6F80",
     fontSize: 14,
     lineHeight: 20,
     marginTop: 8,
     maxWidth: "90%",
   },
   lessonJourneyProgressValue: {
-    color: "#1D4ED8",
+    color: "#7B61FF",
     fontSize: 22,
     fontWeight: "800",
   },
@@ -2586,8 +2567,10 @@ const styles = StyleSheet.create({
   },
   lessonNavButton: {
     alignItems: "center",
-    backgroundColor: "#EEF5FF",
+    backgroundColor: "rgba(123,97,255,0.15)",
+    borderColor: "rgba(123,97,255,0.28)",
     borderRadius: 999,
+    borderWidth: 1,
     flex: 1,
     paddingHorizontal: 14,
     paddingVertical: 12,
@@ -2596,22 +2579,24 @@ const styles = StyleSheet.create({
     opacity: 0.45,
   },
   lessonNavButtonText: {
-    color: "#1D4ED8",
+    color: "#7B61FF",
     fontSize: 13,
     fontWeight: "800",
   },
   lessonOpenButton: {
     alignItems: "center",
-    backgroundColor: "#10233B",
-    borderRadius: 999,
+    borderRadius: 18,
     flex: 1.3,
     paddingHorizontal: 14,
     paddingVertical: 12,
   },
+  lessonOpenButtonWrapper: {
+    flex: 1.3,
+  },
   lessonOpenButtonText: {
     color: "#FFFFFF",
     fontSize: 13,
-    fontWeight: "800",
+    fontWeight: "700",
   },
   lessonSummaryRow: {
     flexDirection: "row",
@@ -2629,12 +2614,13 @@ const styles = StyleSheet.create({
     fontWeight: "800",
   },
   nextLessonCard: {
-    backgroundColor: "#10233B",
     borderRadius: 28,
+  },
+  nextLessonContent: {
     padding: 20,
   },
   nextLessonEyebrow: {
-    color: "#8FB7FF",
+    color: "#89DDFF",
     fontSize: 12,
     fontWeight: "800",
     letterSpacing: 1.2,
@@ -2647,7 +2633,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   nextLessonText: {
-    color: "#D2DCE7",
+    color: "rgba(255,255,255,0.65)",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 10,
@@ -2660,13 +2646,13 @@ const styles = StyleSheet.create({
   },
   primaryLessonButton: {
     alignItems: "center",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#7B61FF",
     borderRadius: 999,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   primaryLessonButtonText: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 13,
     fontWeight: "800",
   },
@@ -2685,27 +2671,23 @@ const styles = StyleSheet.create({
     fontWeight: "800",
   },
   quizCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  quizCardContent: {
     padding: 18,
   },
   quizEyebrow: {
-    color: "#1D4ED8",
     fontSize: 12,
     fontWeight: "800",
     letterSpacing: 1.2,
     textTransform: "uppercase",
   },
   quizTitle: {
-    color: "#10233B",
     fontSize: 22,
     fontWeight: "800",
     marginTop: 10,
   },
   quizSubtitle: {
-    color: "#5E6F80",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 8,
@@ -2721,20 +2703,22 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   quizAnswerBox: {
-    backgroundColor: "#F7F4EE",
+    backgroundColor: "rgba(255,255,255,0.06)",
+    borderColor: "rgba(255,255,255,0.10)",
     borderRadius: 18,
+    borderWidth: 1,
     marginTop: 14,
     padding: 14,
   },
   quizAnswerLabel: {
-    color: "#6D7D8C",
+    color: "rgba(255,255,255,0.5)",
     fontSize: 12,
     fontWeight: "800",
     letterSpacing: 0.8,
     textTransform: "uppercase",
   },
   quizAnswerText: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 18,
     fontWeight: "800",
     marginTop: 8,
@@ -2755,18 +2739,20 @@ const styles = StyleSheet.create({
     marginTop: 14,
   },
   quizStatCard: {
-    backgroundColor: "#F7F4EE",
+    backgroundColor: "rgba(255,255,255,0.06)",
+    borderColor: "rgba(255,255,255,0.10)",
     borderRadius: 18,
+    borderWidth: 1,
     flex: 1,
     padding: 14,
   },
   quizStatValue: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 20,
     fontWeight: "800",
   },
   quizStatLabel: {
-    color: "#6D7D8C",
+    color: "rgba(255,255,255,0.5)",
     fontSize: 12,
     fontWeight: "800",
     marginTop: 8,
@@ -2792,54 +2778,48 @@ const styles = StyleSheet.create({
   },
   quizPrimaryButton: {
     alignItems: "center",
-    backgroundColor: "#10233B",
-    borderRadius: 999,
+    borderRadius: 18,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   quizPrimaryButtonText: {
     color: "#FFFFFF",
     fontSize: 13,
-    fontWeight: "800",
+    fontWeight: "700",
   },
   quizSecondaryButton: {
     alignItems: "center",
-    backgroundColor: "#DCFCE7",
-    borderRadius: 999,
+    borderRadius: 18,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   quizSecondaryButtonText: {
-    color: "#166534",
+    color: "#FFFFFF",
     fontSize: 13,
-    fontWeight: "800",
+    fontWeight: "700",
   },
   quizTertiaryButton: {
     alignItems: "center",
-    backgroundColor: "#EEF5FF",
-    borderRadius: 999,
+    borderRadius: 18,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   quizTertiaryButtonText: {
-    color: "#1D4ED8",
+    color: "#FFFFFF",
     fontSize: 13,
-    fontWeight: "800",
+    fontWeight: "700",
   },
   reviewSuggestionsCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  reviewCardContent: {
     padding: 18,
   },
   reviewSuggestionsTitle: {
-    color: "#10233B",
     fontSize: 18,
     fontWeight: "800",
   },
   reviewSuggestionsText: {
-    color: "#5E6F80",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 8,
@@ -2860,27 +2840,23 @@ const styles = StyleSheet.create({
     fontWeight: "800",
   },
   reviewSuggestionName: {
-    color: "#10233B",
     fontSize: 14,
     fontWeight: "700",
     marginTop: 10,
   },
   reviewSuggestionMeta: {
-    color: "#5E6F80",
     fontSize: 12,
     fontWeight: "600",
     lineHeight: 18,
     marginTop: 6,
   },
   studyPlanCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 24,
-    borderWidth: 1,
+  },
+  studyPlanContent: {
     padding: 18,
   },
   studyPlanTitle: {
-    color: "#10233B",
     fontSize: 18,
     fontWeight: "800",
   },
@@ -2894,7 +2870,6 @@ const styles = StyleSheet.create({
   },
   studyPlanIndex: {
     alignItems: "center",
-    backgroundColor: "#EEF5FF",
     borderRadius: 999,
     height: 24,
     justifyContent: "center",
@@ -2902,28 +2877,26 @@ const styles = StyleSheet.create({
     width: 24,
   },
   studyPlanIndexText: {
-    color: "#1D4ED8",
     fontSize: 12,
     fontWeight: "800",
   },
   studyPlanText: {
-    color: "#5E6F80",
     flex: 1,
     fontSize: 14,
     lineHeight: 20,
   },
   toolbarCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 22,
-    borderWidth: 1,
+  },
+  toolbarContent: {
     gap: 12,
     padding: 16,
   },
   searchInput: {
-    backgroundColor: "#F7F4EE",
+    backgroundColor: "rgba(255,255,255,0.07)",
+    borderColor: "rgba(255,255,255,0.12)",
     borderRadius: 16,
-    color: "#10233B",
+    borderWidth: 1,
     fontSize: 15,
     paddingHorizontal: 14,
     paddingVertical: 12,
@@ -2933,19 +2906,22 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   chip: {
-    backgroundColor: "#F7F4EE",
+    backgroundColor: "rgba(255,255,255,0.07)",
+    borderColor: "rgba(255,255,255,0.12)",
     borderRadius: 999,
+    borderWidth: 1,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   chipActive: {
-    backgroundColor: "#10233B",
+    backgroundColor: "rgba(123,97,255,0.25)",
+    borderColor: "rgba(123,97,255,0.45)",
   },
   chipPressed: {
     opacity: 0.86,
   },
   chipText: {
-    color: "#5B6C7D",
+    color: "rgba(255,255,255,0.6)",
     fontSize: 13,
     fontWeight: "700",
   },
@@ -2953,24 +2929,28 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   resetButton: {
+    borderRadius: 999,
+  },
+  resetButtonInner: {
     alignItems: "center",
     alignSelf: "flex-start",
-    backgroundColor: "#EDF4FF",
+    backgroundColor: "rgba(123,97,255,0.15)",
+    borderColor: "rgba(123,97,255,0.28)",
     borderRadius: 999,
+    borderWidth: 1,
     paddingHorizontal: 14,
     paddingVertical: 10,
   },
   resetButtonText: {
-    color: "#1D4ED8",
+    color: "#7B61FF",
     fontSize: 13,
     fontWeight: "800",
   },
   summaryCard: {
-    alignItems: "center",
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 22,
-    borderWidth: 1,
+  },
+  summaryCardContent: {
+    alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
     padding: 16,
@@ -2979,18 +2959,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   summaryDivider: {
-    backgroundColor: "#ECE3D6",
     height: 42,
     width: 1,
   },
   summaryValue: {
-    color: "#10233B",
     fontSize: 24,
     fontWeight: "800",
     textAlign: "center",
   },
   summaryLabel: {
-    color: "#6D7D8C",
     fontSize: 11,
     fontWeight: "800",
     marginTop: 6,
@@ -3006,12 +2983,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   highlightTitle: {
-    color: "#10233B",
     fontSize: 20,
     fontWeight: "800",
   },
   highlightLink: {
-    color: "#1D4ED8",
+    color: "#7B61FF",
     fontSize: 14,
     fontWeight: "800",
   },
@@ -3030,41 +3006,41 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   miniCardTitle: {
-    color: "#10233B",
     fontSize: 22,
     fontWeight: "800",
     marginTop: 10,
   },
   miniCardMeta: {
-    color: "#5B6C7D",
     fontSize: 12,
     fontWeight: "700",
     marginTop: 4,
   },
   emptyCard: {
-    backgroundColor: "#FFFFFF",
-    borderColor: "#E6DED1",
     borderRadius: 22,
-    borderWidth: 1,
+  },
+  emptyCardContent: {
     padding: 18,
   },
   emptyTitle: {
-    color: "#10233B",
     fontSize: 18,
     fontWeight: "800",
   },
   emptyText: {
-    color: "#6D7D8C",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 8,
   },
   emptyButton: {
-    alignItems: "center",
     alignSelf: "flex-start",
-    backgroundColor: "#10233B",
     borderRadius: 16,
     marginTop: 14,
+  },
+  emptyButtonInner: {
+    alignItems: "center",
+    backgroundColor: "rgba(123,97,255,0.2)",
+    borderColor: "rgba(123,97,255,0.4)",
+    borderRadius: 16,
+    borderWidth: 1,
     paddingHorizontal: 16,
     paddingVertical: 12,
   },
@@ -3082,12 +3058,10 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   sectionTitle: {
-    color: "#10233B",
     fontSize: 20,
     fontWeight: "800",
   },
   sectionCount: {
-    color: "#6D7D8C",
     fontSize: 13,
     fontWeight: "700",
   },
@@ -3108,16 +3082,19 @@ const styles = StyleSheet.create({
     opacity: 0.92,
   },
   favoriteButton: {
-    backgroundColor: "rgba(255,255,255,0.82)",
+    backgroundColor: "rgba(255,255,255,0.10)",
+    borderColor: "rgba(255,255,255,0.18)",
     borderRadius: 999,
+    borderWidth: 1,
     paddingHorizontal: 12,
     paddingVertical: 8,
   },
   favoriteButtonActive: {
-    backgroundColor: "#10233B",
+    backgroundColor: "rgba(123,97,255,0.30)",
+    borderColor: "rgba(123,97,255,0.55)",
   },
   favoriteButtonText: {
-    color: "#10233B",
+    color: "rgba(255,255,255,0.7)",
     fontSize: 12,
     fontWeight: "700",
   },
@@ -3141,34 +3118,34 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   signTitle: {
-    color: "#10233B",
     fontSize: 22,
     fontWeight: "800",
     marginTop: 12,
   },
   signSubtitle: {
-    color: "#47586A",
     fontSize: 14,
     lineHeight: 20,
     marginTop: 6,
   },
   learnedButton: {
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.86)",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderColor: "rgba(255,255,255,0.15)",
     borderRadius: 16,
-    marginTop: 14,
+    borderWidth: 1,
     paddingVertical: 12,
   },
   learnedButtonActive: {
-    backgroundColor: "#10233B",
+    backgroundColor: "rgba(74,222,128,0.18)",
+    borderColor: "rgba(74,222,128,0.35)",
   },
   learnedButtonText: {
-    color: "#10233B",
+    color: "rgba(255,255,255,0.7)",
     fontSize: 14,
     fontWeight: "800",
   },
   learnedButtonTextActive: {
-    color: "#FFFFFF",
+    color: "#4ADE80",
   },
   modalOverlay: {
     alignItems: "center",
@@ -3178,7 +3155,10 @@ const styles = StyleSheet.create({
     padding: 18,
   },
   modalCard: {
+    backgroundColor: "rgba(14,11,36,0.97)",
+    borderColor: "rgba(123,97,255,0.28)",
     borderRadius: 28,
+    borderWidth: 1,
     padding: 20,
     width: "100%",
   },
@@ -3192,24 +3172,26 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   modalTitle: {
-    color: "#10233B",
+    color: "#FFFFFF",
     fontSize: 26,
     fontWeight: "800",
   },
   modalSubtitle: {
-    color: "#47586A",
+    color: "rgba(255,255,255,0.55)",
     fontSize: 15,
     lineHeight: 21,
     marginTop: 8,
   },
   modalSaveButton: {
-    backgroundColor: "rgba(255,255,255,0.8)",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderColor: "rgba(255,255,255,0.15)",
     borderRadius: 999,
+    borderWidth: 1,
     paddingHorizontal: 12,
     paddingVertical: 8,
   },
   modalSaveButtonText: {
-    color: "#10233B",
+    color: "rgba(255,255,255,0.7)",
     fontSize: 12,
     fontWeight: "700",
   },
@@ -3225,13 +3207,14 @@ const styles = StyleSheet.create({
   },
   modalLearnedButton: {
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.82)",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderColor: "rgba(255,255,255,0.15)",
     borderRadius: 18,
-    marginTop: 18,
+    borderWidth: 1,
     paddingVertical: 14,
   },
   modalLearnedButtonText: {
-    color: "#10233B",
+    color: "rgba(255,255,255,0.7)",
     fontSize: 15,
     fontWeight: "800",
   },
@@ -3242,22 +3225,24 @@ const styles = StyleSheet.create({
   },
   secondaryButton: {
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.82)",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderColor: "rgba(255,255,255,0.15)",
     borderRadius: 18,
-    flex: 1,
+    borderWidth: 1,
     paddingVertical: 14,
+    width: "100%",
   },
   secondaryButtonText: {
-    color: "#10233B",
+    color: "rgba(255,255,255,0.7)",
     fontSize: 15,
     fontWeight: "700",
   },
   closeButton: {
     alignItems: "center",
-    backgroundColor: "#10233B",
+    backgroundColor: "#7B61FF",
     borderRadius: 18,
-    flex: 1,
     paddingVertical: 14,
+    width: "100%",
   },
   closeButtonPressed: {
     opacity: 0.84,

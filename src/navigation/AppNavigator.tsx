@@ -7,13 +7,19 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ONBOARDING_STORAGE_KEY } from "../constants/storage";
+import {
+  ONBOARDING_STORAGE_KEY,
+  USER_INFO_STORAGE_KEY,
+} from "../constants/storage";
 import { DemoSignsScreen } from "../screens/DemoSignsScreen";
 import { HomeScreen } from "../screens/HomeScreen";
+import { LearningScreen } from "../screens/LearningScreen";
+import { LessonDetailScreen } from "../screens/LessonDetailScreen";
 import { OnboardingScreen } from "../screens/OnboardingScreen";
 import { SettingsScreen } from "../screens/SettingsScreen";
 import { SignToSpeechScreen } from "../screens/SignToSpeechScreen";
 import { SpeechToSignScreen } from "../screens/SpeechToSignScreen";
+import { UserInfoScreen } from "../screens/UserInfoScreen";
 import { VoiceRecorderScreen } from "../screens/VoiceRecorderScreen";
 import { useAppTheme } from "../theme";
 import { RootStackParamList } from "../types";
@@ -25,28 +31,32 @@ export const AppNavigator = () => {
   const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState<
     boolean | null
   >(null);
+  const [hasUserInfo, setHasUserInfo] = useState<boolean | null>(null);
 
   useEffect(() => {
     let isMounted = true;
 
-    const loadOnboardingState = async () => {
+    const loadBootState = async () => {
       try {
-        const savedValue = await AsyncStorage.getItem(ONBOARDING_STORAGE_KEY);
+        const [onboardingValue, userInfoValue] = await Promise.all([
+          AsyncStorage.getItem(ONBOARDING_STORAGE_KEY),
+          AsyncStorage.getItem(USER_INFO_STORAGE_KEY),
+        ]);
 
-        if (!isMounted) {
-          return;
-        }
+        if (!isMounted) return;
 
-        setHasCompletedOnboarding(savedValue === "true");
+        setHasCompletedOnboarding(onboardingValue === "true");
+        setHasUserInfo(userInfoValue !== null);
       } catch (storageError) {
-        console.log("load onboarding state error", storageError);
+        console.log("load boot state error", storageError);
         if (isMounted) {
           setHasCompletedOnboarding(false);
+          setHasUserInfo(false);
         }
       }
     };
 
-    void loadOnboardingState();
+    void loadBootState();
 
     return () => {
       isMounted = false;
@@ -65,14 +75,20 @@ export const AppNavigator = () => {
     },
   };
 
-  if (hasCompletedOnboarding === null) {
+  if (hasCompletedOnboarding === null || hasUserInfo === null) {
     return null;
   }
+
+  const initialRoute = !hasUserInfo
+    ? "UserInfo"
+    : hasCompletedOnboarding
+      ? "Home"
+      : "Onboarding";
 
   return (
     <NavigationContainer theme={navigationTheme}>
       <Stack.Navigator
-        initialRouteName={hasCompletedOnboarding ? "Home" : "Onboarding"}
+        initialRouteName={initialRoute}
         screenOptions={{
           animation: "slide_from_right",
           contentStyle: {
@@ -89,6 +105,11 @@ export const AppNavigator = () => {
           },
         }}
       >
+        <Stack.Screen
+          component={UserInfoScreen}
+          name="UserInfo"
+          options={{ headerShown: false, animation: "fade" }}
+        />
         <Stack.Screen
           component={OnboardingScreen}
           name="Onboarding"
@@ -123,9 +144,22 @@ export const AppNavigator = () => {
           options={{ title: "Settings" }}
         />
         <Stack.Screen
+          component={LearningScreen}
+          name="Learning"
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          component={LessonDetailScreen}
+          name="LessonDetail"
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
           component={SignToSpeechScreen}
           name="SignToSpeech"
-          options={{ title: "Sign to Speech" }}
+          options={{
+            animation: "fade_from_bottom",
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -18,6 +18,8 @@ import {
   HeroRecorderButton,
   WaveformBackdrop,
 } from "../components/VoiceRecorderStage";
+import { PremiumButtonSurface } from "../components/PremiumButtonSurface";
+import { useAppTheme } from "../theme";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -419,11 +421,11 @@ export const RecordingScreen = ({ onDelete, onTranslate }: RecordingScreenProps)
             scaleTo={0.96}
             style={styles.translateButtonWrapper}
           >
-            <View style={styles.translateButton}>
+            <PremiumButtonSurface radius={22} style={styles.translateButton}>
               <Feather color="#FFFFFF" name="zap" size={18} />
               <Text style={styles.translateButtonText}>Translate to signs</Text>
               <Feather color="rgba(255,255,255,0.6)" name="arrow-right" size={16} />
-            </View>
+            </PremiumButtonSurface>
           </ScalePressable>
 
           <ScalePressable
@@ -458,7 +460,9 @@ const RoundControl = ({
   size = "regular",
   variant,
 }: RoundControlProps) => {
+  const { isDark } = useAppTheme();
   const isLarge = size === "large";
+  const isPrimary = variant === "primary";
 
   return (
     <ScalePressable
@@ -472,15 +476,30 @@ const RoundControl = ({
         style={[
           styles.roundButton,
           isLarge && styles.roundButtonLarge,
-          variant === "primary" ? styles.primaryButton : styles.secondaryButton,
-          variant === "secondary" && styles.buttonDepth,
+          isPrimary
+            ? styles.primaryButton
+            : [
+                styles.secondaryButton,
+                {
+                  backgroundColor: isDark
+                    ? "rgba(255,255,255,0.16)"
+                    : "rgba(255,255,255,0.9)",
+                  borderColor: isDark
+                    ? "rgba(255,255,255,0.28)"
+                    : "rgba(91,61,245,0.28)",
+                  shadowColor: isDark ? "#050510" : "#7B61FF",
+                  shadowOpacity: isDark ? 0.36 : 0.18,
+                  shadowRadius: isDark ? 14 : 12,
+                },
+              ],
+          !isPrimary && styles.buttonDepth,
           disabled && styles.disabledButton,
         ]}
       >
         <Feather
-          color={variant === "primary" ? "#FFFFFF" : "#C8D6FF"}
+          color={isPrimary ? "#FFFFFF" : isDark ? "#FFFFFF" : "#5B3DF5"}
           name={iconName}
-          size={isLarge ? 28 : 22}
+          size={isLarge ? 28 : 24}
         />
       </View>
     </ScalePressable>
@@ -508,10 +527,7 @@ const styles = StyleSheet.create({
   },
   buttonDepth: {
     elevation: 5,
-    shadowColor: "#050510",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 1,
-    shadowRadius: 18,
+    shadowOffset: { width: 0, height: 6 },
   },
   content: {
     alignItems: "center",
@@ -552,7 +568,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   primaryButton: {
-    backgroundColor: "#7C5CFC",
+    backgroundColor: "#5B3DF5",
     elevation: 0,
     shadowOpacity: 0,
     shadowRadius: 0,
@@ -570,8 +586,6 @@ const styles = StyleSheet.create({
     width: 72,
   },
   secondaryButton: {
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderColor: "rgba(255,255,255,0.14)",
     borderWidth: 1,
   },
   timer: {
@@ -607,23 +621,18 @@ const styles = StyleSheet.create({
   },
   translateButton: {
     alignItems: "center",
-    backgroundColor: "#7C5CFC",
     borderRadius: 22,
     flexDirection: "row",
     gap: 10,
     justifyContent: "center",
     paddingHorizontal: 24,
     paddingVertical: 18,
-    shadowColor: "#050510",
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.9,
-    shadowRadius: 20,
   },
   translateButtonText: {
     color: "#FFFFFF",
     flex: 1,
     fontSize: 17,
-    fontWeight: "800",
+    fontWeight: "700",
     textAlign: "center",
   },
   discardText: {

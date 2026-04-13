@@ -2,6 +2,7 @@ import { Feather } from "@expo/vector-icons";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { GlassCard } from "./LiquidGlass";
 import { ScalePressable } from "./ScalePressable";
 import { useAppTheme } from "../theme";
 
@@ -18,37 +19,27 @@ export const ResumeActivityCard = ({
   subtitle,
   title,
 }: ResumeActivityCardProps) => {
-  const { colors, isDark } = useAppTheme();
+  const { colors } = useAppTheme();
 
   return (
     <ScalePressable
       accessibilityHint="Reopens the last lesson or activity you were using"
       onPress={onPress}
+      pressGlowColor="#7B61FF"
       style={styles.wrapper}
     >
-      <View
-        style={[
-          styles.card,
-          {
-            backgroundColor: isDark ? colors.surfaceMuted : "#FFF6E8",
-            borderColor: isDark ? colors.border : "#E8D8B7",
-          },
-        ]}
-      >
+      <GlassCard contentStyle={styles.cardContent} radius={28}>
         <View
           style={[
             styles.icon,
-            {
-              backgroundColor: colors.surface,
-              borderColor: colors.border,
-            },
+            { backgroundColor: "rgba(123,97,255,0.15)" },
           ]}
         >
-          <Feather color={colors.warning} name={iconName} size={20} />
+          <Feather color="#7B61FF" name={iconName} size={20} />
         </View>
 
         <View style={styles.content}>
-          <Text style={[styles.eyebrow, { color: colors.warning }]}>
+          <Text style={[styles.eyebrow, { color: colors.kicker }]}>
             Continue where you left off
           </Text>
           <Text style={[styles.title, { color: colors.text }]}>{title}</Text>
@@ -56,21 +47,17 @@ export const ResumeActivityCard = ({
         </View>
 
         <View style={styles.action}>
-          <Feather color={colors.text} name="arrow-right" size={18} />
+          <Feather color={colors.textSecondary} name="arrow-right" size={18} />
         </View>
-      </View>
+      </GlassCard>
     </ScalePressable>
   );
 };
 
 const styles = StyleSheet.create({
-  wrapper: {
-    borderRadius: 28,
-  },
-  card: {
+  wrapper: { borderRadius: 28 },
+  cardContent: {
     alignItems: "center",
-    borderRadius: 28,
-    borderWidth: 1,
     flexDirection: "row",
     gap: 14,
     padding: 18,
@@ -78,29 +65,28 @@ const styles = StyleSheet.create({
   icon: {
     alignItems: "center",
     borderRadius: 18,
-    borderWidth: 1,
-    height: 54,
+    height: 52,
     justifyContent: "center",
-    width: 54,
+    width: 52,
   },
   content: {
     flex: 1,
   },
   eyebrow: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: "800",
     letterSpacing: 0.8,
     textTransform: "uppercase",
   },
   title: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "800",
-    marginTop: 6,
+    marginTop: 4,
   },
   subtitle: {
-    fontSize: 14,
-    lineHeight: 20,
-    marginTop: 6,
+    fontSize: 13,
+    lineHeight: 18,
+    marginTop: 4,
   },
   action: {
     alignItems: "center",

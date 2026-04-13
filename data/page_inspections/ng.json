@@ -1,0 +1,262 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/n/ng.htm",
+  "title": "ASL no good",
+  "candidates": [
+    {
+      "url": "https://www.youtube.com/embed/2oIGmdTH334?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "ASL,no good,American Sign Language,Sign Language,learn sign language,Deaf,signing,what is the sign for,how do you sign",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "ASL no good. What is the sign for \"no good\" in American Sign Language (ASL)?",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "William Vicars",
+        "name": "author"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "index,follow",
+        "name": "robots"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Global",
+        "name": "distribution"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "30 days",
+        "name": "revisit-after"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Copyright William Vicars / Lifeprint.com",
+        "name": "copyright"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Lessons",
+      "attrs": {
+        "href": "../../lessons/lessons.htm"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Library",
+      "attrs": {
+        "href": "../../pages-layout/topics.htm"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University Main ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/2oIGmdTH334?rel=0"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Training Center",
+      "attrs": {
+        "href": "http://www.asl.tc/landing/index.html"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "www.youtube.com/billvicars",
+      "attrs": {
+        "href": "https://www.youtube.com/billvicars"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://asl.ms"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "ASL no good ASL Lessons | Bookstore | Library | ASL University Main ► American Sign Language: \"no good\" The sign for \"no good\" (lexicalized): * Want to help support ASL University? It's easy : DONATE ( Thanks! ) * Another way to help is to buy something from Dr. Bill's \" Bookstore .\" * Want even more ASL resources? Visit the \" ASL Training Center ! \" (Subscription Extension of ASLU) * Also check out Dr. Bill's channel: www.youtube.com/billvicars You can learn American Sign Language (ASL) online at American Sign Language University ™ ASL resources by Lifeprint.com © Dr. William Vicars You can learn American Sign Language (ASL) online at American Sign Language University ™ ASL resources by Lifeprint.com © Dr. William Vicars"
+}

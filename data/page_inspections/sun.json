@@ -1,0 +1,627 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/s/sun.htm",
+  "title": "\"sun\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.youtube.com/embed/fnYd3XHdEPI?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/zMh7ja4xvDA?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/_zPeOLUL8GY?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/AjJTLUhIHww?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/852pcRTvXp8?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/878nLVWZmFI?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/AJQcfZZf04M?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/bS5TGnuQWpo?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/G4aFaJtzQGk?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/RUQyUdMJkws?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/z668-eh0Aks?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/dzB1IiNmlp4?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/dlXlDOD0UVo?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/sun.ht1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/sun-sunlight7.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/sun-sunlight9.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/sun1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/sun2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/sun3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/sun4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "ASL, American, Sign, Language, learn, signing, Deaf, what, how, sun, sunny, bright, moon, sunday, world, star, day, tanning, sun bathe, sunrise, sunset, sunshine, sun beatin down, sun beating down, ",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "What is the sign for \"sun\" in American Sign Language (ASL)?",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "William Vicars",
+        "name": "author"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "index,follow",
+        "name": "robots"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Global",
+        "name": "distribution"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "30 days",
+        "name": "revisit-after"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Copyright 2002-2017 Lifeprint.com",
+        "name": "copyright"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Lessons",
+      "attrs": {
+        "href": "../../lessons/lessons.htm"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Library",
+      "attrs": {
+        "href": "../../pages-layout/topics.htm"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University Main ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/sun.ht1.jpg"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/sun-sunlight7.jpg"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/sun-sunlight9.jpg"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/fnYd3XHdEPI?rel=0"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "I1",
+        "src": "https://www.youtube.com/embed/zMh7ja4xvDA?rel=0"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "GLASSES",
+      "attrs": {
+        "href": "../g/glasses.htm"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/sun1.jpg"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/sun2.jpg"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/sun3.jpg"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/sun4.jpg"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/_zPeOLUL8GY?rel=0"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/AjJTLUhIHww?rel=0"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/852pcRTvXp8?rel=0"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/878nLVWZmFI?rel=0"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/AJQcfZZf04M?rel=0"
+      }
+    },
+    {
+      "index": 29,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/bS5TGnuQWpo?rel=0"
+      }
+    },
+    {
+      "index": 30,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/G4aFaJtzQGk?rel=0"
+      }
+    },
+    {
+      "index": 31,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/RUQyUdMJkws?rel=0"
+      }
+    },
+    {
+      "index": 32,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/z668-eh0Aks?rel=0"
+      }
+    },
+    {
+      "index": 33,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/dzB1IiNmlp4?rel=0"
+      }
+    },
+    {
+      "index": 34,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/dlXlDOD0UVo?rel=0"
+      }
+    },
+    {
+      "index": 35,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "MOON",
+      "attrs": {
+        "href": "../m/moon.htm"
+      }
+    },
+    {
+      "index": 36,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "SUNDAY",
+      "attrs": {
+        "href": "sunday.htm"
+      }
+    },
+    {
+      "index": 37,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "WORLD",
+      "attrs": {
+        "href": "../w/world.htm"
+      }
+    },
+    {
+      "index": 38,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "STAR",
+      "attrs": {
+        "href": "star.htm"
+      }
+    },
+    {
+      "index": 39,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DAY",
+      "attrs": {
+        "href": "../d/day.htm"
+      }
+    },
+    {
+      "index": 40,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 41,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 42,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Training Center",
+      "attrs": {
+        "href": "http://www.asl.tc/landing/index.html"
+      }
+    },
+    {
+      "index": 43,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "www.youtube.com/billvicars",
+      "attrs": {
+        "href": "https://www.youtube.com/billvicars"
+      }
+    },
+    {
+      "index": 44,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 45,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://asl.ms"
+      }
+    },
+    {
+      "index": 46,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 47,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 48,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"sun\" American Sign Language (ASL) ASL Lessons | Bookstore | Library | ASL University Main ► SUN: The American Sign Language (ASL) sign for \"sun\" The sign for \"sun\" has several versions. Use whatever version your local teacher or Deaf friends use. Here is version of \"sun\" that is based on the sign \"sunlight\" (like a ray of sunlight coming down from the sky.) If you just do a small movement, it is interpreted as \"sun.\" If you do a larger downward movement it will be interpreted as \"sunlight.\" Circle a flattened \"O\" handshape once and then bring it downward an inch or two as you open it up. SUN: Sample sentence: \"Why do pilots wear sun glasses?\" = PLANE-PERSON USE SUN GLASSES, WHY? Note: Usually I tend to just spell S-U-N and sign glasses. As with most compound signs, the movements are conde"
+}

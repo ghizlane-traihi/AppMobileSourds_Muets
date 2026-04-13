@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import {
   AccessibilityRole,
   AccessibilityState,
+  ColorValue,
   GestureResponderEvent,
   Pressable,
   StyleProp,
@@ -26,6 +27,7 @@ type ScalePressableProps = {
   disabled?: boolean;
   enableHaptics?: boolean;
   onPress?: ((event: GestureResponderEvent) => void) | null;
+  pressGlowColor?: ColorValue;
   scaleTo?: number;
   style?: StyleProp<ViewStyle>;
 };
@@ -40,10 +42,12 @@ export const ScalePressable = ({
   disabled = false,
   enableHaptics = true,
   onPress,
+  pressGlowColor,
   scaleTo = DEFAULT_PRESS_SCALE,
   style,
 }: ScalePressableProps) => {
   const scale = useSharedValue(1);
+  const pressGlow = useSharedValue(0);
 
   const animateTo = (value: number) => {
     if (value === 1) {
@@ -51,6 +55,10 @@ export const ScalePressable = ({
         damping: 18,
         mass: 0.7,
         stiffness: 280,
+      });
+      pressGlow.value = withTiming(0, {
+        duration: 180,
+        easing: Easing.out(Easing.quad),
       });
 
       return;
@@ -60,9 +68,15 @@ export const ScalePressable = ({
       duration: 120,
       easing: Easing.out(Easing.quad),
     });
+    pressGlow.value = withTiming(1, {
+      duration: 120,
+      easing: Easing.out(Easing.quad),
+    });
   };
 
   const animatedStyle = useAnimatedStyle(() => ({
+    shadowOpacity: pressGlowColor ? 0.2 + pressGlow.value * 0.28 : 0,
+    shadowRadius: pressGlowColor ? 10 + pressGlow.value * 22 : 0,
     transform: [{ scale: scale.value }],
   }));
 
@@ -70,6 +84,13 @@ export const ScalePressable = ({
     <Animated.View
       style={[
         style,
+        pressGlowColor
+          ? {
+              elevation: 4,
+              shadowColor: pressGlowColor,
+              shadowOffset: { width: 0, height: 0 },
+            }
+          : null,
         animatedStyle,
       ]}
     >

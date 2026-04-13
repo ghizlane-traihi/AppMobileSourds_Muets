@@ -1,4 +1,5 @@
 export type RootStackParamList = {
+  UserInfo: undefined;
   Onboarding: undefined;
   Home: undefined;
   VoiceRecorder: undefined;
@@ -14,6 +15,8 @@ export type RootStackParamList = {
     | undefined;
   DemoSigns: undefined;
   Settings: undefined;
+  Learning: undefined;
+  LessonDetail: { moduleId: string; lessonTitle: string };
 };
 
 export type SignAssetType = "image" | "video";

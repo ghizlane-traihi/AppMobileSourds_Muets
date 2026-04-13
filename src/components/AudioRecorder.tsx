@@ -19,6 +19,7 @@ import Animated, {
 
 import { AnimatedProgressBar } from "./AnimatedProgressBar";
 import { LiveWaveform } from "./LiveWaveform";
+import { PremiumButtonSurface } from "./PremiumButtonSurface";
 import { useAppTheme } from "../theme";
 import { useAudioRecorder } from "../hooks/useAudioRecorder";
 import { AudioRecorderResult } from "../types";
@@ -432,25 +433,13 @@ export const AudioRecorder = ({
                 pointerEvents="none"
                 style={[
                   styles.primaryButtonPulse,
-                  { backgroundColor: colors.primary },
+                  { backgroundColor: "#5B3DF5" },
                   pulseStyle,
                 ]}
               />
             ) : null}
 
-            <View
-              accessibilityState={{ disabled: disabled || isProcessing, busy: isRecording || isProcessing }}
-              style={[
-                styles.primaryButton,
-                {
-                  backgroundColor: isProcessing
-                    ? colors.primary
-                    : isRecording
-                      ? colors.recording
-                      : colors.primary,
-                },
-              ]}
-            >
+            <PremiumButtonSurface radius={22} style={styles.primaryButton}>
               {isProcessing ? (
                 <View style={styles.processingRow}>
                   <ActivityIndicator color="#FFFFFF" size="small" />
@@ -461,7 +450,7 @@ export const AudioRecorder = ({
                   {isRecording ? "Stop recording" : "Start recording"}
                 </Text>
               )}
-            </View>
+            </PremiumButtonSurface>
           </View>
         </ScalePressable>
 
@@ -633,7 +622,7 @@ const styles = StyleSheet.create({
     color: "#0F172A",
     fontSize: 46,
     fontWeight: "800",
-    letterSpacing: -1.2,
+    letterSpacing: 0,
   },
   timerFraction: {
     fontSize: 22,
@@ -720,10 +709,10 @@ const styles = StyleSheet.create({
     opacity: 0.82,
   },
   startButton: {
-    backgroundColor: "#1D4ED8",
+    backgroundColor: "#5B3DF5",
   },
   stopButton: {
-    backgroundColor: "#DC2626",
+    backgroundColor: "#5B3DF5",
   },
   primaryButtonText: {
     color: "#FFFFFF",

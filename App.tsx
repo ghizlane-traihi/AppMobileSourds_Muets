@@ -5,9 +5,9 @@ import { StatusBar } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { AppNavigator } from "./src/navigation/AppNavigator";
-import { useAppTheme } from "./src/theme";
+import { ThemeProvider, useAppTheme } from "./src/theme";
 
-export default function App() {
+const AppShell = () => {
   const { colors, isDark } = useAppTheme();
 
   return (
@@ -18,5 +18,13 @@ export default function App() {
       />
       <AppNavigator />
     </GestureHandlerRootView>
+  );
+};
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <AppShell />
+    </ThemeProvider>
   );
 }

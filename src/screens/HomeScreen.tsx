@@ -10,6 +10,9 @@ import Animated, {
   useSharedValue,
 } from "react-native-reanimated";
 
+import { AppBackground } from "../components/AppBackground";
+import { GlassButton, GlassCard } from "../components/LiquidGlass";
+import { PremiumButtonSurface } from "../components/PremiumButtonSurface";
 import { ScalePressable } from "../components/ScalePressable";
 import { ScrollRevealView } from "../components/ScrollRevealView";
 import {
@@ -19,6 +22,7 @@ import {
   SIGN_TRANSLATION_HISTORY_STORAGE_KEY,
   SPEECH_TRANSLATION_HISTORY_STORAGE_KEY,
 } from "../constants/storage";
+import { useAppTheme } from "../theme";
 import { RootStackParamList } from "../types";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Home">;
@@ -37,10 +41,7 @@ type MistakeSnapshot = Record<
 type PendingAction = "speech" | "camera" | "learning" | null;
 
 type PrimaryActionCardProps = {
-  accentColor: string;
-  borderColor: string;
   ctaLabel: string;
-  iconBackgroundColor: string;
   iconColor: string;
   iconName: React.ComponentProps<typeof Feather>["name"];
   isLoading: boolean;
@@ -63,65 +64,67 @@ const toStoredCount = (rawValue: string | null) => {
 };
 
 const PrimaryActionCard = ({
-  accentColor,
-  borderColor,
   ctaLabel,
-  iconBackgroundColor,
   iconColor,
   iconName,
   isLoading,
   onPress,
   title,
 }: PrimaryActionCardProps) => {
+  const { colors, isDark } = useAppTheme();
+
   return (
-    <ScalePressable onPress={onPress} scaleTo={0.97} style={styles.primaryCardWrapper}>
-      <View
-        style={[
-          styles.primaryCard,
-          {
-            borderColor,
-          },
-        ]}
-      >
-        <View
+    <ScalePressable
+      onPress={onPress}
+      pressGlowColor="#5B3DF5"
+      scaleTo={0.97}
+      style={styles.primaryCardWrapper}
+    >
+      <GlassCard contentStyle={styles.primaryCard} featured radius={28}>
+        <LinearGradient
+          colors={
+            isDark
+              ? (["rgba(137,221,255,0.16)", "rgba(123,97,255,0.14)"] as const)
+              : (["rgba(255,255,255,0.9)", "rgba(237,232,255,0.9)"] as const)
+          }
+          end={{ x: 1, y: 1 }}
+          start={{ x: 0, y: 0 }}
           style={[
             styles.primaryIcon,
             {
-              backgroundColor: iconBackgroundColor,
+              borderColor: isDark
+                ? "rgba(137,221,255,0.2)"
+                : "rgba(123,97,255,0.2)",
             },
           ]}
         >
           <Feather color={iconColor} name={iconName} size={24} />
-        </View>
+        </LinearGradient>
 
-        <Text style={styles.primaryTitle}>{title}</Text>
+        <Text style={[styles.primaryTitle, { color: colors.text }]}>{title}</Text>
 
-        <View
-          style={[
-            styles.primaryButton,
-            {
-              backgroundColor: accentColor,
-            },
-          ]}
-        >
-          {isLoading ? (
-            <>
-              <ActivityIndicator color="#FFFFFF" size="small" />
-              <Text style={styles.primaryButtonText}>Opening...</Text>
-            </>
-          ) : (
-            <>
-              <Text style={styles.primaryButtonText}>{ctaLabel}</Text>
-              <Feather color="#FFFFFF" name="arrow-right" size={16} />
-            </>
-          )}
+        <View style={styles.primaryButtonShell}>
+          <PremiumButtonSurface radius={24} style={styles.primaryButton}>
+            {isLoading ? (
+              <>
+                <ActivityIndicator color="#FFFFFF" size="small" />
+                <Text style={styles.primaryButtonText}>Opening...</Text>
+              </>
+            ) : (
+              <>
+                <Text style={styles.primaryButtonText}>{ctaLabel}</Text>
+                <Feather color="#FFFFFF" name="arrow-right" size={16} />
+              </>
+            )}
+          </PremiumButtonSurface>
         </View>
-      </View>
+      </GlassCard>
     </ScalePressable>
   );
 };
 
 export const HomeScreen = ({ navigation }: Props) => {
+  const { colors, isDark, setThemeMode } = useAppTheme();
   const [learnedCount, setLearnedCount] = useState(0);
   const [lessonCompletedCount, setLessonCompletedCount] = useState(0);
   const [needsReviewCount, setNeedsReviewCount] = useState(0);
@@ -212,6 +215,10 @@ export const HomeScreen = ({ navigation }: Props) => {
     }, 160);
   };
 
+  const toggleThemeMode = () => {
+    setThemeMode(isDark ? "light" : "dark");
+  };
+
   const learningButtonLabel =
     learnedCount > 0 || lessonCompletedCount > 0 ? "Continue learning" : "Start learning";
   const learningTitle =
@@ -226,13 +233,7 @@ export const HomeScreen = ({ navigation }: Props) => {
         : "Alphabet lessons";
 
   return (
-    <View style={styles.root}>
-      <LinearGradient
-        colors={["#07071F", "#0A0A2E", "#111044"]}
-        locations={[0, 0.56, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-
+    <AppBackground style={styles.root}>
       <SafeAreaView style={styles.safeArea}>
         <Animated.ScrollView
           contentContainerStyle={styles.container}
@@ -242,36 +243,74 @@ export const HomeScreen = ({ navigation }: Props) => {
         >
           <ScrollRevealView scrollY={scrollY}>
             <View style={styles.headerRow}>
-              <View>
-                <Text style={styles.eyebrow}>SignLink</Text>
-                <Text style={styles.title}>
+              <View style={styles.headerCopy}>
+                <Text style={[styles.eyebrow, { color: colors.kicker }]}>SignLink</Text>
+                <Text style={[styles.title, { color: colors.text }]}>
                   Translate faster. Learn smarter.
                 </Text>
-                <Text style={styles.subtitle}>
+                <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
                   Choose speech or camera.
                 </Text>
               </View>
 
-              <ScalePressable
-                accessibilityHint="Opens application settings"
-                onPress={() => navigation.navigate("Settings")}
-                style={styles.settingsWrapper}
-              >
-                <View style={styles.settingsButton}>
-                  <Feather color="#C8D6FF" name="settings" size={16} />
-                </View>
-              </ScalePressable>
+              <View style={styles.headerActions}>
+                <ScalePressable
+                  accessibilityHint="Switches between light and dark mode"
+                  accessibilityLabel={isDark ? "Switch to light mode" : "Switch to dark mode"}
+                  onPress={toggleThemeMode}
+                  style={styles.headerActionWrapper}
+                >
+                  <View
+                    style={[
+                      styles.headerActionButton,
+                      {
+                        backgroundColor: isDark
+                          ? "rgba(255,255,255,0.08)"
+                          : "rgba(255,255,255,0.72)",
+                        borderColor: isDark
+                          ? "rgba(255,255,255,0.14)"
+                          : "rgba(123,97,255,0.18)",
+                      },
+                    ]}
+                  >
+                    <Feather
+                      color={colors.textSecondary}
+                      name={isDark ? "sun" : "moon"}
+                      size={16}
+                    />
+                  </View>
+                </ScalePressable>
+
+                <ScalePressable
+                  accessibilityHint="Opens application settings"
+                  onPress={() => navigation.navigate("Settings")}
+                  style={styles.headerActionWrapper}
+                >
+                  <View
+                    style={[
+                      styles.headerActionButton,
+                      {
+                        backgroundColor: isDark
+                          ? "rgba(255,255,255,0.08)"
+                          : "rgba(255,255,255,0.72)",
+                        borderColor: isDark
+                          ? "rgba(255,255,255,0.14)"
+                          : "rgba(123,97,255,0.18)",
+                      },
+                    ]}
+                  >
+                    <Feather color={colors.textSecondary} name="settings" size={16} />
+                  </View>
+                </ScalePressable>
+              </View>
             </View>
           </ScrollRevealView>
 
           <ScrollRevealView scrollY={scrollY}>
             <View style={styles.primaryActionsStack}>
               <PrimaryActionCard
-                accentColor="#7C5CFC"
-                borderColor="rgba(124,92,252,0.3)"
                 ctaLabel="Start speaking"
-                iconBackgroundColor="rgba(137,221,255,0.1)"
-                iconColor="#89DDFF"
+                iconColor={isDark ? "#89DDFF" : "#5B3DF5"}
                 iconName="mic"
                 isLoading={pendingAction === "speech"}
                 onPress={() =>
@@ -283,11 +322,8 @@ export const HomeScreen = ({ navigation }: Props) => {
               />
 
               <PrimaryActionCard
-                accentColor="#7C5CFC"
-                borderColor="rgba(255,255,255,0.1)"
                 ctaLabel="Start camera"
-                iconBackgroundColor="rgba(124,92,252,0.15)"
-                iconColor="#B39DFC"
+                iconColor={isDark ? "#B39DFC" : "#3F2BBF"}
                 iconName="camera"
                 isLoading={pendingAction === "camera"}
                 onPress={() =>
@@ -302,45 +338,62 @@ export const HomeScreen = ({ navigation }: Props) => {
 
           <ScrollRevealView scrollY={scrollY}>
             <ScalePressable
-              onPress={() => queueNavigation("learning", () => navigation.navigate("DemoSigns"))}
+              onPress={() => queueNavigation("learning", () => navigation.navigate("Learning"))}
               style={styles.learningCardWrapper}
             >
-              <View style={styles.learningCard}>
-                <View style={styles.learningIcon}>
-                  <Feather color="#FBBF24" name="book-open" size={18} />
-                </View>
+              <GlassCard contentStyle={styles.learningCard} radius={24}>
+                <LinearGradient
+                  colors={
+                    isDark
+                      ? (["rgba(137,221,255,0.13)", "rgba(123,97,255,0.14)"] as const)
+                      : (["rgba(255,255,255,0.9)", "rgba(237,232,255,0.9)"] as const)
+                  }
+                  end={{ x: 1, y: 1 }}
+                  start={{ x: 0, y: 0 }}
+                  style={[
+                    styles.learningIcon,
+                    {
+                      borderColor: isDark
+                        ? "rgba(137,221,255,0.18)"
+                        : "rgba(123,97,255,0.2)",
+                    },
+                  ]}
+                >
+                  <Feather color={isDark ? "#FBBF24" : "#5B3DF5"} name="book-open" size={18} />
+                </LinearGradient>
 
                 <View style={styles.learningContent}>
-                  <Text style={styles.learningTitle}>{learningTitle}</Text>
-                  <Text style={styles.learningMeta}>
+                  <Text style={[styles.learningTitle, { color: colors.text }]}>{learningTitle}</Text>
+                  <Text style={[styles.learningMeta, { color: colors.textSecondary }]}>
                     {learningMeta}
                   </Text>
                 </View>
 
-                <View style={styles.learningButton}>
-                  {pendingAction === "learning" ? (
-                    <ActivityIndicator color="#C8D6FF" size="small" />
-                  ) : (
-                    <>
-                      <Text style={styles.learningButtonText}>
-                        {learningButtonLabel}
-                      </Text>
-                      <Feather color="#C8D6FF" name="arrow-right" size={15} />
-                    </>
-                  )}
+                <View style={styles.learningButtonShell}>
+                  <PremiumButtonSurface radius={20} style={styles.learningButton}>
+                    {pendingAction === "learning" ? (
+                      <ActivityIndicator color="#FFFFFF" size="small" />
+                    ) : (
+                      <>
+                        <Text style={styles.learningButtonText}>
+                          {learningButtonLabel}
+                        </Text>
+                        <Feather color="#FFFFFF" name="arrow-right" size={15} />
+                      </>
+                    )}
+                  </PremiumButtonSurface>
                 </View>
-              </View>
+              </GlassCard>
             </ScalePressable>
           </ScrollRevealView>
         </Animated.ScrollView>
       </SafeAreaView>
-    </View>
+    </AppBackground>
   );
 };
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: "#07071F",
     flex: 1,
   },
   safeArea: {
@@ -354,7 +407,11 @@ const styles = StyleSheet.create({
   headerRow: {
     alignItems: "flex-start",
     flexDirection: "row",
+    gap: 12,
     justifyContent: "space-between",
+  },
+  headerCopy: {
+    flex: 1,
   },
   eyebrow: {
     color: "rgba(137,221,255,0.78)",
@@ -364,39 +421,39 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   title: {
-    color: "#FFFFFF",
     fontSize: 30,
     fontWeight: "800",
-    letterSpacing: -0.8,
     lineHeight: 36,
     marginTop: 12,
     maxWidth: "90%",
   },
   subtitle: {
-    color: "rgba(226,232,255,0.62)",
     fontSize: 15,
     fontWeight: "600",
     lineHeight: 21,
     marginTop: 8,
   },
-  settingsWrapper: {
-    borderRadius: 999,
-    marginLeft: 12,
+  headerActions: {
+    flexDirection: "row",
+    gap: 8,
     marginTop: 2,
   },
-  settingsButton: {
+  headerActionWrapper: {
+    borderRadius: 999,
+  },
+  headerActionButton: {
     alignItems: "center",
     backgroundColor: "rgba(255,255,255,0.08)",
     borderColor: "rgba(255,255,255,0.14)",
     borderRadius: 999,
     borderWidth: 1,
-    height: 44,
+    height: 42,
     justifyContent: "center",
     shadowColor: "#050510",
     shadowOffset: { width: 0, height: 8 },
     shadowOpacity: 0.6,
     shadowRadius: 14,
-    width: 44,
+    width: 42,
   },
   primaryActionsStack: {
     gap: 12,
@@ -405,37 +462,40 @@ const styles = StyleSheet.create({
     borderRadius: 26,
   },
   primaryCard: {
-    backgroundColor: "rgba(255,255,255,0.06)",
-    borderRadius: 26,
-    borderWidth: 1,
     minHeight: 152,
     padding: 18,
   },
   primaryIcon: {
     alignItems: "center",
+    borderWidth: 1,
     borderRadius: 18,
     height: 52,
     justifyContent: "center",
     width: 52,
   },
   primaryTitle: {
-    color: "#FFFFFF",
     fontSize: 24,
     fontWeight: "800",
-    letterSpacing: -0.5,
     lineHeight: 30,
     marginTop: 18,
     maxWidth: "92%",
   },
+  primaryButtonShell: {
+    alignSelf: "flex-start",
+    backgroundColor: "rgba(91,61,245,0.12)",
+    borderRadius: 24,
+    marginTop: 18,
+    shadowColor: "#5B3DF5",
+    shadowOffset: { width: 0, height: 7 },
+    shadowOpacity: 0.28,
+    shadowRadius: 16,
+  },
   primaryButton: {
     alignItems: "center",
-    alignSelf: "flex-start",
-    borderRadius: 999,
     flexDirection: "row",
     gap: 8,
-    marginTop: 18,
     minHeight: 48,
-    paddingHorizontal: 16,
+    paddingHorizontal: 18,
     paddingVertical: 12,
   },
   primaryButtonText: {
@@ -444,58 +504,58 @@ const styles = StyleSheet.create({
     fontWeight: "800",
   },
   learningCardWrapper: {
-    borderRadius: 22,
+    borderRadius: 24,
   },
   learningCard: {
-    alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.06)",
-    borderColor: "rgba(255,255,255,0.1)",
-    borderRadius: 22,
-    borderWidth: 1,
-    flexDirection: "row",
-    gap: 12,
-    padding: 14,
+    alignItems: "flex-start",
+    gap: 14,
+    minHeight: 172,
+    padding: 18,
   },
   learningIcon: {
     alignItems: "center",
-    backgroundColor: "rgba(251,191,36,0.12)",
-    borderColor: "rgba(251,191,36,0.25)",
-    borderRadius: 16,
+    borderRadius: 18,
     borderWidth: 1,
-    height: 46,
+    height: 58,
     justifyContent: "center",
-    width: 46,
+    width: 58,
   },
   learningContent: {
-    flex: 1,
+    width: "100%",
   },
   learningTitle: {
-    color: "#FFFFFF",
-    fontSize: 16,
+    fontSize: 22,
     fontWeight: "800",
-    lineHeight: 22,
+    lineHeight: 28,
+    maxWidth: "92%",
   },
   learningMeta: {
-    color: "rgba(226,232,255,0.55)",
-    fontSize: 13,
-    lineHeight: 18,
-    marginTop: 4,
+    fontSize: 14,
+    fontWeight: "600",
+    lineHeight: 20,
+    marginTop: 6,
   },
   learningButton: {
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderColor: "rgba(255,255,255,0.14)",
-    borderRadius: 999,
-    borderWidth: 1,
     flexDirection: "row",
-    gap: 6,
-    minHeight: 40,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    gap: 8,
+    minHeight: 48,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+  },
+  learningButtonShell: {
+    alignSelf: "flex-start",
+    backgroundColor: "rgba(91,61,245,0.12)",
+    borderRadius: 20,
+    marginTop: 2,
+    shadowColor: "#5B3DF5",
+    shadowOffset: { width: 0, height: 7 },
+    shadowOpacity: 0.24,
+    shadowRadius: 14,
   },
   learningButtonText: {
-    color: "#C8D6FF",
-    fontSize: 12,
+    color: "#FFFFFF",
+    fontSize: 13,
     fontWeight: "800",
   },
 });

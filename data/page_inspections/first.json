@@ -1,0 +1,941 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/f/first.htm",
+  "title": "\"first\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://lifeprint.com/asl101/gifs/f/first.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://lifeprint.com/asl101/gifs/f/first-version.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://lifeprint.com/asl101/gifs/f/first-ordinal.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://lifeprint.com/asl101/gifs/f/first-place.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.youtube.com/embed/tZ04_s30aXY?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/p5hoRJW1nRg?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/IxHcuZfsiwE?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.youtube.com/embed/x9xgoFqsBkE?rel=0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "about:blank",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.google.com/recaptcha/api2/aframe",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-c2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-e1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-e2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-e3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-c1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-5.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-6.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-b1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-b2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-place1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/f/first-place2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/second-place1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/s/second-place2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/t/third-place1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/t/third-place2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "ASL, American, Sign, Language, learn, signing, Deaf, what, how, first, primary, first of all, original, prototype, first place, ",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "What is the sign for \"first\" in American Sign Language (ASL)?",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "William Vicars",
+        "name": "author"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "index,follow",
+        "name": "robots"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Global",
+        "name": "distribution"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "30 days",
+        "name": "revisit-after"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Copyright 2002-2017 Lifeprint.com",
+        "name": "copyright"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="
+      }
+    },
+    {
+      "index": 11,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="
+      }
+    },
+    {
+      "index": 12,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "iframe",
+      "id": "aswift_0",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_0",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&h=280&slotname=7543121294&adk=1014335003&adf=683863926&pi=t.ma~as.7543121294&w=960&fwrn=4&fwrnh=100&lmt=1772746098&rafmt=1&format=960x280&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Ff%2Ffirst.htm&fwr=0&fwrattr=true&rpe=1&resp_fmts=3&aiof=9&asro=0&aiapmd=0.0001&aiapmid=0.0001&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775928172906&bpp=1&bdt=8&idt=4&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775928159%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775928159%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775928159%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&correlator=4299803647605&frm=20&pv=2&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=160&ady=12&biw=1280&bih=720&scr_x=0&scr_y=0&eid=31097633%2C95385799%2C95386950%2C95387625%2C95386955%2C95386193&oid=2&pvsid=8505208429568402&tmod=57119849&uas=0&nvt=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7CeoE%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=9",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Lessons",
+      "attrs": {
+        "href": "../../lessons/lessons.htm"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Library",
+      "attrs": {
+        "href": "../../pages-layout/topics.htm"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University Main ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first1.jpg"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-c2.jpg"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://lifeprint.com/asl101/gifs/f/first.gif"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "YouTube video player",
+      "attrs": {
+        "name": "I1",
+        "src": "https://www.youtube.com/embed/tZ04_s30aXY?rel=0",
+        "title": "YouTube video player"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first1.jpg"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first2.jpg"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first3.jpg"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-e1.jpg"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-e2.jpg"
+      }
+    },
+    {
+      "index": 29,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-e3.jpg"
+      }
+    },
+    {
+      "index": 30,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-c1.jpg"
+      }
+    },
+    {
+      "index": 31,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-c2.jpg"
+      }
+    },
+    {
+      "index": 32,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-1.jpg"
+      }
+    },
+    {
+      "index": 33,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-2.jpg"
+      }
+    },
+    {
+      "index": 34,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-3.jpg"
+      }
+    },
+    {
+      "index": 35,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-4.jpg"
+      }
+    },
+    {
+      "index": 36,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-5.jpg"
+      }
+    },
+    {
+      "index": 37,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-6.jpg"
+      }
+    },
+    {
+      "index": 38,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://lifeprint.com/asl101/gifs/f/first-version.gif"
+      }
+    },
+    {
+      "index": 39,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "YouTube video player",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/p5hoRJW1nRg?rel=0",
+        "title": "YouTube video player"
+      }
+    },
+    {
+      "index": 40,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-b1.jpg"
+      }
+    },
+    {
+      "index": 41,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-b2.jpg"
+      }
+    },
+    {
+      "index": 42,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://lifeprint.com/asl101/gifs/f/first-ordinal.gif"
+      }
+    },
+    {
+      "index": 43,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "YouTube video player",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/IxHcuZfsiwE?rel=0",
+        "title": "YouTube video player"
+      }
+    },
+    {
+      "index": 44,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-place1.jpg"
+      }
+    },
+    {
+      "index": 45,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/f/first-place2.jpg"
+      }
+    },
+    {
+      "index": 46,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://lifeprint.com/asl101/gifs/f/first-place.gif"
+      }
+    },
+    {
+      "index": 47,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "YouTube video player",
+      "attrs": {
+        "src": "https://www.youtube.com/embed/x9xgoFqsBkE?rel=0",
+        "title": "YouTube video player"
+      }
+    },
+    {
+      "index": 48,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/second-place1.jpg"
+      }
+    },
+    {
+      "index": 49,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/s/second-place2.jpg"
+      }
+    },
+    {
+      "index": 50,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/t/third-place1.jpg"
+      }
+    },
+    {
+      "index": 51,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/t/third-place2.jpg"
+      }
+    },
+    {
+      "index": 52,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "TOURNAMENT",
+      "attrs": {
+        "href": "../t/tournament.htm"
+      }
+    },
+    {
+      "index": 53,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "EARLY",
+      "attrs": {
+        "href": "../e/early.htm"
+      }
+    },
+    {
+      "index": 54,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "BEGINNING",
+      "attrs": {
+        "href": "../b/beginning.htm"
+      }
+    },
+    {
+      "index": 55,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "LAST",
+      "attrs": {
+        "href": "../l/last.htm"
+      }
+    },
+    {
+      "index": 56,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 57,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 58,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Training Center",
+      "attrs": {
+        "href": "http://www.asl.tc/landing/index.html"
+      }
+    },
+    {
+      "index": 59,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "www.youtube.com/billvicars",
+      "attrs": {
+        "href": "https://www.youtube.com/billvicars"
+      }
+    },
+    {
+      "index": 60,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 61,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://asl.ms"
+      }
+    },
+    {
+      "index": 62,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 63,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 64,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../images-layout/back.gif"
+      }
+    },
+    {
+      "index": 65,
+      "tag": "iframe",
+      "id": "aswift_3",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_3",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&adk=1812271804&adf=3025194257&lmt=1772746098&plaf=2%3A2%2C7%3A2&plat=3%3A128%2C4%3A128%2C8%3A128%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Ff%2Ffirst.htm&pra=7&aiof=9&asro=0&aiapmd=0.0001&aiapmid=0.0001&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775928172908&bpp=1&bdt=9&idt=11&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775928159%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775928159%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775928159%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&prev_fmts=960x280&nras=1&correlator=4299803647605&frm=20&pv=1&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=31097633%2C95385799%2C95386950%2C95387625%2C95386955%2C95386193&oid=2&pvsid=8505208429568402&tmod=57119849&uas=0&nvt=1&fsapi=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=4&uci=a!4&fsb=1&dtd=13",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 66,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "googlefcPresent"
+      }
+    },
+    {
+      "index": 67,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "__tcfapiLocator",
+        "src": "about:blank"
+      }
+    },
+    {
+      "index": 68,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "googlefcInactive",
+        "src": "about:blank"
+      }
+    },
+    {
+      "index": 69,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "googlefcLoaded",
+        "src": "about:blank"
+      }
+    },
+    {
+      "index": 70,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.google.com/recaptcha/api2/aframe"
+      }
+    },
+    {
+      "index": 71,
+      "tag": "iframe",
+      "id": "google_esf",
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "google_esf",
+        "src": "https://googleads.g.doubleclick.net/pagead/html/r20260408/r20190131/zrt_lookup.html"
+      }
+    }
+  ],
+  "text_preview": "\"first\" American Sign Language (ASL) ASL Lessons | Bookstore | Library | ASL University Main ► FIRST : The American Sign Language (ASL) sign for \"first\" Note: There are many \"right\" versions of this sign. General sign for first (the most flexible). Meanings: \"First of all\" \"Original\" \"Prototype\" This is a variation of the same sign. Notice how the index finger moves past the thumb instead of stopping at the thumb like in the other variation. Both ways are okay. I suggest you do the first variation, but that doesn't make this version wrong. See below for even more ways to sign \"first.\" This version brings the index finger to the thumb where it makes contact but doesn't go past. Another version of \"first\" And yet another version of \"first\" First as in \"the first one in a series.\" First place"
+}

@@ -1,0 +1,544 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/r/run.htm",
+  "title": "\"run\" American Sign Language (ASL)",
+  "candidates": [
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs-animated/run.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/gifs-animated/run2.gif",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 65
+    },
+    {
+      "url": "https://www.youtube.com/embed/JC6APFamWj0",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht34.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht35.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht36.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht37.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht38.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht39.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht40.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/r/run.ht41.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "run, ran, running, ASL, American, Sign, Language, learn, signing, Deaf, what, how, ",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "What is the sign for \"run\" in American Sign Language (ASL)?",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "en-us"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "William Vicars",
+        "name": "author"
+      }
+    },
+    {
+      "index": 6,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "index,follow",
+        "name": "robots"
+      }
+    },
+    {
+      "index": 7,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Global",
+        "name": "distribution"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "30 days",
+        "name": "revisit-after"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Copyright 2002-2017 Lifeprint.com",
+        "name": "copyright"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Lessons",
+      "attrs": {
+        "href": "../../lessons/lessons.htm"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Library",
+      "attrs": {
+        "href": "../../pages-layout/topics.htm"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University Main ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht34.jpg"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht35.jpg"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht36.jpg"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht37.jpg"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs-animated/run.gif"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht38.jpg"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht39.jpg"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht40.jpg"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/r/run.ht41.jpg"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../gifs-animated/run2.gif"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/jPGs28X_O54",
+      "attrs": {
+        "href": "https://youtu.be/jPGs28X_O54"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/0msTKdOaGG0",
+      "attrs": {
+        "href": "https://youtu.be/0msTKdOaGG0"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/543xGhWIcE0",
+      "attrs": {
+        "href": "https://youtu.be/543xGhWIcE0"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/Ps-rJ8KyKwE",
+      "attrs": {
+        "href": "https://youtu.be/Ps-rJ8KyKwE"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/1lgIo5kdzKU",
+      "attrs": {
+        "href": "https://youtu.be/1lgIo5kdzKU"
+      }
+    },
+    {
+      "index": 29,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/jxWEfoH288I",
+      "attrs": {
+        "href": "https://youtu.be/jxWEfoH288I"
+      }
+    },
+    {
+      "index": 30,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/b8nlVMjXyx4",
+      "attrs": {
+        "href": "https://youtu.be/b8nlVMjXyx4"
+      }
+    },
+    {
+      "index": 31,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/cef5ubfO9bk",
+      "attrs": {
+        "href": "https://youtu.be/cef5ubfO9bk"
+      }
+    },
+    {
+      "index": 32,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/KlbuyMb3Vkw",
+      "attrs": {
+        "href": "https://youtu.be/KlbuyMb3Vkw"
+      }
+    },
+    {
+      "index": 33,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/GYbHeF7kTac",
+      "attrs": {
+        "href": "https://youtu.be/GYbHeF7kTac"
+      }
+    },
+    {
+      "index": 34,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/oMaXlxmkLqs",
+      "attrs": {
+        "href": "https://youtu.be/oMaXlxmkLqs"
+      }
+    },
+    {
+      "index": 35,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "https://youtu.be/BVnja7mW_-Y",
+      "attrs": {
+        "href": "https://youtu.be/BVnja7mW_-Y"
+      }
+    },
+    {
+      "index": 36,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "YouTube video player",
+      "attrs": {
+        "name": "I1",
+        "src": "https://www.youtube.com/embed/JC6APFamWj0",
+        "title": "YouTube video player"
+      }
+    },
+    {
+      "index": 37,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "DONATE",
+      "attrs": {
+        "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XHRNABERKJT4N"
+      }
+    },
+    {
+      "index": 38,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Bookstore",
+      "attrs": {
+        "href": "../../../bookstore/bookstore.htm"
+      }
+    },
+    {
+      "index": 39,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL Training Center",
+      "attrs": {
+        "href": "http://www.asl.tc/landing/index.html"
+      }
+    },
+    {
+      "index": 40,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "www.youtube.com/billvicars",
+      "attrs": {
+        "href": "https://www.youtube.com/billvicars"
+      }
+    },
+    {
+      "index": 41,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 42,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://asl.ms"
+      }
+    },
+    {
+      "index": 43,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 44,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 45,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../images-layout/back.gif"
+      }
+    }
+  ],
+  "text_preview": "\"run\" American Sign Language (ASL) ASL Lessons | Bookstore | Library | ASL University Main ► run: The American Sign Language (ASL) sign for \"run\" WARNING: There are many different meanings of the English word \"run.\" The right ASL sign for \"run\" depends on your meaning. RUN: Version 1 This version is a general sign for run that means to \"move swiftly on foot so that both feet leave the ground during each stride\" (dictionary.com). Both hands use \"L\" handshapes. The right index finger is laying up against the left thumb. Both hands move forward as the index finger flex twice. As the index fingers flex, the right index finger wraps around the left thumb. If the thumbs bend a bit that is okay and simply a byproduct of flexing the index fingers. Animation: \"RUN\" This next version also means \"run"
+}

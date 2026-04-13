@@ -1,5 +1,6 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import { PremiumButtonSurface } from "./PremiumButtonSurface";
 import { useAppTheme } from "../theme";
 
 interface ErrorMessageProps {
@@ -37,12 +38,12 @@ export const ErrorMessage = ({
             accessibilityRole="button"
             onPress={onRetry}
             style={({ pressed }) => [
-              styles.retryButton,
-              { backgroundColor: colors.danger },
               pressed && styles.retryButtonPressed,
             ]}
           >
-            <Text style={styles.retryButtonText}>Try again</Text>
+            <PremiumButtonSurface radius={18} style={styles.retryButton}>
+              <Text style={styles.retryButtonText}>Try again</Text>
+            </PremiumButtonSurface>
           </Pressable>
         ) : null}
 
@@ -51,17 +52,14 @@ export const ErrorMessage = ({
             accessibilityRole="button"
             onPress={onAction}
             style={({ pressed }) => [
-              styles.secondaryButton,
-              {
-                backgroundColor: colors.surface,
-                borderColor: colors.dangerBorder,
-              },
               pressed && styles.retryButtonPressed,
             ]}
           >
-            <Text style={[styles.secondaryButtonText, { color: colors.danger }]}>
-              {actionLabel}
-            </Text>
+            <PremiumButtonSurface radius={18} style={styles.secondaryButton}>
+              <Text style={styles.secondaryButtonText}>
+                {actionLabel}
+              </Text>
+            </PremiumButtonSurface>
           </Pressable>
         ) : null}
       </View>
@@ -97,8 +95,7 @@ const styles = StyleSheet.create({
   retryButton: {
     alignItems: "center",
     alignSelf: "flex-start",
-    backgroundColor: "#D94936",
-    borderRadius: 999,
+    borderRadius: 18,
     paddingHorizontal: 16,
     paddingVertical: 10,
   },
@@ -113,15 +110,12 @@ const styles = StyleSheet.create({
   secondaryButton: {
     alignItems: "center",
     alignSelf: "flex-start",
-    backgroundColor: "#FFFFFF",
-    borderColor: "#F0B4A8",
-    borderRadius: 999,
-    borderWidth: 1,
+    borderRadius: 18,
     paddingHorizontal: 16,
     paddingVertical: 10,
   },
   secondaryButtonText: {
-    color: "#B54034",
+    color: "#FFFFFF",
     fontSize: 14,
     fontWeight: "700",
   },

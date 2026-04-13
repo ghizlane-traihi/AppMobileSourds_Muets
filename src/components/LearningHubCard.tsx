@@ -2,6 +2,8 @@ import { Feather } from "@expo/vector-icons";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { GlassCard } from "./LiquidGlass";
+import { PremiumButtonSurface } from "./PremiumButtonSurface";
 import { ScalePressable } from "./ScalePressable";
 import { useAppTheme } from "../theme";
 
@@ -20,16 +22,8 @@ export const LearningHubCard = ({ onPress }: LearningHubCardProps) => {
   const { colors } = useAppTheme();
 
   return (
-    <View
-      style={[
-        styles.card,
-        {
-          backgroundColor: colors.surface,
-          borderColor: colors.border,
-        },
-      ]}
-    >
-      <Text style={[styles.eyebrow, { color: colors.primary }]}>Learning hub</Text>
+    <GlassCard contentStyle={styles.cardContent} radius={24}>
+      <Text style={[styles.eyebrow, { color: colors.kicker }]}>Learning hub</Text>
       <Text style={[styles.title, { color: colors.text }]}>
         Keep every learning tool together in one place
       </Text>
@@ -44,12 +38,12 @@ export const LearningHubCard = ({ onPress }: LearningHubCardProps) => {
             style={[
               styles.hubItem,
               {
-                backgroundColor: colors.surfaceMuted,
-                borderColor: colors.border,
+                backgroundColor: "rgba(123,97,255,0.08)",
+                borderColor: "rgba(123,97,255,0.18)",
               },
             ]}
           >
-            <Feather color={colors.primary} name={item.icon} size={16} />
+            <Feather color="#7B61FF" name={item.icon} size={16} />
             <Text style={[styles.hubLabel, { color: colors.text }]}>{item.label}</Text>
             <Text style={[styles.hubValue, { color: colors.textSecondary }]}>{item.value}</Text>
           </View>
@@ -57,29 +51,17 @@ export const LearningHubCard = ({ onPress }: LearningHubCardProps) => {
       </View>
 
       <ScalePressable onPress={onPress} style={styles.buttonWrapper}>
-        <View
-          style={[
-            styles.button,
-            {
-              backgroundColor: colors.surfaceMuted,
-              borderColor: colors.border,
-            },
-          ]}
-        >
-          <Text style={[styles.buttonText, { color: colors.text }]}>Browse all lessons</Text>
-          <Feather color={colors.text} name="arrow-right" size={16} />
-        </View>
+        <PremiumButtonSurface radius={24} style={styles.button}>
+          <Text style={styles.buttonText}>Browse all lessons</Text>
+          <Feather color="#FFFFFF" name="arrow-right" size={16} />
+        </PremiumButtonSurface>
       </ScalePressable>
-    </View>
+    </GlassCard>
   );
 };
 
 const styles = StyleSheet.create({
-  card: {
-    borderRadius: 24,
-    borderWidth: 1,
-    padding: 18,
-  },
+  cardContent: { padding: 18 },
   eyebrow: {
     fontSize: 12,
     fontWeight: "800",
@@ -89,7 +71,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: "800",
-    letterSpacing: -0.4,
+    letterSpacing: 0,
     marginTop: 8,
   },
   description: {
@@ -126,8 +108,7 @@ const styles = StyleSheet.create({
   },
   button: {
     alignItems: "center",
-    borderRadius: 999,
-    borderWidth: 1,
+    borderRadius: 24,
     flexDirection: "row",
     gap: 8,
     minHeight: 46,
@@ -135,7 +116,8 @@ const styles = StyleSheet.create({
     paddingVertical: 11,
   },
   buttonText: {
+    color: "#FFFFFF",
     fontSize: 14,
-    fontWeight: "800",
+    fontWeight: "700",
   },
 });

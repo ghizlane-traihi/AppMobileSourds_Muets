@@ -113,7 +113,7 @@ const fallbackStyles = StyleSheet.create({
   word: {
     fontSize: 22,
     fontWeight: "800",
-    letterSpacing: -0.4,
+    letterSpacing: 0,
   },
   hint: {
     fontSize: 13,
@@ -710,7 +710,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 26,
     fontWeight: "800",
-    letterSpacing: -0.4,
+    letterSpacing: 0,
   },
   wordCounter: {
     fontSize: 14,

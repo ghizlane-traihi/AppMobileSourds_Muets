@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: 18,
     fontWeight: "800",
-    letterSpacing: -0.3,
+    letterSpacing: 0,
     marginTop: 12,
   },
 });

@@ -1,6 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useCallback, useState } from "react";
 import { useFocusEffect } from "@react-navigation/native";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import {
   Alert,
   Pressable,
@@ -10,9 +11,10 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { LinearGradient } from "expo-linear-gradient";
 
-import { getApiBaseUrl } from "../services/api";
+import { AppBackground } from "../components/AppBackground";
+import { GlassCard } from "../components/LiquidGlass";
+import { PremiumButtonSurface } from "../components/PremiumButtonSurface";
 import {
   ALPHABET_FAVORITES_STORAGE_KEY,
   ALPHABET_LEARNED_STORAGE_KEY,
@@ -22,7 +24,12 @@ import {
   SPEECH_TRANSLATION_FAVORITES_STORAGE_KEY,
   SIGN_TRANSLATION_HISTORY_STORAGE_KEY,
   SPEECH_TRANSLATION_HISTORY_STORAGE_KEY,
+  USER_INFO_STORAGE_KEY,
 } from "../constants/storage";
+import { ThemeMode, useAppTheme } from "../theme";
+import { RootStackParamList } from "../types";
+
+type Props = NativeStackScreenProps<RootStackParamList, "Settings">;
 
 const STORAGE_KEYS = {
   speechHistory: SPEECH_TRANSLATION_HISTORY_STORAGE_KEY,
@@ -34,6 +41,24 @@ const STORAGE_KEYS = {
   learningMistakes: ALPHABET_MISTAKES_STORAGE_KEY,
   learningRecent: ALPHABET_RECENT_STORAGE_KEY,
 };
+
+const THEME_OPTIONS: { description: string; label: string; mode: ThemeMode }[] = [
+  {
+    description: "Follow this device",
+    label: "System",
+    mode: "system",
+  },
+  {
+    description: "Soft bright glass",
+    label: "Light",
+    mode: "light",
+  },
+  {
+    description: "Deep neon glass",
+    label: "Dark",
+    mode: "dark",
+  },
+];
 
 const resetStorageGroup = async (keys: string[]) => {
   await AsyncStorage.multiRemove(keys);
@@ -54,8 +79,8 @@ const toStoredCount = (rawValue: string | null) => {
   }
 };
 
-export const SettingsScreen = () => {
-  const apiBaseUrl = getApiBaseUrl();
+export const SettingsScreen = ({ navigation }: Props) => {
+  const { colors, isDark, setThemeMode, themeMode } = useAppTheme();
   const [speechHistoryCount, setSpeechHistoryCount] = useState(0);
   const [signHistoryCount, setSignHistoryCount] = useState(0);
   const [learnedLettersCount, setLearnedLettersCount] = useState(0);
@@ -138,150 +163,186 @@ export const SettingsScreen = () => {
     );
   };
 
-  return (
-    <View style={styles.root}>
-      <LinearGradient
-        colors={["#07071F", "#0A0A2E", "#111044"]}
-        locations={[0, 0.56, 1]}
-        style={StyleSheet.absoluteFill}
-      />
+  const handleLogout = () => {
+    Alert.alert(
+      "Log out?",
+      "This removes your local profile information from this device. Your learning progress and saved history stay saved.",
+      [
+        { style: "cancel", text: "Cancel" },
+        {
+          style: "destructive",
+          text: "Log out",
+          onPress: () => {
+            void AsyncStorage.removeItem(USER_INFO_STORAGE_KEY).then(() => {
+              navigation.reset({
+                index: 0,
+                routes: [{ name: "UserInfo" }],
+              });
+            });
+          },
+        },
+      ],
+    );
+  };
 
+  return (
+    <AppBackground style={styles.root}>
       <SafeAreaView style={styles.safeArea}>
         <ScrollView
           contentContainerStyle={styles.contentContainer}
           showsVerticalScrollIndicator={false}
         >
           <View style={styles.hero}>
-            <Text style={styles.eyebrow}>App settings</Text>
-            <Text style={styles.title}>Manage local app data and preferences.</Text>
-            <Text style={styles.subtitle}>
-              Use this screen to review the current API endpoint and clear local
-              app data when you want a fresh start.
+            <Text style={[styles.eyebrow, { color: colors.kicker }]}>Settings</Text>
+            <Text style={[styles.title, { color: colors.text }]}>
+              Customize your app.
+            </Text>
+            <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
+              Theme, account, and saved data.
             </Text>
           </View>
 
-          <View style={styles.card}>
-            <Text style={styles.cardTitle}>
-              Current API endpoint
+          <GlassCard contentStyle={styles.card} radius={24}>
+            <Text style={[styles.cardTitle, { color: colors.text }]}>
+              Appearance
             </Text>
-            <Text style={styles.cardText}>
-              {apiBaseUrl}
+            <Text style={[styles.cardSubtext, { color: colors.textSecondary }]}>
+              Keep the app in sync with your phone or choose a fixed glass theme.
             </Text>
-            <Text style={styles.cardSubtext}>
-              If this value is `localhost`, the backend must be running on this same computer for the app to work correctly.
+            <View style={styles.themeModeRow}>
+              {THEME_OPTIONS.map((option) => {
+                const isSelected = themeMode === option.mode;
+
+                return (
+                  <Pressable
+                    accessibilityRole="button"
+                    key={option.mode}
+                    onPress={() => setThemeMode(option.mode)}
+                    style={({ pressed }) => [
+                      styles.themeChoiceWrap,
+                      pressed && styles.actionPressed,
+                    ]}
+                  >
+                    {isSelected ? (
+                      <PremiumButtonSurface radius={18} style={styles.themeChoiceActive}>
+                        <Text style={styles.themeChoiceActiveLabel}>{option.label}</Text>
+                        <Text style={styles.themeChoiceActiveDescription}>
+                          {option.description}
+                        </Text>
+                      </PremiumButtonSurface>
+                    ) : (
+                      <View
+                        style={[
+                          styles.themeChoice,
+                          {
+                            backgroundColor: isDark
+                              ? "rgba(255,255,255,0.05)"
+                              : "rgba(255,255,255,0.66)",
+                            borderColor: isDark
+                              ? "rgba(255,255,255,0.1)"
+                              : "rgba(123,97,255,0.16)",
+                          },
+                        ]}
+                      >
+                        <Text style={[styles.themeChoiceLabel, { color: colors.text }]}>
+                          {option.label}
+                        </Text>
+                        <Text
+                          style={[
+                            styles.themeChoiceDescription,
+                            { color: colors.textSecondary },
+                          ]}
+                        >
+                          {option.description}
+                        </Text>
+                      </View>
+                    )}
+                  </Pressable>
+                );
+              })}
+            </View>
+          </GlassCard>
+
+          <GlassCard contentStyle={styles.card} radius={24}>
+            <Text style={[styles.cardTitle, { color: colors.text }]}>
+              Account
             </Text>
-            <View style={styles.badgeRow}>
-              <View style={styles.badge}>
-                <Text style={styles.badgeText}>
-                  API connected
+            <Text style={[styles.cardSubtext, { color: colors.textMuted }]}>
+              Sign out from this device and return to the profile screen.
+            </Text>
+
+            <Pressable
+              accessibilityRole="button"
+              onPress={handleLogout}
+              style={({ pressed }) => [
+                styles.logoutAction,
+                {
+                  backgroundColor: isDark
+                    ? "rgba(248,113,113,0.1)"
+                    : "rgba(255,242,239,0.78)",
+                  borderColor: isDark
+                    ? "rgba(248,113,113,0.25)"
+                    : "rgba(180,35,24,0.18)",
+                },
+                pressed && styles.actionPressed,
+              ]}
+            >
+              <Text style={[styles.logoutActionText, { color: colors.danger }]}>
+                Log out
+              </Text>
+            </Pressable>
+          </GlassCard>
+
+          <GlassCard contentStyle={styles.card} radius={24}>
+            <View style={styles.sectionHeader}>
+              <View>
+                <Text style={[styles.cardTitle, { color: colors.text }]}>
+                  Saved data
                 </Text>
-              </View>
-              <View style={styles.badge}>
-                <Text style={styles.badgeText}>
-                  Local data
+                <Text style={[styles.cardSubtext, { color: colors.textSecondary }]}>
+                  Local progress on this device.
                 </Text>
               </View>
             </View>
-          </View>
 
-          <View style={styles.card}>
-            <Text style={styles.cardTitle}>
-              Important to know
-            </Text>
-            <View style={styles.list}>
-              <Text style={styles.listItem}>
-                • `Speech to Sign` needs microphone access and a reachable backend.
-              </Text>
-              <Text style={styles.listItem}>
-                • `Sign to Speech` needs camera permission and backend recognition.
-              </Text>
-              <Text style={styles.listItem}>
-                • Your saved history on this screen is local to this device only.
-              </Text>
-              <Text style={styles.listItem}>
-                • Reset actions do not delete your code or backend files, only app data saved locally.
-              </Text>
-            </View>
-          </View>
-
-          <View style={styles.card}>
-            <Text style={styles.cardTitle}>
-              Local storage summary
-            </Text>
-            <Text style={styles.cardSubtext}>
-              A quick snapshot of what is currently saved on this device.
-            </Text>
             <View style={styles.summaryGrid}>
-              <View style={styles.summaryTile}>
-                <Text style={styles.summaryValue}>
-                  {speechHistoryCount}
-                </Text>
-                <Text style={styles.summaryLabel}>
-                  Speech history
-                </Text>
-              </View>
-              <View style={styles.summaryTile}>
-                <Text style={styles.summaryValue}>
-                  {signHistoryCount}
-                </Text>
-                <Text style={styles.summaryLabel}>
-                  Sign history
-                </Text>
-              </View>
-              <View style={styles.summaryTile}>
-                <Text style={styles.summaryValue}>
-                  {learnedLettersCount}
-                </Text>
-                <Text style={styles.summaryLabel}>
-                  Letters learned
-                </Text>
-              </View>
-              <View style={styles.summaryTile}>
-                <Text style={styles.summaryValue}>
-                  {favoriteLettersCount}
-                </Text>
-                <Text style={styles.summaryLabel}>
-                  Saved favorites
-                </Text>
-              </View>
+              {[
+                ["Speech", speechHistoryCount],
+                ["Signs", signHistoryCount],
+                ["Learned", learnedLettersCount],
+                ["Saved", favoriteLettersCount],
+              ].map(([label, value]) => (
+                <View
+                  key={label}
+                  style={[
+                    styles.summaryTile,
+                    {
+                      backgroundColor: colors.glassBg,
+                      borderColor: colors.glassBorder,
+                    },
+                  ]}
+                >
+                  <Text style={[styles.summaryValue, { color: colors.text }]}>
+                    {value}
+                  </Text>
+                  <Text style={[styles.summaryLabel, { color: colors.textMuted }]}>
+                    {label}
+                  </Text>
+                </View>
+              ))}
             </View>
-          </View>
-
-          <View style={styles.card}>
-            <Text style={styles.cardTitle}>
-              What is saved on this device
-            </Text>
-            <View style={styles.list}>
-              <Text style={styles.listItem}>
-                • `Speech to Sign` saves recent translations locally.
-              </Text>
-              <Text style={styles.listItem}>
-                • `Sign to Speech` saves recent recognitions locally.
-              </Text>
-              <Text style={styles.listItem}>
-                • `Sign Language Learning` stores saved letters, learned progress, and recent practice locally.
-              </Text>
-            </View>
-          </View>
-
-          <View style={styles.card}>
-            <Text style={styles.cardTitle}>
-              Reset local data
-            </Text>
-            <Text style={styles.cardSubtext}>
-              These actions only affect saved frontend data on this device.
-            </Text>
 
             <View style={styles.actions}>
               <Pressable
                 accessibilityRole="button"
                 onPress={handleResetTranslations}
                 style={({ pressed }) => [
-                  styles.primaryAction,
                   pressed && styles.actionPressed,
                 ]}
               >
-                <Text style={styles.primaryActionText}>Clear translation history</Text>
+                <PremiumButtonSurface radius={18} style={styles.primaryAction}>
+                  <Text style={styles.primaryActionText}>Clear translation history</Text>
+                </PremiumButtonSurface>
               </Pressable>
 
               <Pressable
@@ -297,16 +358,15 @@ export const SettingsScreen = () => {
                 </Text>
               </Pressable>
             </View>
-          </View>
+          </GlassCard>
         </ScrollView>
       </SafeAreaView>
-    </View>
+    </AppBackground>
   );
 };
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: "#07071F",
     flex: 1,
   },
   safeArea: {
@@ -318,10 +378,6 @@ const styles = StyleSheet.create({
     paddingBottom: 28,
   },
   hero: {
-    backgroundColor: "rgba(124,92,252,0.15)",
-    borderColor: "rgba(124,92,252,0.3)",
-    borderRadius: 30,
-    borderWidth: 1,
     padding: 22,
   },
   eyebrow: {
@@ -332,41 +388,37 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   title: {
-    color: "#FFFFFF",
     fontSize: 30,
     fontWeight: "800",
     lineHeight: 36,
     marginTop: 10,
   },
   subtitle: {
-    color: "rgba(226,232,255,0.62)",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 10,
   },
   card: {
-    backgroundColor: "rgba(255,255,255,0.06)",
-    borderColor: "rgba(255,255,255,0.1)",
-    borderRadius: 24,
-    borderWidth: 1,
     padding: 18,
   },
   cardTitle: {
-    color: "#FFFFFF",
     fontSize: 18,
     fontWeight: "800",
   },
   cardText: {
-    color: "rgba(226,232,255,0.72)",
     fontSize: 15,
     lineHeight: 22,
     marginTop: 10,
   },
   cardSubtext: {
-    color: "rgba(200,214,255,0.5)",
     fontSize: 14,
     lineHeight: 20,
     marginTop: 8,
+  },
+  sectionHeader: {
+    alignItems: "flex-start",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   badgeRow: {
     flexDirection: "row",
@@ -376,7 +428,6 @@ const styles = StyleSheet.create({
   },
   badge: {
     backgroundColor: "rgba(124,92,252,0.15)",
-    borderColor: "rgba(124,92,252,0.3)",
     borderRadius: 999,
     borderWidth: 1,
     paddingHorizontal: 12,
@@ -392,7 +443,6 @@ const styles = StyleSheet.create({
     marginTop: 14,
   },
   listItem: {
-    color: "rgba(226,232,255,0.62)",
     fontSize: 14,
     lineHeight: 21,
   },
@@ -403,20 +453,16 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   summaryTile: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderColor: "rgba(255,255,255,0.08)",
     borderRadius: 18,
     borderWidth: 1,
     minWidth: "47%",
     padding: 14,
   },
   summaryValue: {
-    color: "#FFFFFF",
     fontSize: 22,
     fontWeight: "800",
   },
   summaryLabel: {
-    color: "rgba(200,214,255,0.5)",
     fontSize: 12,
     fontWeight: "700",
     lineHeight: 18,
@@ -429,19 +475,14 @@ const styles = StyleSheet.create({
   },
   primaryAction: {
     alignItems: "center",
-    backgroundColor: "#7C5CFC",
     borderRadius: 18,
     paddingHorizontal: 16,
     paddingVertical: 14,
-    shadowColor: "#050510",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 1,
-    shadowRadius: 18,
   },
   primaryActionText: {
     color: "#FFFFFF",
     fontSize: 15,
-    fontWeight: "800",
+    fontWeight: "700",
   },
   dangerAction: {
     alignItems: "center",
@@ -457,7 +498,63 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "800",
   },
+  logoutAction: {
+    alignItems: "center",
+    borderRadius: 18,
+    borderWidth: 1,
+    marginTop: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+  },
+  logoutActionText: {
+    fontSize: 15,
+    fontWeight: "800",
+  },
   actionPressed: {
     opacity: 0.84,
+  },
+  themeChoice: {
+    borderRadius: 18,
+    borderWidth: 1,
+    minHeight: 78,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+  },
+  themeChoiceActive: {
+    minHeight: 78,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+  },
+  themeChoiceActiveDescription: {
+    color: "rgba(255,255,255,0.72)",
+    fontSize: 11,
+    fontWeight: "700",
+    lineHeight: 15,
+    marginTop: 5,
+  },
+  themeChoiceActiveLabel: {
+    color: "#FFFFFF",
+    fontSize: 14,
+    fontWeight: "800",
+  },
+  themeChoiceDescription: {
+    fontSize: 11,
+    fontWeight: "700",
+    lineHeight: 15,
+    marginTop: 5,
+  },
+  themeChoiceLabel: {
+    fontSize: 14,
+    fontWeight: "800",
+  },
+  themeChoiceWrap: {
+    flex: 1,
+    minWidth: 96,
+  },
+  themeModeRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 10,
+    marginTop: 16,
   },
 });

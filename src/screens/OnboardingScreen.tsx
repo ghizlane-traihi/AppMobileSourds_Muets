@@ -5,15 +5,18 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import {
   Animated,
   Easing,
+  ScrollView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { LinearGradient } from "expo-linear-gradient";
 
+import { AppBackground } from "../components/AppBackground";
+import { PremiumButtonSurface } from "../components/PremiumButtonSurface";
 import { ScalePressable } from "../components/ScalePressable";
 import { ONBOARDING_STORAGE_KEY } from "../constants/storage";
+import { useAppTheme } from "../theme";
 import { RootStackParamList } from "../types";
 
 type Props = NativeStackScreenProps<RootStackParamList, "Onboarding">;
@@ -77,6 +80,7 @@ const ITEMS: OnboardingItem[] = [
 ];
 
 export const OnboardingScreen = ({ navigation }: Props) => {
+  const { colors, isDark } = useAppTheme();
   const [activeIndex, setActiveIndex] = useState(0);
   const opacity = useRef(new Animated.Value(1)).current;
   const translateY = useRef(new Animated.Value(0)).current;
@@ -135,26 +139,35 @@ export const OnboardingScreen = ({ navigation }: Props) => {
   };
 
   return (
-    <View style={styles.root}>
-      <LinearGradient
-        colors={["#07071F", "#0A0A2E", "#111044"]}
-        locations={[0, 0.56, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-
+    <AppBackground style={styles.root}>
       <SafeAreaView style={styles.safeArea}>
-        <View style={styles.container}>
+        <ScrollView
+          contentContainerStyle={styles.container}
+          showsVerticalScrollIndicator={false}
+        >
           <View style={styles.topRow}>
             <View>
-              <Text style={styles.brand}>SignLink</Text>
-              <Text style={styles.brandSubtext}>
+              <Text style={[styles.brand, { color: colors.text }]}>SignLink</Text>
+              <Text style={[styles.brandSubtext, { color: colors.textSecondary }]}>
                 Modern communication, practice, and learning.
               </Text>
             </View>
 
             <ScalePressable onPress={() => void completeOnboarding()}>
-              <View style={styles.skipButton}>
-                <Text style={styles.skipButtonText}>
+              <View
+                style={[
+                  styles.skipButton,
+                  {
+                    backgroundColor: isDark
+                      ? "rgba(255,255,255,0.08)"
+                      : "rgba(255,255,255,0.72)",
+                    borderColor: isDark
+                      ? "rgba(255,255,255,0.14)"
+                      : "rgba(123,97,255,0.18)",
+                  },
+                ]}
+              >
+                <Text style={[styles.skipButtonText, { color: colors.textSecondary }]}>
                   Skip
                 </Text>
               </View>
@@ -165,7 +178,7 @@ export const OnboardingScreen = ({ navigation }: Props) => {
             <Text style={[styles.stepLabel, { color: currentItem.accent }]}>
               {currentItem.stepLabel}
             </Text>
-            <Text style={styles.progressCopy}>
+            <Text style={[styles.progressCopy, { color: colors.textMuted }]}>
               {activeIndex + 1} / {ITEMS.length}
             </Text>
           </View>
@@ -180,7 +193,11 @@ export const OnboardingScreen = ({ navigation }: Props) => {
                   style={[
                     styles.stepRail,
                     {
-                      backgroundColor: isActive ? currentItem.accent : "rgba(255,255,255,0.15)",
+                      backgroundColor: isActive
+                        ? currentItem.accent
+                        : isDark
+                          ? "rgba(255,255,255,0.15)"
+                          : "rgba(123,97,255,0.18)",
                       width: isActive ? 40 : 12,
                     },
                   ]}
@@ -203,7 +220,9 @@ export const OnboardingScreen = ({ navigation }: Props) => {
                 styles.previewShell,
                 {
                   backgroundColor: currentItem.iconBackground,
-                  borderColor: "rgba(255,255,255,0.08)",
+                  borderColor: isDark
+                    ? "rgba(255,255,255,0.08)"
+                    : "rgba(123,97,255,0.16)",
                 },
               ]}
             >
@@ -223,26 +242,38 @@ export const OnboardingScreen = ({ navigation }: Props) => {
                       { backgroundColor: currentItem.accent },
                     ]}
                   />
-                  <Text style={styles.previewFloatingTitle}>
+                  <Text style={[styles.previewFloatingTitle, { color: colors.text }]}>
                     Live preview
                   </Text>
                 </View>
-                <Text style={styles.previewFloatingText}>
+                <Text style={[styles.previewFloatingText, { color: colors.textSecondary }]}>
                   {currentItem.previewCaption}
                 </Text>
               </View>
             </View>
 
             <View style={styles.copyBlock}>
-              <Text style={styles.title}>
+              <Text style={[styles.title, { color: colors.text }]}>
                 {currentItem.title}
               </Text>
-              <Text style={styles.description}>
+              <Text style={[styles.description, { color: colors.textSecondary }]}>
                 {currentItem.description}
               </Text>
             </View>
 
-            <View style={styles.capabilityCard}>
+            <View
+              style={[
+                styles.capabilityCard,
+                {
+                  backgroundColor: isDark
+                    ? "rgba(255,255,255,0.06)"
+                    : "rgba(255,255,255,0.72)",
+                  borderColor: isDark
+                    ? "rgba(255,255,255,0.1)"
+                    : "rgba(123,97,255,0.16)",
+                },
+              ]}
+            >
               {[
                 "Refined UI with responsive cards and clearer hierarchy",
                 "Better motion, previews, and modern onboarding flow",
@@ -250,7 +281,7 @@ export const OnboardingScreen = ({ navigation }: Props) => {
               ].map((item) => (
                 <View key={item} style={styles.capabilityRow}>
                   <Feather color={currentItem.accent} name="check-circle" size={16} />
-                  <Text style={styles.capabilityText}>
+                  <Text style={[styles.capabilityText, { color: colors.textSecondary }]}>
                     {item}
                   </Text>
                 </View>
@@ -267,41 +298,47 @@ export const OnboardingScreen = ({ navigation }: Props) => {
               <View
                 style={[
                   styles.secondaryButton,
-                  { opacity: activeIndex === 0 ? 0.45 : 1 },
+                  {
+                    backgroundColor: isDark
+                      ? "rgba(255,255,255,0.08)"
+                      : "rgba(255,255,255,0.72)",
+                    borderColor: isDark
+                      ? "rgba(255,255,255,0.14)"
+                      : "rgba(123,97,255,0.18)",
+                    opacity: activeIndex === 0 ? 0.45 : 1,
+                  },
                 ]}
               >
-                <Text style={styles.secondaryButtonText}>
+                <Text style={[styles.secondaryButtonText, { color: colors.textSecondary }]}>
                   Back
                 </Text>
               </View>
             </ScalePressable>
 
             <ScalePressable onPress={handleNext} style={styles.footerButtonWrapper}>
-              <View style={styles.primaryButton}>
+              <PremiumButtonSurface radius={20} style={styles.primaryButton}>
                 <Text style={styles.primaryButtonText}>
                   {isLastItem ? "Get started" : "Continue"}
                 </Text>
-              </View>
+              </PremiumButtonSurface>
             </ScalePressable>
           </View>
-        </View>
+        </ScrollView>
       </SafeAreaView>
-    </View>
+    </AppBackground>
   );
 };
 
 const styles = StyleSheet.create({
   root: {
-    backgroundColor: "#07071F",
     flex: 1,
   },
   safeArea: {
     flex: 1,
   },
   container: {
-    flex: 1,
     padding: 20,
-    paddingBottom: 28,
+    paddingBottom: 34,
     paddingTop: 10,
   },
   topRow: {
@@ -310,21 +347,16 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   brand: {
-    color: "#FFFFFF",
     fontSize: 28,
     fontWeight: "800",
-    letterSpacing: -0.5,
   },
   brandSubtext: {
-    color: "rgba(226,232,255,0.55)",
     fontSize: 13,
     lineHeight: 18,
     marginTop: 6,
     maxWidth: 200,
   },
   skipButton: {
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderColor: "rgba(255,255,255,0.14)",
     borderRadius: 999,
     borderWidth: 1,
     paddingHorizontal: 16,
@@ -348,7 +380,6 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   progressCopy: {
-    color: "rgba(200,214,255,0.5)",
     fontSize: 12,
     fontWeight: "700",
   },
@@ -363,18 +394,17 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   contentArea: {
-    flex: 1,
-    justifyContent: "space-between",
     marginTop: 20,
   },
   previewShell: {
     alignItems: "center",
     borderRadius: 34,
     borderWidth: 1,
-    minHeight: 260,
+    minHeight: 230,
     overflow: "hidden",
     paddingHorizontal: 20,
-    paddingTop: 26,
+    paddingBottom: 18,
+    paddingTop: 24,
   },
   previewOrb: {
     alignItems: "center",
@@ -389,7 +419,7 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.1)",
     borderRadius: 24,
     borderWidth: 1,
-    marginTop: 28,
+    marginTop: 24,
     padding: 18,
     width: "100%",
   },
@@ -404,38 +434,31 @@ const styles = StyleSheet.create({
     width: 10,
   },
   previewFloatingTitle: {
-    color: "#FFFFFF",
     fontSize: 14,
     fontWeight: "800",
   },
   previewFloatingText: {
-    color: "rgba(226,232,255,0.62)",
     fontSize: 14,
     lineHeight: 21,
     marginTop: 10,
   },
   copyBlock: {
-    marginTop: 26,
+    marginTop: 24,
   },
   title: {
-    color: "#FFFFFF",
-    fontSize: 32,
+    fontSize: 30,
     fontWeight: "800",
-    letterSpacing: -0.8,
-    lineHeight: 38,
+    lineHeight: 36,
   },
   description: {
-    color: "rgba(226,232,255,0.72)",
     fontSize: 16,
     lineHeight: 24,
     marginTop: 14,
   },
   capabilityCard: {
-    backgroundColor: "rgba(255,255,255,0.06)",
-    borderColor: "rgba(255,255,255,0.1)",
     borderRadius: 28,
     borderWidth: 1,
-    marginTop: 24,
+    marginTop: 22,
     padding: 18,
   },
   capabilityRow: {
@@ -444,7 +467,6 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   capabilityText: {
-    color: "rgba(226,232,255,0.62)",
     flex: 1,
     fontSize: 14,
     lineHeight: 21,
@@ -452,39 +474,31 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: "row",
     gap: 12,
-    marginTop: 18,
+    marginTop: 20,
   },
   footerButtonWrapper: {
     flex: 1,
   },
   secondaryButton: {
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderColor: "rgba(255,255,255,0.14)",
     borderRadius: 20,
     borderWidth: 1,
     paddingHorizontal: 16,
     paddingVertical: 16,
   },
   secondaryButtonText: {
-    color: "#C8D6FF",
     fontSize: 15,
     fontWeight: "800",
   },
   primaryButton: {
     alignItems: "center",
-    backgroundColor: "#7C5CFC",
     borderRadius: 20,
     paddingHorizontal: 18,
     paddingVertical: 16,
-    shadowColor: "#050510",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 1,
-    shadowRadius: 18,
   },
   primaryButtonText: {
     color: "#FFFFFF",
     fontSize: 16,
-    fontWeight: "800",
+    fontWeight: "700",
   },
 });
