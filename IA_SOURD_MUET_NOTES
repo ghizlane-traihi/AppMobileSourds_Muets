@@ -68,5 +68,10 @@ __création du dataset
 	✔ Utiliser dataset alphabet 
 	✔ Entraîner modèle classification
 	✔ Tester en temps réel avec caméra
+__Ajout du travail sur Github et script apres chaque modification
+   git status
+   git add .
+   git commit -m "description de la modification"
+   git push
 
 
