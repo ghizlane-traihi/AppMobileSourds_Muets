@@ -1,0 +1,23 @@
+# Environnement Python
+venv/
+env/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Modèles IA
+*.pth
+model.pth
+*.pkl
+
+# Dataset
+*.csv
+dataset/
+
+# Fichiers PDF
+*.pdf
+
+# Système
+.DS_Store
+Thumbs.db
