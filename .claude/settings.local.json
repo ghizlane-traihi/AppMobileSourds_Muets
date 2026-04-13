@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l AppMobileSourds_Muets/src/screens/*.tsx)",
+      "Bash(gh auth:*)",
+      "Bash(gh --version)",
+      "Bash(npx tsc:*)",
+      "Bash(pkill -f \"expo\")",
+      "Bash(pkill -f \"metro\")",
+      "Bash(npx expo:*)",
+      "Bash(echo \"Metro lancé avec cache vidé \\(PID: $!\\)\")",
+      "Bash(find /Users/ghizlanetraihi/Desktop -maxdepth 2 -type d -name \"*groupe*\" -exec ls -la {} \\\\;)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('expo',{}\\).get\\('assetBundlePatterns',[]\\),indent=2\\)\\)\")",
+      "Bash(grep -oE '\\\\.[a-z]+$')",
+      "Bash(pkill -f \"expo start\")",
+      "Bash(ls -la /Users/ghizlanetraihi/Desktop/groupe*/)",
+      "Bash(cat /Users/ghizlanetraihi/Desktop/groupe*/AppMobileSourds_Muets/package.json)",
+      "Bash(find /Users/ghizlanetraihi/Desktop/groupe*/AppMobileSourds_Muets/src -type f -name \"*.ts\" -o -name \"*.tsx\")"
+    ]
+  }
+}

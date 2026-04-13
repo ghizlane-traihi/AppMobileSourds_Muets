@@ -20,4 +20,10 @@ dataset/
 
 # Système
 .DS_Store
+
+
+node_modules
 Thumbs.db
+
+.expo
+ios
