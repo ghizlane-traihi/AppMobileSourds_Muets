@@ -1,0 +1,167 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import React, { useEffect, useState } from "react";
+import {
+  NavigationContainer,
+  DefaultTheme,
+  DarkTheme,
+} from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import {
+  ONBOARDING_STORAGE_KEY,
+  USER_INFO_STORAGE_KEY,
+} from "../constants/storage";
+import { DemoSignsScreen } from "../screens/DemoSignsScreen";
+import { HomeScreen } from "../screens/HomeScreen";
+import { LearningScreen } from "../screens/LearningScreen";
+import { LessonDetailScreen } from "../screens/LessonDetailScreen";
+import { OnboardingScreen } from "../screens/OnboardingScreen";
+import { SettingsScreen } from "../screens/SettingsScreen";
+import { SignToSpeechScreen } from "../screens/SignToSpeechScreen";
+import { SpeechToSignScreen } from "../screens/SpeechToSignScreen";
+import { UserInfoScreen } from "../screens/UserInfoScreen";
+import { VoiceRecorderScreen } from "../screens/VoiceRecorderScreen";
+import { useAppTheme } from "../theme";
+import { RootStackParamList } from "../types";
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
+export const AppNavigator = () => {
+  const { colors, isDark } = useAppTheme();
+  const [hasCompletedOnboarding, setHasCompletedOnboarding] = useState<
+    boolean | null
+  >(null);
+  const [hasUserInfo, setHasUserInfo] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadBootState = async () => {
+      try {
+        const [onboardingValue, userInfoValue] = await Promise.all([
+          AsyncStorage.getItem(ONBOARDING_STORAGE_KEY),
+          AsyncStorage.getItem(USER_INFO_STORAGE_KEY),
+        ]);
+
+        if (!isMounted) return;
+
+        setHasCompletedOnboarding(onboardingValue === "true");
+        setHasUserInfo(userInfoValue !== null);
+      } catch (storageError) {
+        console.log("load boot state error", storageError);
+        if (isMounted) {
+          setHasCompletedOnboarding(false);
+          setHasUserInfo(false);
+        }
+      }
+    };
+
+    void loadBootState();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const navigationTheme = {
+    ...(isDark ? DarkTheme : DefaultTheme),
+    colors: {
+      ...(isDark ? DarkTheme.colors : DefaultTheme.colors),
+      background: colors.navigationBackground,
+      card: colors.navigationBackground,
+      primary: colors.primary,
+      text: colors.text,
+      border: colors.border,
+    },
+  };
+
+  if (hasCompletedOnboarding === null || hasUserInfo === null) {
+    return null;
+  }
+
+  const initialRoute = !hasUserInfo
+    ? "UserInfo"
+    : hasCompletedOnboarding
+      ? "Home"
+      : "Onboarding";
+
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <Stack.Navigator
+        initialRouteName={initialRoute}
+        screenOptions={{
+          animation: "slide_from_right",
+          contentStyle: {
+            backgroundColor: colors.navigationBackground,
+          },
+          headerShadowVisible: false,
+          headerStyle: {
+            backgroundColor: colors.navigationBackground,
+          },
+          headerTitleStyle: {
+            color: colors.text,
+            fontSize: 18,
+            fontWeight: "800",
+          },
+        }}
+      >
+        <Stack.Screen
+          component={UserInfoScreen}
+          name="UserInfo"
+          options={{ headerShown: false, animation: "fade" }}
+        />
+        <Stack.Screen
+          component={OnboardingScreen}
+          name="Onboarding"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          component={HomeScreen}
+          name="Home"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          component={SpeechToSignScreen}
+          name="SpeechToSign"
+          options={{ title: "Speech to Sign" }}
+        />
+        <Stack.Screen
+          component={VoiceRecorderScreen}
+          name="VoiceRecorder"
+          options={{
+            animation: "fade_from_bottom",
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          component={DemoSignsScreen}
+          name="DemoSigns"
+          options={{ title: "Sign Language Learning" }}
+        />
+        <Stack.Screen
+          component={SettingsScreen}
+          name="Settings"
+          options={{ title: "Settings" }}
+        />
+        <Stack.Screen
+          component={LearningScreen}
+          name="Learning"
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          component={LessonDetailScreen}
+          name="LessonDetail"
+          options={{ headerShown: false, animation: "slide_from_right" }}
+        />
+        <Stack.Screen
+          component={SignToSpeechScreen}
+          name="SignToSpeech"
+          options={{
+            animation: "fade_from_bottom",
+            headerShown: false,
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};

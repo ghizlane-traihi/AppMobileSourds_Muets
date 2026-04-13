@@ -1,0 +1,549 @@
+{
+  "url": "https://www.lifeprint.com/asl101/pages-signs/h/heavy.htm",
+  "title": "\"heavy\" ASL American Sign Language",
+  "candidates": [
+    {
+      "url": "about:blank",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.google.com/recaptcha/api2/aframe",
+      "kind": "reference",
+      "source": "iframe",
+      "score": 60
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/h/heavy.1.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/h/heavy.2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/h/heavy.3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/h/heavy.4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/l/lightweight.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/l/lightweight2.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/l/lightweight3.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/l/lightweight4.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    },
+    {
+      "url": "https://www.lifeprint.com/asl101/signjpegs/l/lightweight5.jpg",
+      "kind": "image",
+      "source": "img[src]",
+      "score": 50
+    }
+  ],
+  "structure": [
+    {
+      "index": 0,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {}
+    },
+    {
+      "index": 1,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "American Sign Language, ASL, Deaf, signing",
+        "name": "keywords"
+      }
+    },
+    {
+      "index": 2,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "American Sign Language (ASL) Dictionary and Lessons",
+        "name": "description"
+      }
+    },
+    {
+      "index": 3,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Microsoft FrontPage 5.0",
+        "name": "GENERATOR"
+      }
+    },
+    {
+      "index": 4,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "width=device-width, initial-scale=1.0",
+        "name": "viewport"
+      }
+    },
+    {
+      "index": 5,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="
+      }
+    },
+    {
+      "index": 6,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="
+      }
+    },
+    {
+      "index": 7,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"
+      }
+    },
+    {
+      "index": 8,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"
+      }
+    },
+    {
+      "index": 9,
+      "tag": "meta",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "content": "A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"
+      }
+    },
+    {
+      "index": 10,
+      "tag": "iframe",
+      "id": "aswift_0",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_0",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&h=280&slotname=7543121294&adk=1014335003&adf=683863926&pi=t.ma~as.7543121294&w=960&fwrn=4&fwrnh=100&lmt=1773006168&rafmt=1&format=960x280&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Fh%2Fheavy.htm&fwr=0&fwrattr=true&rpe=1&resp_fmts=3&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775929417605&bpp=1&bdt=4&idt=3&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775929379%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&correlator=1722502053281&frm=20&pv=2&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=160&ady=12&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95384087%2C95387623%2C95386957&oid=2&pvsid=8133814688770338&tmod=57119849&uas=0&nvt=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7CeoE%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=6",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 11,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../index.htm"
+      }
+    },
+    {
+      "index": 12,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "alt": "back.gif (1674 bytes)",
+        "src": "../../images-layout/back.gif"
+      }
+    },
+    {
+      "index": 13,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/h/heavy.1.jpg"
+      }
+    },
+    {
+      "index": 14,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/h/heavy.2.jpg"
+      }
+    },
+    {
+      "index": 15,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/h/heavy.3.jpg"
+      }
+    },
+    {
+      "index": 16,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/h/heavy.4.jpg"
+      }
+    },
+    {
+      "index": 17,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/l/lightweight.jpg"
+      }
+    },
+    {
+      "index": 18,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/l/lightweight2.jpg"
+      }
+    },
+    {
+      "index": 19,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/l/lightweight3.jpg"
+      }
+    },
+    {
+      "index": 20,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/l/lightweight4.jpg"
+      }
+    },
+    {
+      "index": 21,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "../../signjpegs/l/lightweight5.jpg"
+      }
+    },
+    {
+      "index": 22,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "LIGHT",
+      "attrs": {
+        "href": "../l/light.htm"
+      }
+    },
+    {
+      "index": 23,
+      "tag": "iframe",
+      "id": "aswift_1",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_1",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&h=280&slotname=7543121294&adk=1991328125&adf=1724537007&pi=t.ma~as.7543121294&w=910&fwrn=4&fwrnh=100&lmt=1773006168&rafmt=1&format=910x280&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Fh%2Fheavy.htm&fwr=0&fwrattr=true&rpe=1&resp_fmts=3&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775929417606&bpp=1&bdt=5&idt=6&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775929379%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&prev_fmts=960x280&correlator=1722502053281&frm=20&pv=1&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=185&ady=1839&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95384087%2C95387623%2C95386957&oid=2&pvsid=8133814688770338&tmod=57119849&uas=0&nvt=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7CeoEbr%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=2&uci=a!2&btvi=1&fsb=1&dtd=8",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 24,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL University ►",
+      "attrs": {
+        "href": "../../../index.htm"
+      }
+    },
+    {
+      "index": 25,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 26,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 27,
+      "tag": "iframe",
+      "id": "aswift_2",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_2",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&h=429&slotname=4979558599&adk=3680471143&adf=2178560903&pi=t.ma~as.4979558599&w=910&lmt=1773006168&rafmt=11&format=910x429&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Fh%2Fheavy.htm&fwrattr=true&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775929417606&bpp=1&bdt=6&idt=10&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775929379%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&prev_fmts=960x280%2C910x280&correlator=1722502053281&frm=20&pv=1&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=185&ady=2300&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95384087%2C95387623%2C95386957&oid=2&pvsid=8133814688770338&tmod=57119849&uas=0&nvt=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7CeoEbr%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=3&uci=a!3&btvi=2&fsb=1&dtd=11",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 28,
+      "tag": "iframe",
+      "id": "aswift_3",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_3",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&h=280&slotname=6501232513&adk=545696854&adf=923417920&pi=t.ma~as.6501232513&w=910&fwrn=4&fwrnh=100&lmt=1773006168&rafmt=1&format=910x280&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Fh%2Fheavy.htm&fwr=0&fwrattr=true&rpe=1&resp_fmts=3&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775929417606&bpp=1&bdt=5&idt=13&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775929379%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&prev_fmts=960x280%2C910x280%2C910x429&correlator=1722502053281&frm=20&pv=1&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=185&ady=2741&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95384087%2C95387623%2C95386957&oid=2&pvsid=8133814688770338&tmod=57119849&uas=0&nvt=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7CeoEbr%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=4&uci=a!4&btvi=3&fsb=1&dtd=14",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 29,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "Back",
+      "attrs": {
+        "alt": "Back",
+        "src": "../../../images-layout/back.gif"
+      }
+    },
+    {
+      "index": 30,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "Sign Language",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 31,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "http://lifeprint.com"
+      }
+    },
+    {
+      "index": 32,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "alt": "back.gif (1674 bytes)",
+        "src": "../../images-layout/back.gif"
+      }
+    },
+    {
+      "index": 33,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "American Sign Language (ASL)",
+      "attrs": {
+        "href": "https://lifeprint.com"
+      }
+    },
+    {
+      "index": 34,
+      "tag": "a",
+      "id": null,
+      "className": "",
+      "text": "ASL",
+      "attrs": {
+        "href": "https://asl.ms"
+      }
+    },
+    {
+      "index": 35,
+      "tag": "iframe",
+      "id": "aswift_4",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_4",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&h=429&slotname=4979558599&adk=261160402&adf=2913177901&pi=t.ma~as.4979558599&w=960&lmt=1773006168&rafmt=11&format=960x429&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Fh%2Fheavy.htm&fwrattr=true&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775929417606&bpp=1&bdt=5&idt=15&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775929379%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&prev_fmts=960x280%2C910x280%2C910x429%2C910x280%2C0x0&nras=1&correlator=1722502053281&frm=20&pv=1&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=160&ady=2565&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95384087%2C95387623%2C95386957&oid=2&pvsid=8133814688770338&tmod=57119849&uas=0&nvt=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7CeoEbr%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=5&uci=a!5&btvi=4&fsb=1&dtd=209",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 36,
+      "tag": "iframe",
+      "id": "aswift_5",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_5",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&h=280&slotname=6501232513&adk=287867346&adf=3175363789&pi=t.ma~as.6501232513&w=960&fwrn=4&fwrnh=100&lmt=1773006168&rafmt=1&format=960x280&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Fh%2Fheavy.htm&fwr=0&fwrattr=true&rpe=1&resp_fmts=3&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775929417606&bpp=1&bdt=5&idt=16&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775929379%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&prev_fmts=960x280%2C910x280%2C910x429%2C910x280%2C0x0%2C960x429&nras=1&correlator=1722502053281&frm=20&pv=1&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=160&ady=2726&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95384087%2C95387623%2C95386957&oid=2&pvsid=8133814688770338&tmod=57119849&uas=0&nvt=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7CeoEbr%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=6&uci=a!6&btvi=5&fsb=1&dtd=226",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 37,
+      "tag": "img",
+      "id": null,
+      "className": "",
+      "text": "back.gif (1674 bytes)",
+      "attrs": {
+        "alt": "back.gif (1674 bytes)",
+        "src": "../../images-layout/back.gif"
+      }
+    },
+    {
+      "index": 38,
+      "tag": "iframe",
+      "id": "aswift_6",
+      "className": "",
+      "text": "Advertisement",
+      "attrs": {
+        "name": "aswift_6",
+        "src": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2513564923850231&output=html&adk=1812271804&adf=3025194257&lmt=1773006168&plaf=2%3A2%2C7%3A2&plat=3%3A128%2C4%3A128%2C8%3A128%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fwww.lifeprint.com%2Fasl101%2Fpages-signs%2Fh%2Fheavy.htm&pra=7&aiof=9&asro=0&aiapmd=0.0001&aiapmid=1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=9&dt=1775929417606&bpp=1&bdt=5&idt=16&shv=r20260408&mjsv=m202604070101&ptt=9&saldr=aa&abxe=1&cookie=ID%3D4e43534021a40d5d%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_Mbwhz5D6D8F_1qa9Lc_FNlbgcDjgA&gpic=UID%3D000013c66b7aa858%3AT%3D1775924175%3ART%3D1775929379%3AS%3DALNI_MaqBCIdnqn0I0ag7Kk6vSiYS7Yksg&eo_id_str=ID%3D63f301cec69e198f%3AT%3D1775924175%3ART%3D1775929379%3AS%3DAA-AfjaReMnTtC8BH7ZX8NR4Jz39&prev_fmts=960x280%2C910x280%2C910x429%2C910x280&nras=1&correlator=1722502053281&frm=20&pv=1&u_tz=60&u_his=50&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95384087%2C95387623%2C95386957&oid=2&pvsid=8133814688770338&tmod=57119849&uas=0&nvt=1&fsapi=1&fc=896&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=7&uci=a!7&fsb=1&dtd=17",
+        "title": "Advertisement"
+      }
+    },
+    {
+      "index": 39,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "googlefcPresent"
+      }
+    },
+    {
+      "index": 40,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "__tcfapiLocator",
+        "src": "about:blank"
+      }
+    },
+    {
+      "index": 41,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "googlefcInactive",
+        "src": "about:blank"
+      }
+    },
+    {
+      "index": 42,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "googlefcLoaded",
+        "src": "about:blank"
+      }
+    },
+    {
+      "index": 43,
+      "tag": "iframe",
+      "id": null,
+      "className": "",
+      "text": "",
+      "attrs": {
+        "src": "https://www.google.com/recaptcha/api2/aframe"
+      }
+    },
+    {
+      "index": 44,
+      "tag": "iframe",
+      "id": "google_esf",
+      "className": "",
+      "text": "",
+      "attrs": {
+        "name": "google_esf",
+        "src": "https://googleads.g.doubleclick.net/pagead/html/r20260408/r20190131/zrt_lookup.html"
+      }
+    }
+  ],
+  "text_preview": "\"heavy\" ASL American Sign Language ASL University ► heavy / lightweight Hold your hands out as if holding up something heavy. The motion is a down, up, down movement. The hands drop down about 5 inches, then come up about 2 inches then drop down 2 inches. HEAVY: LIGHT: As in \"lightweight\" or \"light in color\" For more \"light\" related signs, visit the LIGHT page ASL University ► You can learn American Sign Language (ASL) online at American Sign Language University ™ ASL resources by Lifeprint.com © Dr. William Vicars American Sign Language University ™ ASL resources by Lifeprint.com © Dr. William Vicars You can learn American Sign Language (ASL) online at American Sign Language University ™ ASL resources by Lifeprint.com © Dr. William Vicars"
+}

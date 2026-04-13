@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-04-11T22:42:26.021238+00:00",
+  "total_entries": 1273,
+  "status_counts": {
+    "failed": 6,
+    "done": 1267
+  },
+  "media_type_counts": {
+    "null": 6,
+    "image": 641,
+    "reference": 387,
+    "video": 137,
+    "linked-media": 101,
+    "page-reference": 1
+  },
+  "downloaded_files": 879,
+  "resolved_by_url_alias_count": 31,
+  "remaining_failed_count": 6,
+  "remaining_failed": [
+    {
+      "word": "-she-her-him-it",
+      "url": "https://www.lifeprint.com/asl101/pages-signs/h/-she-her-him-it.htm",
+      "status": "failed",
+      "http_status": 404,
+      "error": "404 page not found",
+      "reason": "Lifeprint returns 404 for this exact page; no safe single equivalent was applied automatically."
+    },
+    {
+      "word": "car-broke-down",
+      "url": "https://www.lifeprint.com/asl101/pages-signs/c/car-broke-down.htm",
+      "status": "failed",
+      "http_status": 404,
+      "error": "404 page not found",
+      "reason": "Lifeprint returns 404 for this exact page; no safe single equivalent was applied automatically."
+    },
+    {
+      "word": "friend-boy-girl",
+      "url": "https://www.lifeprint.com/asl101/pages-signs/f/friend-boy-girl.htm",
+      "status": "failed",
+      "http_status": 404,
+      "error": "404 page not found",
+      "reason": "Lifeprint returns 404 for this exact page; no safe single equivalent was applied automatically."
+    },
+    {
+      "word": "his-hers-its",
+      "url": "https://www.lifeprint.com/asl101/pages-signs/h/his-hers-its.htm",
+      "status": "failed",
+      "http_status": 404,
+      "error": "404 page not found",
+      "reason": "Lifeprint returns 404 for this exact page; no safe single equivalent was applied automatically."
+    },
+    {
+      "word": "not-mind",
+      "url": "https://www.lifeprint.com/asl101/pages-signs/n/not-mind.htm",
+      "status": "failed",
+      "http_status": 404,
+      "error": "404 page not found",
+      "reason": "Lifeprint returns 404 for this exact page; no safe single equivalent was applied automatically."
+    },
+    {
+      "word": "window-open",
+      "url": "https://www.lifeprint.com/asl101/pages-signs/w/window-open.htm",
+      "status": "failed",
+      "http_status": 404,
+      "error": "404 page not found",
+      "reason": "Lifeprint returns 404 for this exact page; no safe single equivalent was applied automatically."
+    }
+  ],
+  "done_with_warning_count": 1,
+  "done_with_warning": [
+    {
+      "word": "hanukah",
+      "url": "https://www.lifeprint.com/asl101/pages-signs/h/hanukah.htm",
+      "media": "https://www.lifeprint.com/asl101/pages-signs/h/hanukah.htm",
+      "media_type": "page-reference",
+      "error": "No video or image found; stored page reference only."
+    }
+  ]
+}

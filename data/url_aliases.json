@@ -1,0 +1,126 @@
+{
+  "apt": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/a/apartment.htm",
+    "note": "Lifeprint broken link uses apt.htm; apartment.htm exists."
+  },
+  "avacado": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/a/avocado.htm",
+    "note": "Corrects misspelled sitemap slug."
+  },
+  "babysit-1": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/b/babysitter.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "buying": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/b/buy.htm",
+    "note": "Base sign page exists."
+  },
+  "cards-playing": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/p/play-cards.htm",
+    "note": "Equivalent available Lifeprint page."
+  },
+  "cleaning": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/c/clean.htm",
+    "note": "Base sign page exists."
+  },
+  "cooking": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/c/cook.htm",
+    "note": "Base sign page exists."
+  },
+  "don't-know": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/d/dont-know.htm",
+    "note": "Lifeprint URL omits apostrophe."
+  },
+  "door-close": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/c/close-door.htm",
+    "note": "Equivalent available Lifeprint page."
+  },
+  "door-open": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/o/open.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "goodmorning": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/g/good-morning.htm",
+    "note": "Lifeprint uses hyphenated slug outside phrases folder."
+  },
+  "hool-elementary": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/e/elementary.htm",
+    "note": "Broken slug appears to be truncated from school-elementary."
+  },
+  "howareyou": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/h/how-are-you.htm",
+    "note": "Lifeprint uses hyphenated slug outside phrases folder."
+  },
+  "howmany": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/h/how-many.htm",
+    "note": "Lifeprint uses hyphenated slug."
+  },
+  "howmuch": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/h/how-much.htm",
+    "note": "Lifeprint uses hyphenated slug."
+  },
+  "like-not": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/d/dont-like.htm",
+    "note": "Equivalent negative form found."
+  },
+  "lord": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/l/lord.htm",
+    "note": "Sitemap folder is wrong; l/lord.htm exists."
+  },
+  "now-today": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/t/today.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "numbers-11-20": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/n/numbers11-20.htm",
+    "note": "Lifeprint uses no hyphen after numbers."
+  },
+  "o-that-is-wrong": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/w/wrong.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "on-the-left": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/l/left.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "on-the-right": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/r/right.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "over-there": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/t/there.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "pen": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/p/pencil.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "playing": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/p/play.htm",
+    "note": "Base sign page exists."
+  },
+  "running": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/r/run.htm",
+    "note": "Base sign page exists."
+  },
+  "school-high": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/h/high-school.htm",
+    "note": "Equivalent available Lifeprint page."
+  },
+  "turn-off-light": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/t/turn-off.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "turn-on-light": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/t/turn-on.htm",
+    "note": "Closest available Lifeprint sign page found."
+  },
+  "week-last": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/w/weeklast.htm",
+    "note": "Lifeprint uses compact slug."
+  },
+  "week-next": {
+    "url": "https://www.lifeprint.com/asl101/pages-signs/w/weeknext.htm",
+    "note": "Lifeprint uses compact slug."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-04-11T16:16:12.169970+00:00",
+  "count": 1273,
+  "sources": [
+    "sign-index",
+    "sitemap"
+  ],
+  "by_first_letter": {
+    "a": 68,
+    "b": 102,
+    "c": 110,
+    "d": 68,
+    "e": 43,
+    "f": 72,
+    "g": 46,
+    "h": 62,
+    "i": 32,
+    "j": 9,
+    "k": 10,
+    "l": 38,
+    "m": 61,
+    "n": 50,
+    "o": 31,
+    "p": 82,
+    "phrases": 2,
+    "q": 4,
+    "r": 45,
+    "s": 164,
+    "t": 73,
+    "u": 12,
+    "v": 14,
+    "w": 63,
+    "x": 1,
+    "y": 9,
+    "z": 2
+  },
+  "outputs": {
+    "words": "data/words_all.json",
+    "index": "data/word_index.json"
+  }
+}
