@@ -9,6 +9,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
+import { useReducedMotionPreference } from "../hooks/useReducedMotionPreference";
 import { useAppTheme } from "../theme";
 
 type GradientColors = readonly [ColorValue, ColorValue, ...ColorValue[]];
@@ -75,11 +76,17 @@ export const GlassCard = ({
   style,
 }: GlassCardProps) => {
   const { isDark } = useAppTheme();
+  const reduceMotionEnabled = useReducedMotionPreference();
   const shimmerX = useSharedValue(-120);
   const cardEdgeColors = isDark ? CARD_EDGE_COLORS : LIGHT_CARD_EDGE_COLORS;
   const cardSurfaceColors = isDark ? CARD_SURFACE_COLORS : LIGHT_CARD_SURFACE_COLORS;
 
   useEffect(() => {
+    if (reduceMotionEnabled) {
+      shimmerX.value = -120;
+      return;
+    }
+
     shimmerX.value = withRepeat(
       withTiming(240, {
         duration: featured ? 4800 : 6200,
@@ -88,7 +95,7 @@ export const GlassCard = ({
       -1,
       true,
     );
-  }, [featured, shimmerX]);
+  }, [featured, reduceMotionEnabled, shimmerX]);
 
   const shimmerStyle = useAnimatedStyle(() => ({
     transform: [{ translateX: shimmerX.value }, { rotate: "12deg" }],
@@ -165,14 +172,16 @@ export const GlassCard = ({
           />
           <View pointerEvents="none" style={styles.cardTopRightLight} />
           <View pointerEvents="none" style={styles.cardLowerVioletLight} />
-          <Animated.View pointerEvents="none" style={[styles.cardMovingRefraction, shimmerStyle]}>
-            <LinearGradient
-              colors={["rgba(255,255,255,0)", "rgba(255,255,255,0.09)", "rgba(255,255,255,0)"]}
-              end={{ x: 1, y: 1 }}
-              start={{ x: 0, y: 0 }}
-              style={StyleSheet.absoluteFill}
-            />
-          </Animated.View>
+          {!reduceMotionEnabled ? (
+            <Animated.View pointerEvents="none" style={[styles.cardMovingRefraction, shimmerStyle]}>
+              <LinearGradient
+                colors={["rgba(255,255,255,0)", "rgba(255,255,255,0.09)", "rgba(255,255,255,0)"]}
+                end={{ x: 1, y: 1 }}
+                start={{ x: 0, y: 0 }}
+                style={StyleSheet.absoluteFill}
+              />
+            </Animated.View>
+          ) : null}
           <View
             pointerEvents="none"
             style={[

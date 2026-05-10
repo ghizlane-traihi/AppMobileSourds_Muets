@@ -31,17 +31,21 @@ const lightColors = {
   // Text
   text: "#1A1035",
   textSecondary: "#5E5480",
-  textMuted: "#8B80A8",
+  textMuted: "#675C84",
   textOnDark: "#FFFFFF",
 
   // Borders
   border: "#E0D8F0",
 
   // Brand
-  primary: "#7C5CFC",
+  primary: "#6B4EF6",
   primarySoft: "#EDE8FF",
   primarySofter: "#F5F2FF",
   primaryText: "#FFFFFF",
+  primaryTextMuted: "rgba(255,255,255,0.84)",
+  premiumGradientStart: "#6B4EF6",
+  premiumGradientMid: "#5846C7",
+  premiumGradientEnd: "#3F367A",
   accent: "#4FD1FF",
 
   // Status
@@ -62,7 +66,7 @@ const lightColors = {
   white: "#FFFFFF",
 
   // Kicker / eyebrow
-  kicker: "#7C5CFC",
+  kicker: "#5B3DF5",
   kickerGlow: "rgba(124,92,252,0.3)",
 };
 
@@ -102,6 +106,10 @@ const darkColors = {
   primarySoft: "#1E1650",
   primarySofter: "#141038",
   primaryText: "#FFFFFF",
+  primaryTextMuted: "rgba(255,255,255,0.84)",
+  premiumGradientStart: "#6B4EF6",
+  premiumGradientMid: "#5846C7",
+  premiumGradientEnd: "#3F367A",
   accent: "#89DDFF",
 
   // Status

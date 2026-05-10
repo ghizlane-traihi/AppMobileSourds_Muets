@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "SignLink",
+    "slug": "signlink",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "SignLink needs camera access to capture sign language gestures.",
+        "NSMicrophoneUsageDescription": "SignLink needs microphone access to record speech and audio for translation."
+      },
+      "bundleIdentifier": "com.anonymous.signlink"
+    },
+    "android": {
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.CAMERA"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow SignLink to access your microphone for speech translation."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow SignLink to access your camera for sign language recognition.",
+          "microphonePermission": "Allow SignLink to record audio with your videos when needed."
+        }
+      ]
+    ]
+  }
+}

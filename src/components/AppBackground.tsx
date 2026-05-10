@@ -9,6 +9,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
+import { useReducedMotionPreference } from "../hooks/useReducedMotionPreference";
 import { useAppTheme } from "../theme";
 
 type AppBackgroundProps = {
@@ -84,6 +85,7 @@ const AmbientParticle = ({
 
 export const AppBackground = ({ children, style }: AppBackgroundProps) => {
   const { colors, isDark } = useAppTheme();
+  const reduceMotionEnabled = useReducedMotionPreference();
 
   const baseGradient = isDark
     ? (["#07071F", "#0A0A2E", "#111044"] as const)
@@ -150,9 +152,10 @@ export const AppBackground = ({ children, style }: AppBackgroundProps) => {
         pointerEvents="none"
         style={StyleSheet.absoluteFill}
       />
-      {PARTICLES.map((particle) => (
-        <AmbientParticle key={`${particle.left}-${particle.top}`} {...particle} />
-      ))}
+      {!reduceMotionEnabled &&
+        PARTICLES.map((particle) => (
+          <AmbientParticle key={`${particle.left}-${particle.top}`} {...particle} />
+        ))}
       <View
         pointerEvents="none"
         style={[
